@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>menu</title>
+    <style>
+        .navbutton {
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .navstyle {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: underline;
+            padding: 20px 20px;
+            color: red;
+        }
+
+        .navstyle:hover {
+            color: darkred;
+        }
+
+        .navbutton:hover .childmenu {
+            display: block;
+        }
+
+        .childmenu {
+            display: none;
+            position: absolute;
+            color: black;
+            z-index: 1;
+        }
+
+        .childstyle {
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class=navbutton><a class="navstyle" href="">Alpha</a>
+        <div class="childmenu"><a href="" class="childstyle">Nu</a> --
+            <a href="" class="childstyle">Phi</a> --
+            <a href="" class="childstyle">Rau</a></div>
+    </div>
+    </div>
+    <div class=navbutton><a class="navstyle" href="">Beta</a>
+        <div class="childmenu"><a href="" class="childstyle">Myu</a> --
+            <a href="" class="childstyle">Upslion</a> --
+            <a href="" class="childstyle">Theta</a></div>
+    </div>
+    <div class=navbutton><a class="navstyle" href="">Kappa</a>
+        <div class="childmenu"><a href="" class="childstyle">Gamma</a> --
+            <a href="" class="childstyle">Delta</a> --
+            <a href="" class="childstyle">Theta</a></div>
+    </div>
+    <div class=navbutton><a class="navstyle" href="">Zeta</a>
+        <div class="childmenu"><a href="" class="childstyle">Sigma</a> --
+            <a href="" class="childstyle">Zetta</a> --
+            <a href="" class="childstyle">Eta</a></div>
+    </div>
+</body>
+
+</html>
