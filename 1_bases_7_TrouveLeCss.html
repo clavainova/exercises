@@ -2,12 +2,143 @@
 <html>
 
 <head>
-    <title>texte</title>
+    <title>trouvelecss</title>
     <style>
+        body {
+            background-color: black;
+            max-width: 100vw;
+            max-height: 100vh;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        h1 {
+            color: white;
+            font-style: bold;
+            text-align: center;
+        }
+
+        .line {
+            white-space: nowrap;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .greybox1 {
+            background-color: grey;
+            width: 30vw;
+            height: 30vh;
+            display: inline-block;
+            margin: 20px;
+        }
+
+        .greybox34 {
+            background-color: grey;
+            width: 25vw;
+            height: 30vh;
+            display: inline-block;
+            margin: 20px;
+            transform: translate(0, -40vh);
+        }
+
+        .bluebox2 {
+            display: inline-block;
+            width: 50vw;
+            height: 30vh;
+            background-color: slateblue;
+        }
+
+        .bluebox7 {
+            transform: translate(90vw, -40vh);
+            overflow: hide;
+            height: 30vh;
+            background-color: slateblue;
+            width: 50vw;
+            margin-bottom: 10vh;
+            line-height: 0;
+        }
+
+        .lefttext {
+            transform: translate(1vw, 15vh);
+            text-align: left;
+            vertical-align: middle;
+            color: white;
+        }
+
+        .centeredtext {
+            margin-top: 15vh;
+            text-align: center;
+            vertical-align: middle;
+            color: white;
+        }
+
+        .raisedcenteredtext{
+            margin-top: 15vh;
+            text-align: center;
+            color: white;
+        }
+
+        .leftgreybox {
+            background-color: grey;
+            width: 15vw;
+            transform: translate(0, -40vh);
+            height: 30vh;
+        }
+
+        .rightgreybox{
+            background-color: grey;
+            width: 30vw;
+            transform: translate(65vw, -115vh);
+            height: 30vh;
+            z-index: 2;
+        }
+
+        .lastbluebox{
+            background-color: slateblue;
+            width: 15vw;
+            transform: translate(40vw, -80vh);
+            height: 30vh;
+        }
     </style>
 </head>
 
 <body>
+    <h1>Titre de L'Application</h1>
+    <div class="line">
+        <div class="greybox1">
+            <p class="centeredtext">1</p>
+        </div>
+        <div class="bluebox2">
+            <p class="centeredtext">2</p>
+        </div>
+
+    </div>
+    <div class="bluebox7">
+        <p class="lefttext">7</p>
+    </div>
+
+    <div class="line">
+        <div class="center">
+            <div class="greybox34">
+                <p class="centeredtext">3</p>
+            </div>
+            <div class="greybox34">
+                <p class="centeredtext">4</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="line">
+        <div class="leftgreybox"></div>
+        <div class="lastbluebox">
+            <p class="raisedcenteredtext">^^</p>
+        </div>
+        <div class="rightgreybox"></div>
+    </div>
+
+    ^^
 
 </body>
 
