@@ -10,10 +10,10 @@ Bases 1:
 - <a href="1_bases_1_Table.html">Table</a>
 - <a href="1_bases_2_Latin.html">Latin</a>
 - <a href="1_bases_3_MenuCSS.html">MenuCSS</a>
-- <a href="1_bases_4_MetEnForme.html">MetEnForme</a>
+- <a href="1_bases_4_MetEnFormeHTML.html">MetEnForme</a>
 - <a href="1_bases_5_MiseEnTexte.html">MiseEnTexte</a>
-- <a href="1_bases_6_TeteAnime.html">TeteAnime</a>
-- <a href="1_bases_7_TrouveLeCSS.html">TrouveLeCSS</a>
+- <a href="1_bases_6_TeteAnimee.html">TeteAnime</a>
+- <a href="1_bases_7_TrouveLeCss.html">TrouveLeCSS</a>
 Css Avancé:
-- <a href="2_CssAvance_1_feu.html">Feu</a>
-- <a href="2_CssAvance_2_flipboard.html">Flipboard</a>
+- <a href="2_CssAvance_1_Feu.html">Feu</a>
+- <a href="2_CssAvance_2_Flipboard.html">Flipboard</a>
