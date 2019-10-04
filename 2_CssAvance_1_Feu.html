@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Feu</title>
+    <style>
+        .line {
+            white-space: nowrap;
+        }
+
+        /* hover */
+        .oblong {
+            background-color: rgb(80, 80, 80);
+            height: auto;
+            width: 20vh;
+            padding: 10vh 10vh;
+            display: inline-block;
+        }
+
+        .circle1h {
+            border-radius: 200px;
+            width: 10vh;
+            height: 10vh;
+            padding: 5vh 5vh;
+            margin-bottom: 3vh;
+            background-color: grey;
+        }
+
+        .circle1h:hover {
+            -webkit-transition: ease 1s;
+            background-color: red;
+        }
+
+        .circle2h {
+            border-radius: 200px;
+            width: 10vh;
+            height: 10vh;
+            padding: 5vh 5vh;
+            margin-bottom: 3vh;
+            background-color: grey;
+        }
+
+        .circle2h:hover {
+            -webkit-transition: ease 1s;
+            background-color: yellow;
+        }
+
+        .circle3h {
+            border-radius: 200px;
+            width: 10vh;
+            height: 10vh;
+            padding: 5vh 5vh;
+            margin-bottom: 3vh;
+            background-color: grey;
+        }
+
+        .circle3h:hover {
+            -webkit-transition: ease 1s;
+            background-color: green;
+        }
+
+        /* synchronisé */
+        .circle1s {
+            border-radius: 200px;
+            width: 10vh;
+            height: 10vh;
+            padding: 5vh 5vh;
+            margin-bottom: 3vh;
+            animation-name: reds;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            background-color: grey;
+        }
+
+        @keyframes reds {
+            0% {
+                background-color: grey;
+            }
+
+            20% {
+                background-color: red;
+            }
+
+            30% {
+                background-color: grey;
+            }
+        }
+
+        @keyframes yellows {
+            0% {
+                background-color: grey;
+            }
+
+            20% {
+                background-color: yellow;
+            }
+
+            30% {
+                background-color: grey;
+            }
+        }
+
+        @keyframes greens {
+            0% {
+                background-color: grey;
+            }
+
+            85% {
+                background-color: green;
+            }
+
+            90% {
+                background-color: grey;
+            }
+        }
+
+        .circle2s {
+            border-radius: 200px;
+            width: 10vh;
+            height: 10vh;
+            padding: 5vh 5vh;
+            margin-bottom: 3vh;
+            background-color: grey;
+            animation-name: yellows;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        .circle3s {
+            border-radius: 200px;
+            width: 10vh;
+            height: 10vh;
+            padding: 5vh 5vh;
+            margin-bottom: 3vh;
+            background-color: grey;
+            animation-name: greens;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        /* animation */
+        .oblong {
+            background-color: rgb(80, 80, 80);
+            height: auto;
+            width: 20vh;
+            padding: 10vh 10vh;
+        }
+
+        .circle1 {
+            border-radius: 200px;
+            width: 10vh;
+            height: 10vh;
+            padding: 5vh 5vh;
+            margin-bottom: 3vh;
+            animation-name: red;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            background-color: grey;
+            -webkit-animation-delay: 1s;
+        }
+
+        @keyframes red {
+            0% {
+                background-color: grey;
+            }
+
+            50% {
+                background-color: red;
+            }
+
+            100% {
+                background-color: grey;
+            }
+        }
+
+        @keyframes yellow {
+            0% {
+                background-color: grey;
+            }
+
+            50% {
+                background-color: yellow;
+            }
+
+            100% {
+                background-color: grey;
+            }
+        }
+
+        @keyframes green {
+            0% {
+                background-color: grey;
+            }
+
+            50% {
+                background-color: green;
+            }
+
+            100% {
+                background-color: grey;
+            }
+        }
+
+        .circle2 {
+            border-radius: 200px;
+            width: 10vh;
+            height: 10vh;
+            padding: 5vh 5vh;
+            margin-bottom: 3vh;
+            background-color: grey;
+            -webkit-animation-delay: 2s;
+            animation-name: yellow;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        .circle3 {
+            border-radius: 200px;
+            width: 10vh;
+            height: 10vh;
+            padding: 5vh 5vh;
+            margin-bottom: 3vh;
+            background-color: grey;
+            -webkit-animation-delay: 3s;
+            animation-name: green;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="line">
+        <div class="oblong">Animé
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+        </div>
+
+        <div class="oblong">:Hover
+            <div class="circle1h"></div>
+            <div class="circle2h"></div>
+            <div class="circle3h"></div>
+        </div>
+
+        <div class="oblong">Synchronisé
+            <div class="circle1s"></div>
+            <div class="circle2s"></div>
+            <div class="circle3s"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

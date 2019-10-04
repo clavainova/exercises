@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flipboard</title>
+    <style>
+        body {
+            background-color: purple;
+        }
+
+        .line {
+            white-space: nowrap;
+        }
+
+        .box {
+            margin-top: 25vh;
+            width: 15vw;
+            height: 17vw;
+            background-color: white;
+            display: inline-block;
+            padding: 30px 30px;
+            margin-left: 5vw;
+            perspective: 1000px;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .box:hover {
+            transform: rotateY(180deg);
+        }
+
+        .img {
+            display: inline-block;
+            height: 15vw;
+            width: 15vw;
+            object-fit: cover;
+        }
+
+        .boxtxt {
+            margin-left: 5.5vw;
+            text-align: center;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class=box><img class="img"
+            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&w=1000&q=80">
+        <br>
+        <p class="boxtxt">L'été</p>
+    </div>
+    <div class=box><img class="img"
+            src="https://panmacmillan.azureedge.net/pmk11/panmacmillan/files/media/panmacmillan/blogs-2018/autumn-poems-header-min.jpg">
+        <br>
+        <p class="boxtxt">L'automne</p>
+    </div>
+    <div class=box><img class="img"
+            src="https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/weather/winter/frost-and-ice-on-a-screen.jpg">
+        <br>
+        <p class="boxtxt">L'hiver</p>
+    </div>
+    <div class=box><img class="img"
+            src="https://upload.wikimedia.org/wikipedia/commons/9/92/Colorful_spring_garden.jpg">
+        <br>
+        <p class="boxtxt">Le printemps</p>
+    </div>
+
+</body>
+
+</html>
