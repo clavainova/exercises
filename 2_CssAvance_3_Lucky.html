@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0 0;
+            padding: 0 0;
+            overflow: hide;
+        }
+
+        .bgimg {
+            height: 70vh;
+            width: 100vw;
+            margin: 0 0;
+            padding: 0 0;
+            object-fit: cover;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .mario,
+        .shyguy {
+            float: right;
+            position: relative;
+            z-index: 2;
+            margin-top: 52vh;
+        }
+
+        .mario {
+            margin-right: 5vw;
+            animation: run 5s;
+            animation-iteration-count: 1;
+        }
+
+        .shyguy {
+            margin-right: -11vw;
+        }
+
+        @keyframes run {
+            from {
+                right: 0
+            }
+            to {
+                right: 100%
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img class="bgimg" src="https://i.pinimg.com/originals/b8/25/3c/b8253c9cccc6b62e92ad0bb2c2f40f92.png">
+    <img class="mario"
+        src="https://i.gjcdn.net/data/games/5/112/337112/media/game-description/5d096ba98ef55-pkdudxri.gif">
+    <img class="shyguy" src="https://www.mariowiki.com/images/7/74/PMCS_Shy_Guy_5-Stack_Idle_Animated.gif">
+</body>
+
+</html>
