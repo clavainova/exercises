@@ -14,11 +14,12 @@
 * <a href="2_CssAvance_1_Feu.html">Feu</a>
 * <a href="2_CssAvance_2_Flipboard.html">Flipboard</a>
 * <a href="2_CssAvance_3_Lucky.html">Lucky</a>
+* <a href="2_CssAvance_4_Medley_1_videobg.html">Medley Video Background</a>
 
 <br  />
 
 2. En cours:
-* <a href="2_CssAvance_4_Medley.html">Medley</a>
+* <a href="2_CssAvance_4_Medley_2_videotube.html">Medley YouTube</a>
 
 3. Pas commencé:
 * <a href="2_CssAvance_5_News.html">News</a>
