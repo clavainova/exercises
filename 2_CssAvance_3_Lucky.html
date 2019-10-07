@@ -31,6 +31,27 @@
             z-index: 1;
         }
 
+        .trapdoorleft,
+        .trapdoorright {
+            position: absolute;
+            overflow: hidden;
+            width: 10vw;
+            height: 15px;
+            object-fit: cover;
+            margin-top: 68vh;
+            z-index: 0;
+        }
+
+        .trapdoorleft {
+            margin-left: 45vw;
+            animation: leftopen 5s linear 0s infinite none;
+        }
+
+        .trapdoorright{
+            margin-left: 35vw;
+            animation: rightopen 5s linear 0s infinite none;
+        }
+
         .mario,
         .shyguy {
             float: right;
@@ -122,31 +143,52 @@
                 transform: rotate(0deg);
             }
 
-            55% {
+            60% {
                 right: 70%;
                 transform: rotate(0deg);
             }
 
-            56%,
-            58% {
+            61% {
                 transform: rotate(-90deg);
                 transition-duration: 0;
             }
 
             90% {
-                transform: translate(0, 50vh);
+                transform: translate(0, 50vh) rotate(-90deg);
+            }
+        }
+
+        @keyframes leftopen {
+            0%, 60%, 100%{
+                transform: rotate(0deg);
+            }
+            61% {
+                transform: rotate(-110deg);
+            }
+        }
+
+        @keyframes rightopen {
+            0%, 60%, 100%{
+                transform: rotate(0deg);
+            }
+            61% {
+                transform: rotate(110deg);
             }
         }
     </style>
 </head>
 
 <body>
+    <img class="trapdoorleft" src="https://i.pinimg.com/originals/b8/25/3c/b8253c9cccc6b62e92ad0bb2c2f40f92.png">
+    <img class="trapdoorright" src="https://i.pinimg.com/originals/b8/25/3c/b8253c9cccc6b62e92ad0bb2c2f40f92.png">
     <img class="bgimg" src="https://i.pinimg.com/originals/b8/25/3c/b8253c9cccc6b62e92ad0bb2c2f40f92.png">
     <img class="mario"
         src="https://i.gjcdn.net/data/games/5/112/337112/media/game-description/5d096ba98ef55-pkdudxri.gif">
     <p class="luckytext">lucky</p>
     <img class="shyguy" src="https://www.mariowiki.com/images/7/74/PMCS_Shy_Guy_5-Stack_Idle_Animated.gif">
     <p class="unluckytext">unlucky</p>
+
+
 </body>
 
 </html>
