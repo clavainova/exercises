@@ -16,9 +16,9 @@
 * <a href="2_CssAvance_3_Lucky.html">Lucky</a>
 * <a href="2_CssAvance_4_Medley_1_videobg.html">Medley Video Background</a>
 * <a href="2_CssAvance_4_Medley_2_videotube.html">Medley YouTube</a>
+* <a href="2_CssAvance_5_News.html">News</a>
 <br  />
 
 2. En cours:
-* <a href="2_CssAvance_5_News.html">News</a>
 
 3. Pas commencé:

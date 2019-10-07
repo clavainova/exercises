@@ -5,22 +5,45 @@
     <title>news</title>
     <style>
 
-        .pwrap,
-        .paysage{
+        body{
+            background-color: black;
+        }
+
+        .wrap {
+            text-align: center;
+        }
+
+        .wrap:hover .paysage {
+            animation-play-state: paused;
+        }
+
+        .pwrap {
+            padding: 10px 10px;
+            width: 40vh;
             height: 40vh;
-            max-width: 56vh;
-            width: auto;
+        }
+
+        .paysage,
+        .soustext {
+            width: inherit;
+        }
+
+        .pwrap,
+        .paysage {
             display: inline-block;
             position: relative;
-            overflow: hidden;
         }
 
         .paysage {
-            object-fit: none;
+            object-fit: cover;
+            height: inherit;
+            background-size: 200%;
+            animation: pan 10s infinite linear forwards;
         }
 
-        .pwrap:hover .paysage{
+        .pwrap:hover .paysage {
             object-fit: cover;
+            animation-play-state: running;
         }
 
         .pwrap:hover .soustext {
@@ -28,59 +51,130 @@
         }
 
         .soustext {
-            width: 56vh;
             padding: 20px 20px;
             display: none;
             position: absolute;
-            transform: translateY(-10vh);
+            transform: translateY(30vh);
             color: white;
             background-color: rgb(0, 0, 0, 0.8);
             text-align: center;
+        }
+
+        @keyframes pan {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            25% {
+                background-position: 100% 100%;
+            }
+
+            50% {
+                background-position: 100% 0%;
+            }
+
+            75% {
+                background-position: 0 100%;
+            }
+
+            200% {
+                background-position: 0 0;
+            }
+        }
+
+        div.pwrap:nth-child(2) {
+            width: 50vh;
+        }
+
+        div.pwrap:nth-child(3) {
+            width: 60vh;
+        }
+
+        div.pwrap:nth-child(5) {
+            width: 65vh;
+        }
+
+        div.pwrap:nth-child(7) {
+            width: 45vh;
+        }
+
+        div.pwrap:nth-child(9) {
+            width: 55vh;
         }
     </style>
 </head>
 
 <body>
-    <div class="pwrap"><img class="paysage" src="ressources/paysage_1.webp">
-        <p class="soustext">La plage du Paradis Blanc en Australie</p>
+    <div class="wrap">
+        <div class="pwrap">
+            <div class="paysage" style="background: black url(ressources/paysage_1.webp); ">
+                <p class="soustext">La plage du Paradis Blanc en Australie</p>
+            </div>
+        </div>
+
+        <div class="pwrap">
+            <div class="paysage" style="background: black url(ressources/paysage_2.webp);">
+                <p class="soustext">Le "Fossé du Dragon Jaune" à Huanglong en Chine
+                </p>
+            </div>
+        </div>
+
+        <div class="pwrap">
+            <div class="paysage" style="background: black url(ressources/paysage_3.webp);">
+                <p class="soustext">The Wave (La Vague) aux Coyote Buttes en Arizona, Etats-Unis
+                </p>
+            </div>
+        </div>
+
+        <div class="pwrap">
+            <div class="paysage" style="background: black url(ressources/paysage_4.webp);">
+                <p class="soustext">Le désert des Pinnacles en Australie
+                </p>
+            </div>
+        </div>
+
+        <div class="pwrap">
+            <div class="paysage" style="background: black url(ressources/paysage_5.webp);">
+                <p class="soustext">Le château de coton : Les piscines thermales de Pamukkale en Turquie
+                </p>
+            </div>
+        </div>
+
+        <div class="pwrap">
+            <div class="paysage" style="background: black url(ressources/paysage_6.webp);">
+                <p class="soustext">Les rizières de Jatiluwih à Bali en Indonésie
+                </p>
+            </div>
+        </div>
+
+        <div class="pwrap">
+            <div class="paysage" style="background: black url(ressources/paysage_7.webp);">
+                <p class="soustext">La "cascade sous-marine" de l’Île Maurice
+                </p>
+            </div>
+        </div>
+
+        <div class="pwrap">
+            <div class="paysage" style="background: black url(ressources/paysage_8.webp);">
+                <p class="soustext">Les temples d'Angkor au Cambodge
+                </p>
+            </div>
+        </div>
+
+        <div class="pwrap">
+            <div class="paysage" style="background: black url(ressources/paysage_9.webp);">
+                <p class="soustext">L'île de Mljet : perle sauvage en Croatie
+                </p>
+            </div>
+        </div>
+
+        <div class="pwrap">
+            <div class="paysage" style="background: black url(ressources/paysage_10.webp);">
+                <p class="soustext">Anse Source d'Argent sur l'île de la Digue aux Seychelles
+                </p>
+            </div>
+        </div>
     </div>
-
-
-    <div class="pwrap"><img class="paysage" src="ressources/paysage_2.webp">
-        <p class="soustext">Le "Fossé du Dragon Jaune" à Huanglong en Chine</p>
-    </div>
-
-    <div class="pwrap"><img class="paysage" src="ressources/paysage_3.webp">
-        <p class="soustext">The Wave (La Vague) aux Coyote Buttes en Arizona, Etats-Unis</p>
-    </div>
-
-    <div class="pwrap"><img class="paysage" src="ressources/paysage_4.webp">
-        <p class="soustext">Le désert des Pinnacles en Australie</p>
-    </div>
-
-    <div class="pwrap"><img class="paysage" src="ressources/paysage_5.webp">
-        <p class="soustext">Le château de coton : Les piscines thermales de Pamukkale en
-            Turquie</p>
-    </div>
-
-    <div class="pwrap"><img class="paysage" src="ressources/paysage_6.webp">
-        <p class="soustext">Les rizières de Jatiluwih à Bali en Indonésie</p>
-    </div>
-
-    <div class="pwrap"><img class="paysage" src="ressources/paysage_7.webp">
-        <p class="soustext">La "cascade sous-marine" de l’Île Maurice</p>
-    </div>
-
-    <div class="pwrap"><img class="paysage" src="ressources/paysage_8.webp">
-        <p class="soustext">Les temples d'Angkor au Cambodge</p>
-    </div>
-
-    <div class="pwrap"><img class="paysage" src="ressources/paysage_9.webp">
-        <p class="soustext">L'île de Mljet : perle sauvage en Croatie</p>
-    </div>
-
-    <div class="pwrap"><img class="paysage" src="ressources/paysage_10.webp">
-        <p class="soustext">Anse Source d'Argent sur l'île de la Digue aux Seychelles</p>
 </body>
 
 </html>
