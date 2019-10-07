@@ -8,7 +8,8 @@
             background-color: black;
             margin: 0 0;
             padding: 0 0;
-            overflow: hide;
+            overflow-x: hidden;
+            overflow-y: hidden;
         }
 
         .bgimg {
@@ -25,21 +26,21 @@
         .shyguy {
             float: right;
             position: relative;
-            z-index: 2;
             margin-top: 52vh;
         }
 
         .mario {
             margin-right: 9vw;
+            z-index: 3;
             animation: run 5s linear 0s infinite none;
         }
 
         /* animation (Animation name; Duration; Timing function; Delay; Iteration count; Fill mode) */
 
         .shyguy {
-            margin-right: -15vw;
-            animation: halfrun 4s linear 0s infinite none,
-                rotate 1s linear 4s infinite none;
+            margin-right: -30vw;
+            z-index: 2;
+            animation: halfrun 5s linear 0s infinite none;
         }
 
         @keyframes run {
@@ -52,36 +53,38 @@
             }
         }
 
+        @keyframes halfrun {
+            0% {
+                right: 0;
+                visibility: visibile;
+            }
 
-        @keyframes rotate {
-            from {
-                transform: right(70%);
+            55% {
+                right: 70%;
                 transform: rotate(0deg);
             }
 
-            to {
-                transform: rotate(90deg);
-                transform: right(70%);
-            }
-        }
-
-        @keyframes halfrun {
-            from {
-                right: 0
+            60% {
+                transform: rotate(-90deg);
             }
 
-            to {
-                right: 70%
+            70% {
+                transform: translate(0, 700px);
+                transition-property: transform;
             }
+
+            100% {
+                visibility: hidden;
+            }
+
         }
     </style>
 </head>
 
 <body>
-    <img class="bgimg" src="https://i.pinimg.com/originals/b8/25/3c/b8253c9cccc6b62e92ad0bb2c2f40f92.png">
-    <img class="mario"
-        src="https://i.gjcdn.net/data/games/5/112/337112/media/game-description/5d096ba98ef55-pkdudxri.gif">
-    <img class="shyguy" src="https://www.mariowiki.com/images/7/74/PMCS_Shy_Guy_5-Stack_Idle_Animated.gif">
+        <img class="bgimg" src="https://i.pinimg.com/originals/b8/25/3c/b8253c9cccc6b62e92ad0bb2c2f40f92.png">
+        <img class="mario" src="https://i.gjcdn.net/data/games/5/112/337112/media/game-description/5d096ba98ef55-pkdudxri.gif" alt="lucky">
+        <img class="shyguy" src="https://www.mariowiki.com/images/7/74/PMCS_Shy_Guy_5-Stack_Idle_Animated.gif" alt= "unlucky">
 </body>
 
 </html>
