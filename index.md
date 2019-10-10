@@ -1,6 +1,5 @@
 
-1. Fini:<br  />
-
+*1.* Fini:<br  />
 * Bases 1 :
 * <a href="1_bases_1_Table.html">Table</a>
 * <a href="1_bases_2_Latin.html">Latin</a>
@@ -20,7 +19,9 @@
 <br  />
 * Maquettage :
 * <a href="https://www.figma.com/proto/sXJCDChcsRvjvgvwBAOMLn/OneHope_Maquettage?node-id=1%3A12&scaling=min-zoom">Maquettage 1 : Copiez (desktop)</a> 
+* <a href="https://www.figma.com/file/iLW7IKpQqeEZLgQL82xekJ/OneHope_Maquettage_mobile?node-id=0%3A1">Maquettage 2 : Copiez (mobile)</a>
 <br  />
-2. En cours:
 
-3. Pas commencé:
+*2.* En cours:
+<br  />
+*3.* Pas commencé:
