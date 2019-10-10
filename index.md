@@ -1,4 +1,3 @@
-
 *1.* Bases 1 :
 * <a href="1_bases_1_Table.html">Table</a>
 * <a href="1_bases_2_Latin.html">Latin</a>
@@ -16,7 +15,4 @@
 * <a href="2_CssAvance_4_Medley_2_videotube.html">Medley YouTube</a>
 * <a href="2_CssAvance_5_News.html">News</a>
 <br  /><br  />
-*3.* Maquettage :
-* <a href="https://www.figma.com/proto/sXJCDChcsRvjvgvwBAOMLn/OneHope_Maquettage?node-id=1%3A12&scaling=min-zoom">Maquettage 1 : Copiez (desktop)</a> 
-* <a href="https://www.figma.com/file/iLW7IKpQqeEZLgQL82xekJ/OneHope_Maquettage_mobile?node-id=0%3A1">Maquettage 2 : Copiez (mobile)</a>
-<br  /><br  />
+*3.* <a href="https://www.figma.com/file/0o6LngMyxuLQMP7xhFhozf/OneHope_Maquettage-wireframe?node-id=0%3A1">Maquettage</a> 
