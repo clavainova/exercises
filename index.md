@@ -15,4 +15,4 @@
 * <a href="2_CssAvance_4_Medley_2_videotube.html">Medley YouTube</a>
 * <a href="2_CssAvance_5_News.html">News</a>
 <br  /><br  />
-*3.* <a href="https://www.figma.com/file/0o6LngMyxuLQMP7xhFhozf/OneHope_Maquettage-wireframe?node-id=0%3A1">Maquettage</a> 
+*3.* <a href="https://www.figma.com/file/0o6LngMyxuLQMP7xhFhozf/OneHope_Maquettage-wireframe?node-id=0%3A1">Maquettage (1: imaginer (desktop), 2: imaginer (portable), 3: inventer)</a> 
