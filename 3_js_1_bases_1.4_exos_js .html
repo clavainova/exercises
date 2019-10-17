@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>exos_js</title>
+    <style>
+        img {
+            position: relative;
+            height: 400px;
+            width: 400px;
+            z-index: 0;
+        }
+    </style>
+    <script>
+        //Ex4
+        function Ex4() {
+            getImg(); showSrc(); changeImg2();;
+
+            function getImg() {
+                var img = document.createElement("img");
+                img.src = "ressources/paysage_1.webp";
+                document.getElementById("target").appendChild(img);
+                img.setAttribute("id", "imog");
+            }
+            function showSrc() {
+                var imgsrc = document.getElementsByTagName('img')[0].src;
+                console.log("img src = " + imgsrc);
+            }
+            function changeImg() { //part 3
+                var img = document.getElementsByTagName('img')[0];
+                console.log("adding onclick to " + img);
+                img.setAttribute("onclick", "big();");
+            }
+
+            function changeImg2() {
+                var img = document.getElementsByTagName('img')[0];
+                console.log("adding onclick to " + img);
+                img.setAttribute("onclick", "anim();");
+            }
+        }
+        function big() {
+            console.log("making big ");
+            document.getElementsByTagName('img')[0].style.width = "400%";
+        }
+
+        function anim() {
+            //add the transition thing
+            var element = document.getElementsByTagName("h1")[0];
+            element.classList.add("animated");
+            //add css
+            var style = document.createElement('style');
+            style.type = 'text/css';
+            style.innerHTML = '.animated{position: absolute; z-index: 5; height: 400px; width: 400px;animation: anims 5s linear 1s infinite forwards}@keyframes anims {0%{background: url("ressources/paysage_1.webp");}100%{background: url("ressources/paysage_3.webp");}}';
+            document.getElementsByTagName('head')[0].appendChild(style);
+            //remove the image on top
+            var elem = document.getElementById('imog');
+            elem.parentNode.removeChild(elem)
+        }
+    </script>
+</head>
+
+<body>
+    <H2 onclick="Ex4();">EX4 CLICK HERE</H2>
+    <h1 id="target"></h1>
+</body>
+
+</html>

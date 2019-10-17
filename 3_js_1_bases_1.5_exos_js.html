@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>exos_js</title>
+    <style>
+        .anim {
+            animation: halfrun 5s linear 1s infinite forwards;
+            min-height: 50px;
+            background-color: lightgrey;
+        }
+
+        @keyframes halfrun {
+            0% {
+                right: 0;
+                transform: rotate(0deg);
+            }
+
+            60% {
+                right: 70%;
+                transform: rotate(0deg);
+            }
+
+            61% {
+                transform: rotate(-90deg);
+                transition-duration: 0;
+            }
+
+            90% {
+                transform: translate(0, 50vh) rotate(-90deg);
+            }
+
+            h3 {
+                text-align: center;
+            }
+        }
+    </style>
+    <script>
+        //EX5
+        function Ex5() {
+            document.querySelector("span").onmouseenter = function () {
+                this.style.color = "red";
+            };
+            document.querySelector("span").onmouseout = function () {
+                this.style.color = "black";
+            };
+            document.querySelector("span").onclick = function () {
+                var ex5text = document.getElementsByTagName("h3")[0];
+                console.log("click registered");
+                ex5text.classList.add("anim");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p onclick="Ex5();">CLICK HERE FOR EX 5</p>
+    <h3><span>EX5</span></h3>
+</body>
+
+</html>

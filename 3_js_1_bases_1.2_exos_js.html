@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>exos_js</title>
+    <style>
+    </style>
+    <script>        //EX2
+        function Ex2() {
+            colordiv();
+            displayinline();
+
+            function add3Div() {
+                for (i = 0; i < 3; i++) {
+                    append(); //refers to something in ex1
+                }
+            }
+
+            function colordiv() {
+                var divs = document.getElementsByTagName("div");
+                divs[0].style.color = "red";
+                divs[1].style.color = "green";
+                divs[2].style.color = "blue";
+            }
+
+            function displayinline() {
+                var divs = document.getElementsByTagName("div");
+                for (i = 0; i < 3; i++) {
+                    divs[i].style.display = "inline";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div onclick="Ex2();">Exercise 2 CLICK HERE</div>
+    <div>Exercise 2 </div>
+    <div>Exercise 2 </div>
+</body>
+
+</html>

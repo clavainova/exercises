@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>exos_js</title>
+    <style>
+        div {
+            font-size: 2em;
+            color: red;
+        }
+    </style>
+    
+    <script>
+        // EX 1
+        function Ex1() {
+            changecolor(); center(); append(); invert(); leftright();
+            function changecolor() {
+                document.getElementById("div").style.color = "blue";
+            }
+            function center() {
+                document.getElementById("div").style.textAlign = "center";
+            }
+            function append() {
+                var element = document.getElementById("div");
+                var parent = element.parentNode;
+                var wrapper = document.createElement('div');
+                wrapper.setAttribute("id", "newdiv");
+                parent.replaceChild(wrapper, element);
+                wrapper.appendChild(element);
+            }
+            function invert() {
+                var string2 = document.getElementById("div").innerHTML;
+                console.log("we are replacing " + string2);
+                document.getElementById("div").innerHTML = reverseString(string2);
+                function reverseString(str) {
+                    var splitString = str.split("");
+                    console.log("string after split " + splitString);
+                    var reverseArray = splitString.reverse();
+                    console.log("string in reverse array " + reverseArray);
+                    var joinArray = reverseArray.join("");
+                    console.log("string finished " + joinArray);
+                    return joinArray;
+                }
+            }
+            function leftright() {
+                document.getElementById("div").style.textAlign = "left";
+                console.log("changing alignment of " + document.getElementById("div"));
+                document.getElementById("newdiv").style.textAlign = "right";
+                console.log("changing alignment of " + document.getElementById("newdiv"));
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div" onclick="Ex1();">EX1 click here</div>
+</body>
+
+</html>

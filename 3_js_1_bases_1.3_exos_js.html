@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>exos_js</title>
+    <style>
+
+    </style>
+    <script>        //EX3
+        function Ex3() {
+            var ArrDiv = document.getElementsByTagName("div");
+            var MaDiv = ArrDiv[0];
+            console.log(MaDiv);
+            MaDiv.setAttribute("id", "MADIV");
+            console.log(MaDiv);
+            //create class
+            var style = document.createElement('style');
+            style.type = 'text/css';
+            style.innerHTML = '.MaClasse {color: green;font-size: 50px;background-color:black;} ';
+            document.getElementsByTagName('style')[0].appendChild(style);
+            MaDiv.setAttribute("class", "MaClasse");
+        }
+    </script>
+</head>
+
+<body>
+    <div name="MaDivID" onclick="Ex3();">EX3 click here</div>
+</body>
+
+</html>
