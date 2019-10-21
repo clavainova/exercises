@@ -2,13 +2,42 @@
 <html>
 
 <head>
-    <title></title>
+    <title>functions</title>
+    <script type="text/javascript" src="ressources/jquery-3.4.1.js"></script>
+
     <style>
     </style>
-    <script></script>
+
+    <script>
+        var reference = [];
+
+        function go() {
+            var macbeth = decode();
+        }
+
+        function decode() {
+            console.log("decode called");
+            $.getJSON("ressources/macbeth_entier.json", function (data) {
+                console.log("data fetched");
+                console.log(data);
+            });
+        }
+
+        function addAct() {
+            try { } catch (error) {
+                console.log("end reached");
+                break;
+            }
+        }
+
+        function addScene() {
+        }
+    </script>
 </head>
 
 <body>
+    <button onclick="go();">go</button>
+    <p id="target"></p>
 </body>
 
 </html>
