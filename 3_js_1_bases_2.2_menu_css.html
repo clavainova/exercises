@@ -36,46 +36,57 @@
         }
 
         nav li ul {
-            visibility: hidden;
+            display: none;
             position: absolute;
             margin-left: -50px;
             transition: all .4s ease-in-out;
-            opacity: 0;
-        }
-
-        nav li ul li {
-            display: block;
         }
     </style>
-    <script></script>
+    <script>
+        function activateMenu(str) {
+            var submenu = document.getElementById(str);
+            console.log("menu selected id = " + str)
+            console.log("content = " + submenu.innerHTML);
+            if ((submenu.style.display == "none") || (submenu.style.display == "")) {
+                console.log("status: " + submenu.style.display);
+                console.log("showing menu");
+                submenu.style.display = "block";
+            }
+            else {
+                console.log("status: " + submenu.style.display);
+                console.log("hiding menu");
+                submenu.style.display = "none";
+            }
+        }
+    </script>
 </head>
 
 <body>
     <nav>
         <ul>
-            <li><a href="#">Alpha</a>
-                <ul>
+            <li><a href="#" onclick="activateMenu('alpha');">Alpha</a>
+                <ul id="alpha">
                     <li>Nu</li>
                     <li>Phi</li>
                     <li>Rau</li>
                 </ul>
             </li>
-            <li><a href="#">Beta</a>
-                <ul>
+            <li><a href="#" onclick="activateMenu('beta');">Beta</a>
+                <ul id="beta">
                     <li>Nu</li>
                     <li>Phi</li>
                     <li>Rau</li>
                 </ul>
             </li>
-            <li><a href="#">Kappa</a>
-                <ul>
+            <li><a href="#" onclick="activateMenu('kappa');">Kappa</a>
+                <ul id="kappa">
                     <li>Nu</li>
                     <li>Phi</li>
                     <li>Rau</li>
                 </ul>
             </li>
-            <li><a href="#">Zeta</a>
-                <ul>
+            <li><a href="#" onclick="activateMenu('zeta');">Zeta</a>
+                <ul id="zeta">
                     <li>Nu</li>
                     <li>Phi</li>
                     <li>Rau</li>
