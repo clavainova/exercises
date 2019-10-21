@@ -12,15 +12,15 @@
         var reference = [];
 
         function go() {
-            var macbeth = decode();
+            decode();
         }
 
         function decode() {
             console.log("decode called");
             $.getJSON("ressources/macbeth_entier.json", function (data) {
                 console.log("data fetched");
-                console.log(data);
             });
+            console.log("reached end of decode");
         }
 
         function addAct() {
