@@ -5,11 +5,13 @@
     <title></title>
     <style>
         body {
-            display: table;
+            display: flex center;
             text-align: center;
         }
 
         .bar {
+            z-index: 20;
+            top: 10px;
             text-align: right;
             position: absolute;
             width: 90vw;
@@ -21,11 +23,12 @@
         }
 
         .wrapper {
-            float: center;
-            display: table-cell;
+            margin-top: 10vh;
+            margin-bottom: 10vh;
+            background-color: grey;
+            display: flex center;
             vertical-align: middle;
-            width: 100vw;
-            height: 100vh;
+            min-height: 80vh;
         }
 
         p {
@@ -35,14 +38,71 @@
             max-width: 1000px;
             max-height: 100px;
         }
+
+        video {
+            width: 1000px;
+            height: 500px;
+        }
     </style>
-    <script></script>
+    <script>
+
+        var wrap;
+        var body;
+        var vid;
+
+        function getValues() {
+            wrap = document.getElementById("wrap")
+            body = document.getElementsByTagName("body")[0];
+            vid = document.getElementById('vid');
+        }
+
+        function droit() {
+            getValues(); clearStyle();
+            console.log("droit called");
+            body.style.display = "flex right";
+            wrap.style.height = "100vh";
+            wrap.style.paddingTop = "10vh";
+            wrap.style.marginLeft = "10vw";
+            wrap.style.marginRight = "10vw";
+        }
+
+        function enligne() {
+            //this is the default so it's not actually required to change much
+            getValues(); clearStyle(); 
+            console.log("enligne called");
+            wrap.style.marginTop = "10vh";
+            vid.style.minWidth = "80vw !important";
+            body.style.display = "flex center";
+        }
+
+        function fullscreen() {
+            getValues(); clearStyle(); 
+            console.log("fullscreen called");
+            vid.setAttribute("style", "height: 100vh; width: 100vw;");
+            body.style.overflow = "hidden";
+        }
+
+        function clearStyle() {
+            vid.style.width = null;
+            vid.style.height = null;
+            body.style.overflow = "scroll";
+            body.style.display = "block";
+            body.style.margin = "0";
+            wrap.style.margin = "0";
+            wrap.style.padding = "0";
+            console.log("style cleared");
+        }
+    </script>
 </head>
 
 <body>
-    <nav class="bar"><img src="../ressources/list-2-xxl.png"><img src="../ressources/grid-three-up-xxl.png"><img
-            src="../ressources/fit-to-width-xxl.png"></nav>
-    <div class="wrapper"><video autoplay controls width="1000px" height="500">
+    <nav class="bar"><img onclick="droit();" src="../ressources/list-2-xxl.png"><img onclick="enligne();"
+            src="../ressources/grid-three-up-xxl.png"><img onclick="fullscreen();"
+            src="../ressources/fit-to-width-xxl.png">
+    </nav>
+
+    <div class="wrapper" id="wrap">
+        <video id="vid" autoplay controls>
             <source src="../ressources/vid.mp4" type="video/mp4">
         </video>
         <h1>Ma Video</h1>

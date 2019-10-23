@@ -4,11 +4,32 @@
 <head>
     <title></title>
     <style>
+        body {
+            text-align: center;
+        }
+
+        .target {
+            border-style: dotted;
+            border-color: black;
+        }
+
+        .target,
+        .redcircle {
+            height: 200px;
+            width: 200px;
+            border-radius: 100px;
+        }
+
+        .redcircle {
+            background-color: red;
+        }
     </style>
     <script></script>
 </head>
 
 <body>
+    <br><br><img class="target"><br><br><br><br><br><br><br><br>
+    <img draggable="true" class="redcircle">
 </body>
 
 </html>
