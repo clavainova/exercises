@@ -1,0 +1,73 @@
+<!DOCTYPE HTML5>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="misterrobot.css" />
+
+    <script>
+        var robot = [];
+        //select every element that comrpises of the robot 
+        //and defines them inside an array
+        function getRobot() {
+            robot[0] = document.getElementById("head");
+            robot[1] = document.getElementById("leye");
+            robot[2] = document.getElementById("reye");
+            robot[3] = document.getElementById("mouth");
+            robot[4] = document.getElementById("neck");
+
+            //too difficult with animation priorities to get the arms independently, 
+            //instead selects entire div and the body is the same colour
+            //so the visual effect is the same
+            robot[5] = document.getElementById("third");
+            robot[6] = document.getElementById("leftleg");
+            robot[7] = document.getElementById("rightleg");
+            robot[8] = document.getElementById("leftfoot");
+            robot[9] = document.getElementById("rightfoot");
+            console.log("robot fetched and stored");
+
+            //sets the onclick to make the whole thing run away
+            for (i = 0; i < 10; i++) {
+                robot[i].setAttribute("onclick", "run();");
+            }
+        }
+        function run() {
+            //go through the robot and make every part play the animation of it leaving
+            //the animation and its properties are in the css
+            for (i = 0; i < 10; i++) {
+                console.log("applying animation to: " + robot[i]);
+                robot[i].style.animationPlayState += "running";
+            }
+        }
+    </script>
+</head>
+
+<body onload="getRobot();">
+    <div id="first">
+        <div id="head"><img id="leye" class="eye"><img id="reye" class="eye">
+            <img id="mouth"></div>
+    </div>
+
+    <div id="second">
+        <div id="neck"></div>
+    </div>
+
+    <div id="third">
+        <div id="leftarm"></div>
+        <div id="body"></div>
+        <div id="rightarm"></div>
+    </div>
+
+    <div id="fourth">
+        <div id="leftleg"></div>
+        <div id="rightleg"></div>
+    </div>
+
+    <div id="fifth">
+        <div id="leftfoot"></div>
+        <div id="rightfoot"></div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	overflow: hidden;
+	background-color: #999999;
+}
+
+div {
+	text-align: center;
+	animation: run 3s linear forwards;
+	animation-play-state: paused;
+}
+
+#first {
+	height: 20vh;
+	background-color: #CCCCCC;
+}
+
+#first #head {
+	height: 20vh;
+	min-width: 300px;
+	width: 15vw;
+	background-color: #FFFFFF;
+	display: inline-block;
+}
+
+#first #head .eye {
+	margin-top: 5vh;
+	height: 50px;
+	width: 50px;
+	background-color: #7C7C7C;
+	border-radius: 50%;
+}
+
+#first #head .eye:nth-of-type(1) {
+	margin-right: 4vw;
+}
+
+#first #head #mouth {
+	width: 6vw;
+	height: 1vh;
+	margin-top: 5vh;
+	background-color: #AFAFAF;
+	border-left: solid #7C7C7C 1vw;
+	border-right: solid #7C7C7C 1vw;
+}
+
+#second {
+	height: 5vh;
+	background-color: #B2B2B2;
+}
+
+#second div {
+	background-color: #FFFFFF;
+	height: 5vh;
+	width: 10vh;
+	display: inline-block;
+}
+
+#third {
+	height: 40vh;
+	background-color: #999999;
+}
+
+#third div {
+	height: 40vh;
+	display: inline-block;
+	background-color: #FFFFFF;
+}
+
+#third div:nth-of-type(1), #third div:nth-of-type(3) {
+	width: 7vw;
+}
+
+body:hover #third div:nth-of-type(1) {
+	animation: waveLeft 3s linear infinite forwards;
+	;
+}
+
+body:hover #third div:nth-of-type(3) {
+	animation: waveRight 3s linear infinite forwards;
+}
+
+@keyframes waveLeft {
+	0% {
+		transform: rotate(0deg);
+		transform-origin: top;
+	}
+	100% {
+		transform: rotate(-360deg);
+		transform-origin: top;
+	}
+}
+
+@keyframes waveRight {
+	0% {
+		transform: rotate(0deg);
+		transform-origin: top;
+	}
+	100% {
+		transform: rotate(360deg);
+		transform-origin: top;
+	}
+}
+
+#third div:nth-of-type(2) {
+	margin-left: 1vw;
+	margin-right: 1vw;
+	width: 20vw;
+}
+
+#fourth {
+	height: 30vh;
+	background-color: #7F7F7F;
+}
+
+#fourth div {
+	display: inline-block;
+	height: 29vh;
+	width: 7vw;
+	background-color: #FFFFFF;
+}
+
+#fourth div:nth-of-type(1) {
+	margin-right: 1vw;
+}
+
+#fifth {
+	height: 5vh;
+	background-color: #7F7F7F;
+}
+
+#fifth div {
+	background-color: #BFBFBF;
+	height: 5vh;
+	width: 7vw;
+	display: inline-block;
+}
+
+#fifth div:nth-of-type(1) {
+	margin-right: 1vw;
+}
+
+@keyframes run {
+	0% {
+		transform: translate(0)
+	}
+	100% {
+		transform: translate(3000px, 0px);
+	}
+}
