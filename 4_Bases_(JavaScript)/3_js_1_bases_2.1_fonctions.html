@@ -9,35 +9,29 @@
     </style>
 
     <script>
-        var reference = [];
 
-        function go() {
-            decode();
-        }
-
-        function decode() {
-            console.log("decode called");
-            $.getJSON("../ressources/macbeth_entier.json", function (data) {
-                console.log("data fetched");
+        $(document).ready(function () {
+            $("button").click(function () {
+                console.log("button");
+                $.getJSON("../ressources/macbeth_entier.json", function (result) {
+                    console.log("json acquired");
+                    console.log(result);
+                    $.each(result, function (i, field) {
+                        $("div").append(field + " ");
+                    });
+                });
             });
-            console.log("reached end of decode");
-        }
+        });
 
-        function addAct() {
-            try { } catch (error) {
-                console.log("end reached");
-                break;
-            }
-        }
-
-        function addScene() {
-        }
     </script>
 </head>
 
 <body>
-    <button onclick="go();">go</button>
-    <p id="target"></p>
+
+    "getJSON does an ajax request. Ajax requests are subject to the Same Origin Policy. Unless your page is loaded from
+    http://test.com (or a couple of other caveats), it won't work."<br>
+    <button>display</button>
+    <div></div>
 </body>
 
 </html>
