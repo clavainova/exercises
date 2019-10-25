@@ -4,11 +4,41 @@
 <head>
     <title>hanoi</title>
     <style>
+        canvas {
+            width: 600px;
+            height: 400px;
+            background-color: black;
+        }
     </style>
-    <script></script>
+    <script>
+
+        function drawBoard() {
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+
+            //baseboard
+            ctx.fillStyle = "darkred";
+            ctx.fillRect(0, 120, 300, 10);
+
+            //pillars
+            ctx.fillRect(50, 20, 10, 100);
+            ctx.fillRect(230, 20, 10, 100);
+            ctx.fillRect(140, 20, 10, 100);
+
+            //counters
+            ctx.fillStyle = "yellow"; //smallest
+            ctx.fillRect(40, 90, 30, 10);
+            ctx.fillStyle = "red"; //medium
+            ctx.fillRect(25, 100, 60, 10);
+            ctx.fillStyle = "blue"; //big
+            ctx.fillRect(10, 110, 90, 10);
+        }
+    </script>
 </head>
 
 <body>
+    <canvas id="canvas"></canvas><br>
+    <button onclick="drawBoard();">load</button>
 </body>
 
 </html>
