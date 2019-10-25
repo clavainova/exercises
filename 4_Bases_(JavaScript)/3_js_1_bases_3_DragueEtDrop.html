@@ -5,31 +5,49 @@
     <title></title>
     <style>
         body {
-            text-align: center;
+            display: flex center;
         }
 
-        .target {
-            border-style: dotted;
-            border-color: black;
-        }
 
-        .target,
-        .redcircle {
+        img,
+        div {
             height: 200px;
             width: 200px;
-            border-radius: 100px;
         }
 
-        .redcircle {
-            background-color: red;
+        img {
+            object-fit: cover;
+        }
+
+        div {
+            padding: 0;
+            border: dotted 2px black;
+            border-radius: 100px;
         }
     </style>
-    <script></script>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
 </head>
 
 <body>
-    <br><br><img class="target"><br><br><br><br><br><br><br><br>
-    <img draggable="true" class="redcircle">
+    <br><br>
+    <img draggable="true" ondragstart="drag(event)" id="redcircle"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Red_Circle%28small%29.svg/1024px-Red_Circle%28small%29.svg.png">
+    <br><br>
+    <div id="target" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 </body>
 
 </html>
