@@ -5,10 +5,82 @@
     <title></title>
     <style>
     </style>
-    <script></script>
 </head>
 
 <body>
+
+    <canvas id="canvas" width="400" height="400">
+    </canvas>
+
+
+
+    <script>
+
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d"); //get the area for drawing the clock
+        var radius = canvas.height / 2; //get radius for maths of drawing clock
+        context.translate(radius, radius);
+        radius = radius * 0.90
+        setInterval(drawClock, 1000);
+
+        function drawClock() {
+            clearFace(context);
+            drawFace(context, radius);
+            drawTime(context, radius);
+        }
+
+        function clearFace(){ //so the hands don't duplicate
+            console.log("clearing face");
+            context.clearRect(-400, -400, 800, 800);
+        }
+
+        function drawFace(context, radius) { 
+            //add outline and center dot
+            context.beginPath();
+            context.arc(0, 0, radius, 0, 2 * Math.PI);
+            context.strokeStyle = "solid";
+            context.lineWidth = radius * 0.01;
+            context.stroke();
+            context.beginPath();
+            context.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);
+            context.fillStyle = '#000';
+            context.fill();
+        }
+
+        function drawTime(context, radius) {
+            console.log("drawing clock");
+            var now = new Date();
+            var hour = now.getHours();
+            var minute = now.getMinutes();
+            var second = now.getSeconds();
+            //hour
+            console.log("drawing hour");
+            hour = hour % 12;
+            hour = (hour * Math.PI / 6) +
+                (minute * Math.PI / (6 * 60)) +
+                (second * Math.PI / (360 * 60));
+            drawHand(context, hour, radius * 0.5, radius * 0.07);
+            //minute
+            console.log("drawing minute");
+            minute = (minute * Math.PI / 30) + (second * Math.PI / (30 * 60));
+            drawHand(context, minute, radius * 0.8, radius * 0.07);
+            // second
+            console.log("drawing second");
+            second = (second * Math.PI / 30);
+            drawHand(context, second, radius * 0.9, radius * 0.02);
+        }
+
+        function drawHand(context, pos, length, width) {
+            console.log("moving hand");
+            context.beginPath();
+            context.lineWidth = width;
+            context.moveTo(0, 0);
+            context.rotate(pos);
+            context.lineTo(0, -length);
+            context.stroke();
+            context.rotate(-pos);
+        }
+    </script>
 </body>
 
 </html>
