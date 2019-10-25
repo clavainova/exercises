@@ -9,23 +9,195 @@
             height: 400px;
             background-color: black;
         }
+
+        button {
+            margin-left: 70px;
+            margin-right: 70px;
+        }
     </style>
     <script>
 
-        function drawBoard() {
-            var canvas = document.getElementById("canvas");
-            var ctx = canvas.getContext("2d");
+        //need win condition
+        //verify position
 
+        var pillars = [];
+        var selected = "none";
+        var ctx;
+
+        function go() {
+            var canvas = document.getElementById("canvas");
+            ctx = canvas.getContext("2d");
+            drawBoard(ctx);
+            drawDiscDefault(ctx);
+            initializeArray();
+        }
+
+        function selectElement(pilnum) {
+            if (selected == "none") {
+                //top gets selected if nothing already selected
+                console.log("selecting disc");
+                setTopDisc(pilnum);
+            }
+            else {
+                //tries to deposit
+                if (selected == "small") {
+                    //add to top of pile visually
+                    push(pilnum);
+                }
+                else if ((selected == "med") && (getTopDisc() != "small")) {
+                    //add med to pillar visually
+                    push(pilnum);
+                }
+                else if ((selected == "big") && (getTopDisc() != "small") && (getTopDisc() != "med")) {
+                    //add big disc to pilar visually, selection emptied
+                    push(pilnum);
+                }
+                else {
+                    console.log("that is an illegal move!");
+                }
+            }
+
+            function push(pilnum) {
+                //pushes the selected disc onto the pile 
+                //only called if verified
+                //everything shuffled to simulate stack
+                pillars[pilnum][0] = pillars[pilnum][1];
+                pillars[pilnum][1] = pillars[pilnum][2];
+                pillars[pilnum][2] = selected;
+                console.log("deposited: " + selected + " on pillar " + pilnum);
+                selected = "none";
+                updateImg();
+            }
+
+            function updateImg() {
+
+                clearBoard(ctx);
+                drawBoard(ctx);
+                console.log("status at update");
+                console.log("pillar 1 status: " + pillars[0][0] + pillars[0][1] + pillars[0][2]);
+                console.log("pillar 2 status: " + pillars[1][0] + pillars[1][1] + pillars[1][2]);
+                console.log("pillar 3 status: " + pillars[2][0] + pillars[2][1] + pillars[2][2]);
+
+                for (i = 0; i < 3; i++) {
+                    for (j = 0; j < 3; j++) {
+                        if (pillars[i][j] == "big") {
+                            console.log("big at " + i + j);
+                            drawStack("big", i, j);
+                        }
+                        if (pillars[i][j] == "med") {
+                            console.log("med at " + i + j);
+                            drawStack("med", i, j);
+                        }
+                        if (pillars[i][j] == "small") {
+                            console.log("small at " + i + j);
+
+                            drawStack("small", i, j);
+                        }
+                    }
+                }
+            }
+
+            //have to verify that big always at bottom, then med, then small
+            function drawStack(size, xpos, ypos) {
+                //x position as determined by place in array
+                var width;
+                if (xpos == 0) {
+                    xpos = 10;
+                }
+                else if (xpos == 1) {
+                    xpos = 80;
+                }
+                else if (xpos == 2) {
+                    xpos = 160;
+                }
+                //y position as determined by stack number
+                if (ypos == 0) {
+                    ypos = 90;
+                }
+                else if (ypos == 1) {
+                    ypos = 100;
+                }
+                else if (ypos == 2) {
+                    ypos = 110;
+                }
+                if (size == "big") {
+                    width = 90;
+                    ctx.fillStyle = "blue";
+                }
+                else if (size == "med") {
+                    xpos += 30;
+                    width = 60;
+                    ctx.fillStyle = "red";
+                }
+                else if (size == "small") {
+                    xpos += 60;
+                    width = 30;
+                    ctx.fillStyle = "yellow";
+                }
+                console.log("depositing rectangle at x: " + xpos + " y pos: " + ypos + " width: " + width);
+                ctx.fillRect(xpos, ypos, width, 10);
+            }
+
+            function setTopDisc(pilnum) {
+                //gets disc on top of pile and sets it as the selected disc
+                var temp;
+                for (i = 2; i >= 0; i--) {
+                    console.log("checking disc: " + pillars[pilnum][i]);
+                    if (pillars[pilnum][i] != "none") {
+                        selected = pillars[pilnum][i];
+                        if (i >= 2) {
+                            pillars[pilnum][2] = pillars[pilnum][1];
+                        }
+                        if (i >= 1) {
+                            //the other two are shuffled forwards
+                            //manually simulating a stack
+                            pillars[pilnum][1] = pillars[pilnum][0];
+                            pillars[pilnum][0] = "none";
+                        }
+                        console.log(selected + " is selected")
+                        return;
+                    }
+                }
+
+                if (selected != "none") {
+                    console.log("selected tile = " + selected);
+                }
+                else { console.log("there was nothing to select"); }
+            }
+
+            function getTopDisc(pilenum) { //tells you what's on top for verification
+                for (i = 2; i >= 0; i--) {
+                    if (pillars[pilnum][i] != "none") {
+                        return pillars[pilnum][i];
+                    }
+                }
+            }
+        }
+
+        function initializeArray() {
+            pillars[0] = ["big", "med", "small"];
+            console.log("pillar 1 status: " + pillars[0][0] + pillars[0][1] + pillars[0][2]);
+            pillars[1] = ["none", "none", "none"];
+            console.log("pillar 2 status: " + pillars[1][0] + pillars[1][1] + pillars[1][2]);
+            pillars[2] = ["none", "none", "none"];
+            console.log("pillar 3 status: " + pillars[2][0] + pillars[2][1] + pillars[2][2]);
+        }
+
+        function clearBoard(ctx) {
+            ctx.clearRect(0, 0, 400, 600);
+        }
+
+        function drawBoard(ctx) {
             //baseboard
             ctx.fillStyle = "darkred";
             ctx.fillRect(0, 120, 300, 10);
-
-            //pillars
+            //cols
             ctx.fillRect(50, 20, 10, 100);
             ctx.fillRect(230, 20, 10, 100);
             ctx.fillRect(140, 20, 10, 100);
+        }
 
-            //counters
+        function drawDiscDefault(ctx) {
             ctx.fillStyle = "yellow"; //smallest
             ctx.fillRect(40, 90, 30, 10);
             ctx.fillStyle = "red"; //medium
@@ -36,9 +208,12 @@
     </script>
 </head>
 
-<body>
+<body onload="go();">
     <canvas id="canvas"></canvas><br>
-    <button onclick="drawBoard();">load</button>
+    <button onclick="selectElement(0)">select</button>
+    <button onclick="selectElement(1)">select</button>
+    <button onclick="selectElement(2)">select</button>
+
 </body>
 
 </html>
