@@ -2,13 +2,51 @@
 <html>
 
 <head>
-    <title></title>
+    <title>dessiner</title>
     <style>
+        canvas {
+            border: 2px solid black;
+            width: 500px;
+            height: 500px;
+            background: grey;
+        }
     </style>
-    <script></script>
 </head>
 
 <body>
+    <canvas id="canvas"></canvas>
+    <br>
+    <button onclick="loadImage('images/abricot.png');">abricot</button>
+    <button onclick="loadImage('images/cerises.png');">cerises </button> <button
+        onclick="loadImage('images/mangue.png');">mangue</button>
+    <button onclick="loadImage('images/olive.png');">olive </button> <button
+        onclick="loadImage('images/poire.png');">poire</button>
+    <button onclick="loadImage('images/pomme_rouge.png');">pomme rouge</button> <button
+        onclick="loadImage('images/pomme.png');">pomme</button>
+    <button onclick="loadImage('images/prune.png');">prune </button>
+    <script>
+
+        function loadImage(str) {
+            var ctx = document.getElementById('canvas');
+            ctx = ctx.getContext('2d');
+
+            clearCanvas(ctx);
+
+            var img = new Image();
+            img.src = str;
+
+            img.onload = function () {
+                ctx.drawImage(img, 0, 0, 200, 100);
+            }
+
+        }
+
+        function clearCanvas(ctx) {
+            ctx.clearRect(-500, -500, 1000, 1000);
+            console.log("cleared canvas");
+        }
+    </script>
+
 </body>
 
 </html>
