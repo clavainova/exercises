@@ -17,11 +17,9 @@
     </style>
     <script>
 
-        //need win condition
         //verify position
 
         var pillars = [];
-        var reversePillars = [];
         var selected = "none";
         var ctx;
 
@@ -79,10 +77,12 @@
 
                 clearBoard(ctx);
                 drawBoard(ctx);
+                console.log("-------------------------");
                 console.log("status at update");
                 console.log("pillar 1 status: " + pillars[0][0] + pillars[0][1] + pillars[0][2]);
                 console.log("pillar 2 status: " + pillars[1][0] + pillars[1][1] + pillars[1][2]);
                 console.log("pillar 3 status: " + pillars[2][0] + pillars[2][1] + pillars[2][2]);
+                console.log("-------------------------");
 
 
                 for (i = 0; i < 3; i++) {
@@ -105,8 +105,8 @@
 
 
             //the array places them on top, 
-            //so to draw on bottom we need to keep track of the number of ones 
-            //on each stack
+            //so to draw on bottom we need to keep track of the 
+            //number of ones on each stack
             function drawStack(size, xpos, ypos) {
                 //x position as determined by place in array
                 var width;
@@ -129,6 +129,7 @@
                 else if (ypos == 0) {
                     ypos = 110;
                 }
+                //small alterations for size of counter
                 if (size == "big") {
                     width = 90;
                     ctx.fillStyle = "blue";
@@ -183,11 +184,11 @@
             }
 
             function victory() {
+                console.log("-------------------------");
                 console.log("testing victory conditions");
-                console.log(pillars[1] + pillars[2]);
                 if ((pillars[1] == "big,med,small") || (pillars[2] == "big,med,small")) {
                     console.log("victory condition met.");
-                    alert("you have won!");
+                    alert("you win!");
                 }
                 else {
                     console.log("no victory yet");
@@ -202,9 +203,7 @@
             console.log("pillar 2 status: " + pillars[1][0] + pillars[1][1] + pillars[1][2]);
             pillars[2] = ["none", "none", "none"];
             console.log("pillar 3 status: " + pillars[2][0] + pillars[2][1] + pillars[2][2]);
-            reversePillars[0] = ["none", "none", "none"];
-            reversePillars[1] = ["none", "none", "none"];
-            reversePillars[2] = ["none", "none", "none"];
+            console.log("-------------------------");
         }
 
         function clearBoard(ctx) {
