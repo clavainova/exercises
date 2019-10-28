@@ -37,44 +37,50 @@
             font-size: 72px;
         }
     </style>
+
+    <script src="../ressources/math.js" type="text/javascript"></script>
+
     <script>
 
         //BIDMAS
 
-        var inputs = [];
-        var inputindex = 0;
+        var input = "";
+        var display = "";
 
         function calculate() {
-            divideinputs();
-
-            function divideinputs() {
-                for (i = 0; i < inputindex; i++) {
-                    if(isNaN(inputs[i])){ 
-                        
-                        
-                    }
-                }
+            if (display != "") {
+                display = math.evaluate(input);
+                console.log(display);
+                input = display;
+                updateDisplay();
             }
         }
 
         function addInput(inpt) {
             console.log("adding input");
-            inputs[inputindex] = inpt;
-            inputindex++;
+            input += inpt;
+            display = display + " " + inpt;
+            updateDisplay();
         }
 
-
+        function updateDisplay() {
+            document.getElementById("display").innerHTML = display;
+            if (display == "") {
+                document.getElementById("display").innerHTML = "0";
+            }
+        }
 
         function reset() {
-            inputs = [];
-            inputindex = 0;
+            input = "";
+            display = "";
+            updateDisplay();
         }
 
     </script>
 </head>
 
-<body>
-    <p>0</p>
+<body onload="updateDisplay();">
+    <p id="display"></p>
     <table>
         <tr>
             <th onclick="addInput('1');">1</th>
@@ -92,13 +98,13 @@
             <th onclick="addInput('7');">7</th>
             <th onclick="addInput('8');">8</th>
             <th onclick="addInput('9');">9</th>
-            <th>*</th>
+            <th onclick="addInput('*');">*</th>
         </tr>
         <tr>
             <th onclick="calculate();">=</th>
             <th onclick="addInput('0');">0</th>
             <th onclick="reset();">CE</th>
-            <th>/</th>
+            <th onclick="addInput('/');">/</th>
         </tr>
     </table>
 
