@@ -3,16 +3,104 @@
 
 <head>
     <title></title>
-    
-    <style>
-    </style>
 
+    <style>
+        table {
+            background-color: black;
+        }
+
+        th,
+        tr {
+            margin: 0;
+        }
+
+        th {
+            background-color: white;
+            border: solid 1px black;
+            padding: 20px 20px;
+            width: 80px;
+            height: 80px;
+            font-size: 72px;
+        }
+
+        th:hover {
+            cursor: pointer;
+        }
+
+        p {
+            text-align: right;
+            background-color: white;
+            border: solid 3px black;
+            width: 492px;
+            min-height: 80px;
+            padding-right: 20px;
+            font-size: 72px;
+        }
+    </style>
     <script>
+
+        //BIDMAS
+
+        var inputs = [];
+        var inputindex = 0;
+
+        function calculate() {
+            divideinputs();
+
+            function divideinputs() {
+                for (i = 0; i < inputindex; i++) {
+                    if(isNaN(inputs[i])){ 
+                        
+                        
+                    }
+                }
+            }
+        }
+
+        function addInput(inpt) {
+            console.log("adding input");
+            inputs[inputindex] = inpt;
+            inputindex++;
+        }
+
+
+
+        function reset() {
+            inputs = [];
+            inputindex = 0;
+        }
 
     </script>
 </head>
 
 <body>
+    <p>0</p>
+    <table>
+        <tr>
+            <th onclick="addInput('1');">1</th>
+            <th onclick="addInput('2');">2</th>
+            <th onclick="addInput('3');">3</th>
+            <th onclick="addInput('+');">+</th>
+        </tr>
+        <tr>
+            <th onclick="addInput('4');">4</th>
+            <th onclick="addInput('5');">5</th>
+            <th onclick="addInput('6');">6</th>
+            <th onclick="addInput('-');">-</th>
+        </tr>
+        <tr>
+            <th onclick="addInput('7');">7</th>
+            <th onclick="addInput('8');">8</th>
+            <th onclick="addInput('9');">9</th>
+            <th>*</th>
+        </tr>
+        <tr>
+            <th onclick="calculate();">=</th>
+            <th onclick="addInput('0');">0</th>
+            <th onclick="reset();">CE</th>
+            <th>/</th>
+        </tr>
+    </table>
 
 </body>
 
