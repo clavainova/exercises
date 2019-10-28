@@ -21,12 +21,17 @@
         //verify position
 
         var pillars = [];
+        var reversePillars = [];
         var selected = "none";
         var ctx;
 
         function go() {
+            pillars = [];
+            selected = "none";
+            ctx;
             var canvas = document.getElementById("canvas");
             ctx = canvas.getContext("2d");
+            clearBoard(ctx);
             drawBoard(ctx);
             drawDiscDefault(ctx);
             initializeArray();
@@ -67,6 +72,7 @@
                 console.log("deposited: " + selected + " on pillar " + pilnum);
                 selected = "none";
                 updateImg();
+                victory(); //check for victory
             }
 
             function updateImg() {
@@ -77,6 +83,7 @@
                 console.log("pillar 1 status: " + pillars[0][0] + pillars[0][1] + pillars[0][2]);
                 console.log("pillar 2 status: " + pillars[1][0] + pillars[1][1] + pillars[1][2]);
                 console.log("pillar 3 status: " + pillars[2][0] + pillars[2][1] + pillars[2][2]);
+
 
                 for (i = 0; i < 3; i++) {
                     for (j = 0; j < 3; j++) {
@@ -90,14 +97,16 @@
                         }
                         if (pillars[i][j] == "small") {
                             console.log("small at " + i + j);
-
                             drawStack("small", i, j);
                         }
                     }
                 }
             }
 
-            //have to verify that big always at bottom, then med, then small
+
+            //the array places them on top, 
+            //so to draw on bottom we need to keep track of the number of ones 
+            //on each stack
             function drawStack(size, xpos, ypos) {
                 //x position as determined by place in array
                 var width;
@@ -111,13 +120,13 @@
                     xpos = 160;
                 }
                 //y position as determined by stack number
-                if (ypos == 0) {
+                if (ypos == 2) {
                     ypos = 90;
                 }
                 else if (ypos == 1) {
                     ypos = 100;
                 }
-                else if (ypos == 2) {
+                else if (ypos == 0) {
                     ypos = 110;
                 }
                 if (size == "big") {
@@ -125,12 +134,12 @@
                     ctx.fillStyle = "blue";
                 }
                 else if (size == "med") {
-                    xpos += 30;
+                    xpos += 25;
                     width = 60;
                     ctx.fillStyle = "red";
                 }
                 else if (size == "small") {
-                    xpos += 60;
+                    xpos += 50;
                     width = 30;
                     ctx.fillStyle = "yellow";
                 }
@@ -172,6 +181,18 @@
                     }
                 }
             }
+
+            function victory() {
+                console.log("testing victory conditions");
+                console.log(pillars[1] + pillars[2]);
+                if ((pillars[1] == "big,med,small") || (pillars[2] == "big,med,small")) {
+                    console.log("victory condition met.");
+                    alert("you have won!");
+                }
+                else {
+                    console.log("no victory yet");
+                }
+            }
         }
 
         function initializeArray() {
@@ -181,6 +202,9 @@
             console.log("pillar 2 status: " + pillars[1][0] + pillars[1][1] + pillars[1][2]);
             pillars[2] = ["none", "none", "none"];
             console.log("pillar 3 status: " + pillars[2][0] + pillars[2][1] + pillars[2][2]);
+            reversePillars[0] = ["none", "none", "none"];
+            reversePillars[1] = ["none", "none", "none"];
+            reversePillars[2] = ["none", "none", "none"];
         }
 
         function clearBoard(ctx) {
@@ -209,10 +233,11 @@
 </head>
 
 <body onload="go();">
-    <canvas id="canvas"></canvas><br>
+    <canvas id="canvas"></canvas><button onclick="go();">restart</button>
+    <br>
     <button onclick="selectElement(0)">select</button>
     <button onclick="selectElement(1)">select</button>
-    <button onclick="selectElement(2)">select</button>
+    <button onclick="selectElement(2)">select</button><br>
 
 </body>
 
