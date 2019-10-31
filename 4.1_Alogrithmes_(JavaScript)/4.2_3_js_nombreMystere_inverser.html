@@ -87,7 +87,7 @@
             var guess = rangeBot + ((rangeTop - rangeBot) / 2);
             guess = Math.round(guess);
 
-            if ((rangeTop == rangeBot) || (rangeTop - rangeBot == 1)) {
+            if ((rangeTop - rangeBot) <= 2) {
                 changeDisplay(("Computer is certain about this choice: " + guess), guess);
             }
             else {

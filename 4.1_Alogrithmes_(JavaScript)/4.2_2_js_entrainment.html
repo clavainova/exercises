@@ -3,16 +3,42 @@
 
 <head>
     <title></title>
-    
+
     <style>
     </style>
 
     <script>
+        var attemptCount = 0;
+
+        function verify() {
+            var user = document.getElementById("user");
+            var pass = document.getElementById("pass");
+            if (verifyUsr(user) && verifyPass(pass)) {
+                console.log("accepted");
+            }
+            else {
+                console.log("rejected");
+            }
+        }
+
+        function verifyUsr(str) {
+            return false;
+            return true;
+        }
+
+        function verifyPass(str) {
+            return false;
+            return true;
+        }
 
     </script>
 </head>
 
 <body>
+    <p>Username:</p>
+    <input id="user" placeholder="Jean123"></input>
+    <p>Password:</p>
+    <input id="pass" placeholder="************"></input> <button onclick="verify();">submit</button>
 
 </body>
 
