@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <style>
+        p {
+            margin-top: 25px;
+            text-align: center;
+            width: 500px;
+            font-size: 50px
+        }
+
+        p,
+        input {
+            background-color: white;
+            border: solid 3px black;
+            margin-bottom: 20px;
+            display: cell;
+        }
+
+        input {
+            padding-left: 20px;
+            width: 480px;
+            font-style: oblique;
+            height: 75px;
+            font-size: 60px;
+        }
+
+        button:nth-of-type(even) {
+            margin-left: 105px;
+        }
+
+        button:nth-of-type(odd):hover {
+            background-color: lightseagreen;
+        }
+
+        button:nth-of-type(even):hover {
+            background-color: lightcoral;
+        }
+
+        button {
+            margin-bottom: 25px;
+            text-align: center;
+            border: solid 3px black;
+            min-height: 60px;
+            min-width: 200px;
+            display: cell;
+        }
+
+        div {
+            max-width: 600px;
+            border: black 1px solid;
+            display: table;
+            justify-content: center;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    </style>
+
+    <script>
+        var rangeTop = 100;
+        var rangeBot = 0;
+        var guessCount = 0;
+
+        function guess(status) {
+            var guess = chooseGuess();
+            var str;
+            guessCount++;
+            if (status == "correct") {
+                str = "Computer guessed in: " + guessCount + ". Click reset to play again";
+            }
+            else if (status == "high") {
+                str = "Computer guessed: " + guess + " it was too high.";
+                rangeTop = guess;
+            }
+            else if (status == "low") {
+                str = "Computer guessed: " + guess + " it was too low.";
+                rangeBot = guess;
+            }
+            changeDisplay(str, guess);
+            chooseGuess();
+        }
+
+        function chooseGuess() {
+            var guess = rangeBot + ((rangeTop - rangeBot) / 2);
+            guess = Math.round(guess);
+
+            if ((rangeTop == rangeBot) || (rangeTop - rangeBot == 1)) {
+                changeDisplay(("Computer is certain about this choice: " + guess), guess);
+            }
+            else {
+                document.getElementById("display").innerHTML = guess;
+            }
+            return guess;
+        }
+
+        function reset() {
+            changeDisplay("reset", "reset: 50");
+            rangeTop = 100;
+            guessCount = 0;
+            rangeBot = 0;
+        }
+
+        function changeDisplay(str, guess) {
+            document.getElementById("history").innerHTML += ("<li>" + str + "</li>");
+            //add guess to log
+            document.getElementById("display").innerHTML = guess; //updates display with message
+        }
+
+        function clearLog() {
+            document.getElementById("history").innerHTML = ("<ul id='history'>Log: <br></ul>");
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Mystery Number Game</h1>
+    <div>
+        <p id="display">50</p>
+        <button onclick="guess('high');">too high</button><button onclick="guess('low');">too low</button><br>
+        <button onclick="guess('correct');">correct</button><button onclick="reset();">reset</button>
+    </div>
+    <br>
+    <span>Rules:<br>
+        1. choose a number between 0 and 100<br>
+        2. Try not to lie to the computer - it doesn't make mistakes.<br>
+        3. If the computer is certain and it's not your number, then you've made a mistake<br>
+    </span><br>
+
+    <button onclick="clearLog();">clear log</button>
+    <ul id="history">Log: <br>
+        <li>computer guesses 50</li>
+    </ul>
+
+
+</body>
+
+</html>

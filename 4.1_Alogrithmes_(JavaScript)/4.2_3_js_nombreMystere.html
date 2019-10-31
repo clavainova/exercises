@@ -3,17 +3,136 @@
 
 <head>
     <title></title>
-    
+
     <style>
+        p {
+            margin-top: 25px;
+            text-align: center;
+            width: 500px;
+            font-size: 50px
+        }
+
+        p,
+        input {
+            background-color: white;
+            border: solid 3px black;
+            margin-bottom: 20px;
+            display: cell;
+        }
+
+        input {
+            padding-left: 20px;
+            width: 480px;
+            font-style: oblique;
+            height: 75px;
+            font-size: 60px;
+        }
+
+        button:nth-of-type(2) {
+            margin-left: 105px;
+        }
+
+        button:nth-of-type(1):hover {
+            background-color: lightseagreen;
+        }
+
+        button:nth-of-type(2):hover {
+            background-color: lightcoral;
+        }
+
+        button {
+            margin-bottom: 25px;
+            text-align: center;
+            border: solid 3px black;
+            min-height: 60px;
+            min-width: 200px;
+            display: cell;
+        }
+
+        div {
+            max-width: 600px;
+            border: black 1px solid;
+            display: table;
+            justify-content: center;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     </style>
 
     <script>
+
+        var num = -1;
+        var guessCount = 0;
+
+        function start() {
+            min = Math.ceil(0);
+            max = Math.floor(100);
+            num = Math.floor(Math.random() * (max - min + 1)) + min;
+            changeDisplay("number chosen");
+        }
+
+        function guess() {
+            var str = "";
+            var guess = document.getElementById("guess").value;
+            if (num == -1) {
+                start(); //if it's the first time choose a number, 
+                //then proceed as normal
+            }
+            if (isNaN(guess)) {
+                str = guess + " was an invalid input";
+            }
+            else if(guess == ""){
+                str = "there wasn't a response";
+            }
+            else {
+                if (guess == num) {
+                    str = "you win! the number was " + num + ". it took: " + guessCount + " guesses. try guessing again!";
+                }
+                else if (guess < num) {
+                    guessCount++;
+                    str = guess + " was too low. You have tried " + guessCount + " times";
+                }
+                else {
+                    guessCount++;
+                    str = guess + " was too high. You have tried " + guessCount + " times";
+                }
+            }
+            changeDisplay(str);
+        }
+
+        function reset() {
+            num = -1;
+            changeDisplay("reset");
+            start();
+        }
+
+        function changeDisplay(str) {
+            document.getElementById("history").innerHTML += ("<li>" + str + "</li>");
+            //add guess to log
+            document.getElementById("display").innerHTML = str; //updates diaply with message
+            document.getElementById("guess").value = ""; //empty the guess box
+        }
 
     </script>
 </head>
 
 <body>
+    <h1>Mystery Number Game</h1>
+    <div onload="start();">
+        <p id="display">Guess the number!</p>
+        <input placeholder="guess here!" id="guess"></input><br>
+        <button onclick="guess();">submit</button><button onclick="reset();">reset</button>
+    </div>
+    <br>
+    <span>Rules:<br>
+        1. All numbers are whole numbers between 0 and 100<br>
+        2. Only guess numbers for the best results<br>
+        3. The game will tell you if your number is too high or too low<br>
+    </span><br>
 
+    <ul id="history">Log: <br></ul>
+
+    <span>Etape 3 : How to choose optimally: choose the halfway between the known maximum and medium</span>
 </body>
 
 </html>
