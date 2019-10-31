@@ -13,22 +13,27 @@
         function verify() {
             var user = document.getElementById("user");
             var pass = document.getElementById("pass");
-            if (verifyUsr(user) && verifyPass(pass)) {
-                console.log("accepted");
-            }
-            else {
-                console.log("rejected");
-            }
+            var statusUser = verifyUsr(user);
+            var statusPass = verifyPass(pass);
         }
 
         function verifyUsr(str) {
-            return false;
-            return true;
+            var status;
+            if (str == "") {
+                status = "empty field";
+            }
+            else {
+            }
+            return status;
         }
 
         function verifyPass(str) {
-            return false;
-            return true;
+            var status;
+            if (str == "") {
+            }
+            else {
+            }
+            return status;
         }
 
     </script>
