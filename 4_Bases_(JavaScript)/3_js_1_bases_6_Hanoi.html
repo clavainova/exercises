@@ -61,7 +61,7 @@
             }
 
             function push(pilnum) {
-                //pushes the selected disc onto the pile 
+                //pushes the selected disc onto the pile
                 //only called if verified
                 //everything shuffled to simulate stack
                 pillars[pilnum][0] = pillars[pilnum][1];
@@ -84,6 +84,9 @@
                 console.log("pillar 3 status: " + pillars[2][0] + pillars[2][1] + pillars[2][2]);
                 console.log("-------------------------");
 
+                var bigWatch = false;
+                var medWatch = false;
+                var smallWatch = false;
 
                 for (i = 0; i < 3; i++) {
                     for (j = 0; j < 3; j++) {
@@ -117,7 +120,7 @@
                     xpos = 80;
                 }
                 else if (xpos == 2) {
-                    xpos = 160;
+                    xpos = 190;
                 }
                 //y position as determined by stack number
                 if (ypos == 2) {
@@ -216,8 +219,8 @@
             ctx.fillRect(0, 120, 300, 10);
             //cols
             ctx.fillRect(50, 20, 10, 100);
-            ctx.fillRect(230, 20, 10, 100);
             ctx.fillRect(140, 20, 10, 100);
+            ctx.fillRect(230, 20, 10, 100);
         }
 
         function drawDiscDefault(ctx) {
