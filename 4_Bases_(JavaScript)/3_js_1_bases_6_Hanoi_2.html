@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>hanoi</title>
+    <style>
+        canvas {
+            width: 600px;
+            height: 400px;
+            background-color: black;
+        }
+
+        button {
+            margin-left: 70px;
+            margin-right: 70px;
+        }
+    </style>
+    <script>
+
+        var pillars = [];
+        var selected = "none";
+
+        class Stack {
+            //last in first out - LIFO
+            constructor() {
+                this.items = [];
+            }
+
+            push(element) {
+                this.items.push(element);
+            }
+
+            pop() {
+                if (this.items.length == 0)
+                    return "";
+                return this.items.pop();
+            }
+
+            peek() {
+                return this.items[this.items.length - 1];
+            }
+
+            isEmpty() {
+                return this.items.length == 0;
+            }
+
+            printStack() {
+                var str = "";
+                for (var i = 0; i < this.items.length; i++)
+                    str += this.items[i] + " ";
+                return str;
+            }
+        }
+
+        function go() {
+            pillars = [];
+            selected = "none";
+            var canvas = document.getElementById("canvas");
+            ctx = canvas.getContext("2d");
+            drawBoard(ctx);
+            drawDiscDefault(ctx);
+            initializeArray();
+        }
+
+        function select(int) {
+            if (selected == "none") {
+                selected = pillars[int].pop();
+                seeArray();
+            }
+            else {
+                move(int);
+            }
+        }
+
+        function checkWin() {
+            if () {
+
+            }
+        }
+
+        function move(int) {
+            if (pillars[int] > selected) {
+                alert("illegal move");
+            }
+            else {
+                pillars[int].push(selected);
+                selected = "none";
+            }
+        }
+
+        function initializeArray() {
+            pillars[0] = new Stack();
+            pillars[1] = new Stack();
+            pillars[2] = new Stack();
+            pillars[0].push("3");
+            pillars[0].push("2");
+            pillars[0].push("1");
+            seeArray();
+        }
+
+        function seeArray() {
+            console.log("----------------");
+            console.log("stack 0 status: " + pillars[0].printStack());
+            console.log("stack 1 status: " + pillars[1].printStack());
+            console.log("stack 2 status: " + pillars[2].printStack());
+        }
+
+        function drawBoard(ctx) {
+            clearBoard(ctx);
+            //baseboard
+            ctx.fillStyle = "darkred";
+            ctx.fillRect(0, 120, 300, 10);
+            //cols
+            ctx.fillRect(50, 20, 10, 100);
+            ctx.fillRect(140, 20, 10, 100);
+            ctx.fillRect(230, 20, 10, 100);
+        }
+
+        function drawDiscDefault(ctx) {
+            ctx.fillStyle = "yellow"; //smallest
+            ctx.fillRect(40, 90, 30, 10);
+            ctx.fillStyle = "red"; //medium
+            ctx.fillRect(25, 100, 60, 10);
+            ctx.fillStyle = "blue"; //big
+            ctx.fillRect(10, 110, 90, 10);
+        }
+
+        function clearBoard(ctx) {
+            ctx.clearRect(0, 0, 400, 600);
+        }
+    </script>
+</head>
+
+<body onload="go();">
+    <canvas id="canvas"></canvas><button onclick="go();">restart</button>
+    <br>
+    <button onclick="select(0)">select</button>
+    <button onclick="select(1)">select</button>
+    <button onclick="select(2)">select</button><br>
+
+</body>
+
+</html>
