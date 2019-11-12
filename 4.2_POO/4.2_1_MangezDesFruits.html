@@ -20,10 +20,7 @@
 
     <script>
         var ctx;
-
-        window.setInterval(resize, 1000);
-
-        //need classes
+        window.setInterval(update, 500);
 
         function initialize() {
             let canvas = document.createElement("canvas");
@@ -32,9 +29,32 @@
             document.getElementsByTagName("body")[0].appendChild(canvas);
         }
 
-        function resize() {
-            document.getElementById("canvas").style.height = (window.innerHeight) * 0.95 + "px";
-            document.getElementById("canvas").style.width = (window.innerWidth) * 0.95 + "px";
+        function update() {
+            clearCanvas();
+            resize();
+            drawFruit();
+
+            function resize() {
+                document.getElementById("canvas").style.height = (window.innerHeight) * 0.95 + "px";
+                document.getElementById("canvas").style.width = (window.innerWidth) * 0.95 + "px";
+            }
+
+            function drawFruit() {
+                let img = new Image();
+                img.src = "../4_Bases_(JavaScript)/images/abricot.png";
+                // let imgx = (((window.innerWidth) * 0.95) / 2) - 10;
+                // console.log("x pos: " + imgx);
+                // let imgy = (((window.innerHeight) * 0.95) / 2) - 10;
+                // console.log("y pos " + imgy);
+                img.onload = function () {
+                    ctx.drawImage(img, 90, 40, 100, 80);
+                }
+            }
+
+            function clearCanvas() {
+            ctx.clearRect(-500, -500, 1000, 1000);
+            console.log("cleared canvas");
+        }
         }
     </script>
 </head>
