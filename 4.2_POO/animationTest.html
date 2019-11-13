@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        canvas {
+            height: 400px;
+            width: 750px;
+        }
+
+        select,
+        button,
+        option {
+            float: left;
+        }
+    </style>
+    <script>
+
+
+        function go() {
+            let str = document.getElementById("select").value;
+            let img = new Image();
+            str = "spritesheet/" + str + ".png";
+            img.src = str;
+            img.onload = function () {
+                init();
+            };
+
+            document.querySelector('canvas').remove();
+            var canv = document.createElement('canvas');
+            document.body.appendChild(canv); 
+
+            let canvas = document.querySelector('canvas');
+            let ctx = canvas.getContext('2d');
+
+            const scale = 0.8;
+            const width = 125;
+            const height = 150;
+            const scaledWidth = scale * width;
+            const scaledHeight = scale * height;
+
+            function drawFrame(frameX, frameY, canvasX, canvasY) {
+                ctx.drawImage(img,
+                    frameX * width, frameY * height, width, height,
+                    canvasX, canvasY, scaledWidth, scaledHeight);
+            }
+
+            function init() {
+                window.requestAnimationFrame(step);
+            }
+
+            window.requestAnimationFrame(step);
+
+            const cycleLoop = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+            let currentLoopIndex = 0;
+            let frameCount = 0;
+
+            function step() {
+                frameCount++;
+                if (frameCount < 25) {
+                    window.requestAnimationFrame(step);
+                    return;
+                }
+                frameCount = 0;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                drawFrame(cycleLoop[currentLoopIndex], 0, 0, 0);
+                currentLoopIndex++;
+                if (currentLoopIndex >= cycleLoop.length) {
+                    currentLoopIndex = 0;
+                }
+                window.requestAnimationFrame(step);
+            }
+        }
+    </script>
+</head>
+
+<body onload="go();">
+    <canvas></canvas>
+    <select id="select">
+        <option value="1">spinning</option>
+        <option value="10">griffon</option>
+        <option value="16">bird</option>
+        <option value="100">white griffon</option>
+        <option value="120">snail</option>
+        <option value="150">centaur</option>
+        <option value="256">wisp</option>
+        <option value="287">purple merperson</option>
+        <option value="311">harpy</option>
+        <option value="314">green fire cat</option>
+        <option value="350">deer</option>
+        <option value="351">deer 2</option>
+        <option value="361">mushroom man</option>
+        <option value="371">hippo</option>
+        <option value="390">frog</option>
+        <option value="400">frog 2</option>
+        <option value="450">chimera</option>
+    </select>
+    <button onclick="go();">submit</button>
+
+</body>
+
+</html>
