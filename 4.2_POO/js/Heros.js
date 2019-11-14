@@ -1,5 +1,4 @@
-import { Humanoid } from "./Humanoide";
+import { Humanoid } from "./Humanoide.js";
+export class Hero extends Humanoid {
 
-export class Hero extends Humanoid{
-    
 }

@@ -1,4 +1,4 @@
-import { Humanoid } from "./Humanoide";
+import { Humanoid } from "./Humanoide.js";
 
 export class Monstre extends Humanoid{
 
