@@ -15,7 +15,8 @@
         }
     </style>
     <script>
-
+        
+        /*for idle animations*/
 
         function go() {
             let str = document.getElementById("select").value;
@@ -28,12 +29,12 @@
 
             document.querySelector('canvas').remove();
             var canv = document.createElement('canvas');
-            document.body.appendChild(canv); 
+            document.body.appendChild(canv);
 
             let canvas = document.querySelector('canvas');
             let ctx = canvas.getContext('2d');
 
-            const scale = 0.8;
+            const scale = 1;
             const width = 125;
             const height = 150;
             const scaledWidth = scale * width;
@@ -57,7 +58,7 @@
 
             function step() {
                 frameCount++;
-                if (frameCount < 25) {
+                if (frameCount < 20) {
                     window.requestAnimationFrame(step);
                     return;
                 }
@@ -77,23 +78,24 @@
 <body onload="go();">
     <canvas></canvas>
     <select id="select">
-        <option value="1">spinning</option>
-        <option value="10">griffon</option>
-        <option value="16">bird</option>
-        <option value="100">white griffon</option>
-        <option value="120">snail</option>
-        <option value="150">centaur</option>
-        <option value="256">wisp</option>
-        <option value="287">purple merperson</option>
-        <option value="311">harpy</option>
-        <option value="314">green fire cat</option>
-        <option value="350">deer</option>
-        <option value="351">deer 2</option>
-        <option value="361">mushroom man</option>
-        <option value="371">hippo</option>
-        <option value="390">frog</option>
-        <option value="400">frog 2</option>
-        <option value="450">chimera</option>
+        <option value="10">10 griffon</option>
+        <option value="16">16 bird</option>
+        <option value="100">100 white griffon</option>
+        <option value="120">120 snail</option>
+        <option value="150">150 centaur</option>
+        <option value="256">256 wisp</option>
+        <option value="287">287 purple merperson</option>
+        <option value="311">311 harpy</option>
+        <option value="314">314 green fire cat</option>
+        <option value="350">350 deer</option>
+        <option value="351">351 deer 2</option>
+        <option value="361">361 mushroom man</option>
+        <option value="370">370 purple frog</option>
+        <option value="371">371 aqua frog</option>
+        <option value="378">378 chimera</option>
+        <option value="390">390 chair</option>
+        <option value="400">400 otter</option>
+        <option value="450">450 hare-pheasant</option>
     </select>
     <button onclick="go();">submit</button>
 
