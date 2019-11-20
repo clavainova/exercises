@@ -3,11 +3,70 @@
 
 <head>
     <meta charset="utf-8">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100vw;
+            background-image: url("ressources/jade.jpg");
+            background-color: black;
+            overflow-x: hidden;
+        }
+
+        ul {
+            width: auto;
+            break-inside: avoid;
+            color: black;
+            border-radius: 10px;
+            margin: 20px 20px;
+            padding: 20px 50px;
+        }
+
+        ul, footer{
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        li {
+            border-left: solid 2px rgb(255, 0, 255);
+            padding-left: 10px;
+            list-style: none;
+        }
+
+        .encours {
+            background-color: yellow;
+        }
+
+        footer{
+            width: 100vw;
+            padding: 20px;
+            left: 0px;
+            bottom: 0;
+            position: fixed;
+        }
+
+        .pascommence {
+            background-color: orange;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        h1 {
+            color: rgb(131, 0, 92);
+            border-bottom: 2px solid rgb(255, 0, 255);
+            padding-bottom: 2px;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>1. Bases HTML/CSS</h1>
     <ul>
+        <h1>1. Bases HTML/CSS</h1>
         <li> <a href="1_Bases_(HTML_CSS)/1_bases_1_Table.html">Table</a></li>
         <li> <a href="1_Bases_(HTML_CSS)/1_bases_2_Latin.html">Latin</a></li>
         <li> <a href="1_Bases_(HTML_CSS)/1_bases_3_MenuCSS.html">MenuCSS</a></li>
@@ -17,8 +76,9 @@
         <li> <a href="1_Bases_(HTML_CSS)/1_bases_7_TrouveLeCss.html">TrouveLeCSS</a></li>
         <br /><br />
     </ul>
-    <h1>2. Css Avancé</h1>
+
     <ul>
+        <h1>2. Css Avancé</h1>
         <li> <a href="2_CSS_Avancé/2_CssAvance_1_Feu.html">Feu</a></li>
         <li><a href="2_CSS_Avancé/2_CssAvance_2_Flipboard.html">Flipboard</a></li>
         <li><a href="2_CSS_Avancé/2_CssAvance_3_Lucky.html">Lucky</a></li>
@@ -26,20 +86,23 @@
         <li><a href="2_CSS_Avancé/2_CssAvance_4_Medley_2_videotube.html">Medley YouTube</a></li>
         <li><a href="2_CSS_Avancé/2_CssAvance_5_News.html">News</a></li>
     </ul>
-    <br /><br />
-    <h1>2.2 LESS</h1>
+
     <ul>
+        <h1>2.2 LESS</h1>
         <li> <a href="2.2_LESS/index.html">LESS</a></li>
     </ul>
+
     <br /><br />
-    <h1>3. Maquettage</h1>
     <ul>
-        <li><a href="https://www.figma.com/file/0o6LngMyxuLQMP7xhFhozf/OneHope_Maquettage-wireframe?node-id=0%3A1">(1:
-                imaginer (desktop), 2: imaginer (portable), 3: inventer)</a></li>
+        <h1>3. Maquettage</h1>
+        <li><a href="https://www.figma.com/file/0o6LngMyxuLQMP7xhFhozf/OneHope_Maquettage-wireframe?node-id=0%3A1">1:
+                imaginer (desktop)</li>
+        <li> 2: imaginer (portable)</li>
+        <li>3: inventer</li></a></li>
     </ul>
-    <br /><br />
-    <h1>4.1 JavaScript Bases</h1>
+
     <ul>
+        <h1>4.1 JavaScript Bases</h1>
         <li>Exos JS<a href="4.1_Bases_(JavaScript)/3_js_1_bases_1.1_exos_js.html">1</a> <a
                 href="4.1_Bases_(JavaScript)/3_js_1_bases_1.2_exos_js.html">2</a> <a
                 href="4.1_Bases_(JavaScript)/3_js_1_bases_1.3_exos_js.html">3</a> <a
@@ -52,46 +115,49 @@
         <li><a href="4.1_Bases_(JavaScript)/3_js_1_bases_3_DragueEtDrop.html">Drague et drop</a></li>
         <li><a href="4.1_Bases_(JavaScript)/3_js_1_bases_4_Horloge.html">Horloge</a></li>
         <li><a href="4.1_Bases_(JavaScript)/3_js_1_bases_5_Dessiner.html">Dessiner</a></li>
-        <li><a href="4.1_Bases_(JavaScript)/3_js_1_bases_6_Hanoi.html">Hanoi Essai 1</a> <a
-                href="4.1_Bases_(JavaScript)/3_js_1_bases_6_Hanoi_2.html">Essai 2</a> - en cours</li>
+        <li><a href="4.1_Bases_(JavaScript)/3_js_1_bases_6_Hanoi.html">Hanoi Essai 1</a>
+        <li><a class="encours" href="4.1_Bases_(JavaScript)/3_js_1_bases_6_Hanoi_2.html">Essai 2</a> - en cours</li>
+        </li>
     </ul>
-    <br /><br />
-    <h1>4.2 JavaScript Algorithmes</h1>
+
     <ul>
+        <h1>4.2 JavaScript Algorithmes</h1>
         <li><a href="4.2_Alogrithmes_(JavaScript)/4.2_1_js_calculatrice.html">Une calculatrice</a></li>
         <li><a href="4.2_Alogrithmes_(JavaScript)/4.2_2_js_entrainment.html">Exercices Entrainment</a></li>
         <li><a href="4.2_Alogrithmes_(JavaScript)/4.2_3_js_nombreMystere.html">Nombre Mystere</a></li>
         <li><a href="4.2_Alogrithmes_(JavaScript)/4.2_3_js_nombreMystere_inverser.html">Nombre Mystere Inverté</a></li>
     </ul>
-    <br /><br />
-    <h1>4.3 JavaScript POO</h1>
+
     <ul>
+        <h1>4.3 JavaScript POO</h1>
         <li><a href="4.3_POO/4.3_1_MangezDesFruits.html">Mangez des Fruits</a></li>
-        <li><a href="4.3_POO/4.3_2_GnomNome.html">GnomNome</a> - en cours</li>
-        <a href="4.3_POO/animationTest.html">animation test</a>
+        <li><a href="4.3_POO/4.3_2_GnomNome.html" class="encours">GnomNome</a> - en cours</li>
+        <li><a href="4.3_POO/animationTest.html">animation test</a></li>
     </ul>
-    <br /><br />
-    <h1>4.4 JavaScript JQuery</h1>
+
     <ul>
-        <li><a href="">??</a></li>
+        <h1>4.4 JavaScript JQuery</h1>
+        <li><a class="pascommence" href="4.4_JQuery/index.html">JQuery - Ciblage</a> - pas commencé</li>
     </ul>
-    <br /><br />
-    <h1>4.5 AJAX</h1>
+
     <ul>
+        <h1>4.5 AJAX</h1>
         <li><a href="4.5_Ajax/1_fromage.html">JSON</a></li>
     </ul>
-    <br /><br />
-    <h1>4.6 JavaScript Promesses</h1>
+
     <ul>
-        <li><a href="">??</a></li>
+        <h1>4.6 JavaScript Promesses</h1>
+        <li><a class="pascommence" href="4.6_Promesses/">1 ca vaut ou ca vaut pas</a> - pas commencé</li>
+        <li><a class="pascommence" href="4.6_Promesses/">2 vas y fonce</a> - pas commencé</li>
     </ul>
-    <br /><br />
-    <h1>Dojos</h1>
+
     <ul>
+        <h1>Dojos</h1>
         <li><a href="Dojos/1_Maquettage_BarberShop/barber_shop.pdf">Maquettage</a></li>
         <li><a href="Dojos/2_HTML_CSS_MisterRobot/misterrobot.html">HTML/CSS</a></li>
     </ul>
 
+    <footer>Des exos de Clavain Ramsden.<br> Dernier misa à jour : 20.11.2019</footer>
 </body>
 
 </html>
