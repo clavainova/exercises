@@ -22,9 +22,12 @@
             border-radius: 10px;
             margin: 20px 20px;
             padding: 20px 50px;
+            border: 10px solid transparent;
+            border-image: url("../ressources/ripples.jpg") 10 round;
         }
 
-        ul, footer{
+        ul,
+        footer {
             background-color: rgba(255, 255, 255, 0.5);
         }
 
@@ -38,7 +41,11 @@
             background-color: yellow;
         }
 
-        footer{
+        footer:before{
+            height: 100px;
+        }
+
+        footer {
             width: 100vw;
             padding: 20px;
             left: 0px;
