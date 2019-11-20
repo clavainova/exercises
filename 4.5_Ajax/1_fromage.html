@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="../ressources/jquery-3.4.1.js"></script>
+    <style>
+        body {
+            background-image: url('cheese.jpeg');
+            background-size: cover;
+        }
+
+        h1 {
+            transform: rotate(270deg);
+            position: absolute;
+            top: 40vh;
+            right: 45vw;
+        }
+
+        h2,
+        h1,
+        span,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            background-color: white;
+            border: 1px solid grey;
+            width: 50vw;
+            min-width: 300px;
+            padding: 20px 20px;
+            margin: 20px 20px;
+            float: right;
+            box-shadow: 2px 2px 1px black;
+        }
+    </style>
+
+
+</head>
+
+<body id="body" onload="getText();">
+    <h1>Les meilleurs fromages du monde</h1>
+
+    <script>
+        function getText() {
+            console.log("getText called");
+            $.getJSON("1_fromages.json", function (data) {
+                console.log(data);
+                //import the text
+
+                for (let i = 0; i < data.length; i++) {
+
+                    let div = document.createElement("div");
+
+                    let h2 = document.createElement("h2");
+                    let titre = document.createTextNode(data[i].nom);
+                    h2.appendChild(titre);
+                    div.appendChild(h2);
+
+                    let p = document.createElement("p");
+                    let text = document.createTextNode("Type : " + data[i].type + " / Pays : " + data[i].pays)
+                    p.appendChild(text);
+                    div.appendChild(p);
+
+                    let span = document.createElement("span");
+                    let str = "";
+                    for (let j = 0; j < data[i].classement; j++) {
+                        str += "⭐";
+                    }
+                    let innerspan = document.createTextNode(str);
+                    span.appendChild(innerspan);
+                    div.appendChild(span);
+
+                    document.getElementById("body").appendChild(div);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
