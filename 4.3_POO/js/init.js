@@ -44,3 +44,7 @@ function drawCanvas() {
     document.body.appendChild(canvas2);
     return canvas2;
 }
+
+function winCondition(){
+
+}

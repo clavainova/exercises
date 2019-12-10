@@ -1,5 +1,5 @@
 export class Humanoid {
-        constructor(url) {
-            this.url = url;
-        }
+    constructor(url) {
+        this.url = url;
+    }
 }

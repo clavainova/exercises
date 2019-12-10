@@ -1,5 +1,15 @@
-export class bomb{
-    
+export class bomb {
+    constuctor(url) {
+        this.url = url;
+    }
+
+    explode() {
+
+    }
+
+    spawn(){
+        
+    }
 }
 
 //detect collision
