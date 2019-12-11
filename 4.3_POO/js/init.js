@@ -4,40 +4,36 @@ import { Plateau } from "./Plateau.js";
 
 "use strict";
 
-//canvas dimensions
-const cWidth = 1000;
-const cHeight = 800;
-
 //urls
 const cUrl = "img/background.jpg";
 const heroUrl = "img/hero.png";
 const monstUrl = "img/monster.png";
 const bombUrl = "img/pixel-bomb-bombe-explosion.png";
 const explUrl = "img/ground-explode.gif";
-const lose = "img/you-lose.gif";
+const loseUrl = "img/you-lose.gif";
 
-//time
+//dimensions
+const heroHeight = 32; //hero
+const heroWidth = 32;
+const monstHeight = 32; //monstre
+const monstWidth = 30;
+const cWidth = 1000; //canvas
+const cHeight = 800;
+
+//time + score
 const timeLimit = 15;
 var countdown;
-
-//score
 var score;
 var highScore;
 
 //objects
-var hero = new Hero(10, 10, heroUrl, 0, 0); //(width, height, x, y, url, speedX, speedY)
-var monster = new Monstre(monstUrl);
+var hero = new Hero(0, 0, heroWidth, heroHeight, heroUrl, 10, 10); //(width, height, x, y, url, speedX, speedY)
+var monster = new Monstre(monstWidth, monstHeight, monstUrl);
+var plateau = new Plateau(cWidth, cHeight, cUrl, ctx);
 
 //draw canvas
 var canvas = drawCanvas();
 var ctx = canvas.getContext('2d');
-
-//plateau
-var plateau = new Plateau(cWidth, cHeight, cUrl, ctx);
-
-
-//populate canvas
-plateau.drawBg(ctx);
 
 //event listeners
 window.addEventListener('keydown', function (e) {
@@ -51,14 +47,15 @@ window.addEventListener('keyup', function (e) {
 
 
 //body
-
-hero.init(ctx);
+plateau.drawBg("board"); //set bg in css to avoid layering problems
+hero.draw(ctx, hero.x, hero.y);
 
 
 //functions
-
+//create canvas object
 function drawCanvas() {
     let canvas2 = document.createElement('canvas');
+    canvas2.setAttribute("id", "board");
     canvas2.width = cWidth;
     canvas2.height = cHeight;
 
@@ -66,6 +63,7 @@ function drawCanvas() {
     return canvas2;
 }
 
+//check win condition/score
 function winCondition() {
 
 }
