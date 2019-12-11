@@ -1,8 +1,12 @@
-export class bomb {
-    constuctor(url) {
-        this.url = url;
-    }
+import { Object } from "./Object.js";
 
+//props inherited from object:      url, width, height, img
+//methods inherited from object:    draw(), despawn()
+
+export class Bomb extends Object {
+constructor(){
+    super();
+}
     explode() {
 
     }

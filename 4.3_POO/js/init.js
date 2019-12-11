@@ -2,6 +2,8 @@ import { Hero } from "./Heros.js";
 import { Monstre } from "./Monstre.js";
 import { Plateau } from "./Plateau.js";
 
+"use strict";
+
 //canvas dimensions
 const cWidth = 1000;
 const cHeight = 800;
@@ -23,16 +25,35 @@ var score;
 var highScore;
 
 //objects
-var plateau = new Plateau(cWidth, cHeight, cUrl);
-var player = new Hero(heroUrl);
+var hero = new Hero(10, 10, heroUrl, 0, 0); //(width, height, x, y, url, speedX, speedY)
 var monster = new Monstre(monstUrl);
 
 //draw canvas
 var canvas = drawCanvas();
 var ctx = canvas.getContext('2d');
 
+//plateau
+var plateau = new Plateau(cWidth, cHeight, cUrl, ctx);
+
+
 //populate canvas
 plateau.drawBg(ctx);
+
+//event listeners
+window.addEventListener('keydown', function (e) {
+    ctx.key = e.keyCode;
+    hero.updateMove(ctx);
+    // this.console.log("keydown detected: " + e.keyCode)
+})
+window.addEventListener('keyup', function (e) {
+    ctx.key = false;
+})
+
+
+//body
+
+hero.init(ctx);
+
 
 //functions
 
@@ -45,6 +66,6 @@ function drawCanvas() {
     return canvas2;
 }
 
-function winCondition(){
+function winCondition() {
 
 }
