@@ -18,20 +18,15 @@ export class List {
         // splice -- alternatif
     }
 
+    //places every object in the array -- useful for doing all bombs at once
     placeItems(maxX, maxY, ctx) {
         this.list.forEach(element => {
-            let x = randomNum(maxX, 0);
-            let y = randomNum(maxY, 0);
-            // console.log("drawing bomb at x: " + x + " y: " + y);
-            element.draw(ctx, x, y);
-            // console.log("element width: " + element.width);
+            element.place(maxX, maxY, ctx);
         });
     }
 }
 
-function randomNum(max, min) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
+
 
 //detect collision
 

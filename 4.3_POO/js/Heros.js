@@ -1,7 +1,7 @@
 import { Object } from "./Object.js";
 
-//props inherited from object:      url, width, height
-//methods inherited from object:    draw(), despawn()
+//props inherited from object:      width, height, url
+//methods inherited from object:    draw(), despawn(), place()
 
 //request animation frame
 

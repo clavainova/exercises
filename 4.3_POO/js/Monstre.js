@@ -1,9 +1,9 @@
-import { Bomb } from "./Bombe.js";
+import { Object } from "./Object.js";
 
-//props inherited from object:      url, width, height
-//methods inherited from object:    draw(), despawn()
+//props inherited from object:      width, height, url
+//methods inherited from object:    draw(), despawn(), place()
 
-export class Monstre extends Bomb {
+export class Monstre extends Object {
     constructor(width, height, url) {
         super(width, height, url);
     }

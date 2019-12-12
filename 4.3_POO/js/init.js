@@ -44,7 +44,7 @@ var keys = [];
 
 //objects
 var hero = new Hero(0, 0, heroWidth, heroHeight, heroUrl, 0, 0, heroSpeed);
-var monster = new Monstre(monstWidth, monstHeight, monstUrl);
+var monstre = new Monstre(monstWidth, monstHeight, monstUrl);
 var plateau = new Plateau(cWidth, cHeight, cUrl, ctx);
 
 //******************** -- initialize array and canvas -- *********************//
@@ -57,12 +57,6 @@ for (let i = 0; i < bombNum; i++) {
     bombeList.push(bombe);
 }
 
-//initalize monstre position
-let arr2 = [];
-var monstreList = new List(arr2);
-let monstre = new Monstre(monstWidth, monstHeight, monstUrl);
-monstreList.push(monstre);
-
 //draw canvas
 var canvas = drawCanvas();
 var ctx = canvas.getContext('2d');
@@ -71,9 +65,9 @@ plateau.drawBg("board"); //set bg in css to avoid layering problems
 //******************** -- body -- ***********************//
 
 //body
-hero.draw(ctx, hero.x, hero.y); //draw hero in starting position
 bombeList.placeItems((cWidth - 32), (cHeight - 32), ctx); //place bombs
-monstreList.placeItems((cWidth - 32), (cHeight - 32), ctx); //place monstre
+monstre.place((cWidth - 32), (cHeight - 32), ctx); //place monstre
+hero.place((cWidth - 32), (cHeight - 32), ctx); //place hero
 
 //******************** -- canvas -- *********************//
 
@@ -120,3 +114,4 @@ function keysPressed(event) {
 function keysReleased(event) {
     keys[event.keyCode] = false;
 }
+

@@ -36,7 +36,21 @@ export class Object {
         ctx.clearRect(x, y, this.width, this.height);
     }
 
-    move() {
-
+    place(maxX, maxY, ctx) {
+        let x = randomNum(maxX, 0);
+        let y = randomNum(maxY, 0);
+        // console.log("drawing bomb at x: " + x + " y: " + y);
+        this.draw(ctx, x, y);
+        // console.log("element width: " + element.width);
+        try { //this block is only for the hero - the others don't have x and y properties
+            this.x = x;
+            this.y = y;
+        } catch (error) {
+            return;
+        }
     }
+}
+
+function randomNum(max, min) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
