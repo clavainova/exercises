@@ -5,6 +5,7 @@ export class Object {
         this.url = url;
     }
 
+    //draw the object
     draw(ctx, x, y, xmax, ymax) {
         // console.log("drawing image: " + " on " + ctx);
         // console.log("x: " + x + " y: " + y + " width: " + this.width + " height: " + this.height);
@@ -29,6 +30,7 @@ export class Object {
         }
     }
 
+    //despawn the object
     despawn(x, y, ctx) {
         //delete an object in the place and of the width of the object specified
         //x and y passed in instead of properties because they are defined later on
@@ -36,6 +38,7 @@ export class Object {
         ctx.clearRect(x, y, this.width, this.height);
     }
 
+    //randomly place everything at the beginning or end of the round
     place(maxX, maxY, ctx) {
         let x = randomNum(maxX, 0);
         let y = randomNum(maxY, 0);
