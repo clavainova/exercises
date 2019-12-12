@@ -21,8 +21,7 @@ export class Object {
             if (y > ymax) {
                 y = ymax;
             }
-            
-            else if (y <= 0) {
+            else if (y <= 0){
                 y = 0;
             }
             ctx.drawImage(img, x, y, this.width, this.height);

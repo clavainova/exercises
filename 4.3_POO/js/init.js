@@ -1,6 +1,9 @@
 import { Hero } from "./Heros.js";
 import { Monstre } from "./Monstre.js";
 import { Plateau } from "./Plateau.js";
+import { Bomb } from "./Bombe.js";
+import { BombList } from "./BombeList.js";
+
 
 "use strict";
 
@@ -13,6 +16,9 @@ const explUrl = "img/ground-explode.gif";
 const loseUrl = "img/you-lose.gif";
 
 //dimensions
+const bombNum = 10;
+const bombWidth = 32;
+const bombHeight = 32;
 const heroHeight = 32; //hero
 const heroWidth = 32;
 const heroSpeed = 10;
@@ -55,6 +61,14 @@ function drawCanvas() {
     return canvas2;
 }
 
+//initialize bomb array
+let arr = [];
+var bombeList = new BombList(arr);
+for (let i = 0; i < bombNum; i++) {
+    var bombe = new Bomb(bombWidth, bombHeight, bombUrl);
+    bombeList.push(bombe);
+}
+
 //event listeners -- controls
 window.addEventListener('keydown', keysPressed, false);
 window.addEventListener('keyup', keysReleased, false);
@@ -77,7 +91,7 @@ function keysPressed(event) {
     event.preventDefault();
     // console.log("rate x: " + hero.rateX + " rate y: " + hero.rateY + " x: " + hero.x + " y: " + hero.y);
     hero.despawn(hero.x, hero.y, ctx);
-    hero.draw(ctx, (hero.x += hero.rateX), (hero.y += hero.rateY), (cWidth-hero.width), (cHeight-hero.height));
+    hero.draw(ctx, (hero.x += hero.rateX), (hero.y += hero.rateY), (cWidth - hero.width), (cHeight - hero.height));
     hero.rateX = 0;    //annul previous momentum so speed doesn't keep building
     hero.rateY = 0;
 }

@@ -3,18 +3,13 @@ import { Object } from "./Object.js";
 //props inherited from object:      url, width, height, img
 //methods inherited from object:    draw(), despawn()
 
-export class Bomb extends Object {
-    constructor() {
-        super();
-    }
-    explode() {
-
+export class BombList{
+    constructor(bombs) {
+        this.bombs = bombs;
     }
 
-    spawn() {
-        let bombs = [];
-        //<> = cWidth, 0
-        //^v = cheight, 0
+    push(bomb) {
+        this.bombs.push(bomb);
     }
 }
 
