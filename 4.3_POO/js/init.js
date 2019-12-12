@@ -14,7 +14,8 @@ const heroUrl = "img/hero.png";
 const monstUrl = "img/monster.png";
 const bombUrl = "img/pixel-bomb-bombe-explosion.png";
 const explUrl = "img/ground-explode.gif";
-const loseUrl = "img/you-lose.gif";
+const loseUrl = "img/you-lose.gif"; //morally refuse to use this ugly text, 
+//find something less likely to cause an epileptic seizure
 
 //dimensions
 //bomb

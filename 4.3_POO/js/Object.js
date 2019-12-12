@@ -18,10 +18,11 @@ export class Object {
             else if (x <= 0) { x = 0; }
             if (y > ymax) { y = ymax; }
             else if (y <= 0) { y = 0; }
+            //catch bizarre glitch where bomb size incorrectly passed
             if (this.width == 178) {
-                //catch bizarre glitch where bomb size incorrectly passed
                 ctx.drawImage(img, x, y, 32, 32);
             }
+            //actually draw it
             else {
                 ctx.drawImage(img, x, y, this.width, this.height);
             }
@@ -29,6 +30,9 @@ export class Object {
     }
 
     despawn(x, y, ctx) {
+        //delete an object in the place and of the width of the object specified
+        //x and y passed in instead of properties because they are defined later on
+        //and frequently changed
         ctx.clearRect(x, y, this.width, this.height);
     }
 
