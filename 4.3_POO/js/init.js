@@ -77,12 +77,11 @@ function keysPressed(event) {
     event.preventDefault();
     // console.log("rate x: " + hero.rateX + " rate y: " + hero.rateY + " x: " + hero.x + " y: " + hero.y);
     hero.despawn(hero.x, hero.y, ctx);
-    hero.draw(ctx, (hero.x += hero.rateX), (hero.y += hero.rateY));
+    hero.draw(ctx, (hero.x += hero.rateX), (hero.y += hero.rateY), (cWidth-hero.width), (cHeight-hero.height));
     hero.rateX = 0;    //annul previous momentum so speed doesn't keep building
     hero.rateY = 0;
 }
 
 function keysReleased(event) {
     keys[event.keyCode] = false;
-
 }
