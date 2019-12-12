@@ -7,4 +7,8 @@ export class Monstre extends Bomb {
     constructor(width, height, url) {
         super(width, height, url);
     }
+
+    slain(){
+        
+    }
 }

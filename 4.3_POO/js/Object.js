@@ -37,4 +37,8 @@ export class Object {
     despawn(x, y, ctx) {
         ctx.clearRect(x, y, this.width, this.height);
     }
+
+    move(){
+        
+    }
 }

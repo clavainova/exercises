@@ -1,8 +1,3 @@
-import { Object } from "./Object.js";
-
-//props inherited from object:      url, width, height, img
-//methods inherited from object:    draw(), despawn()
-
 export class List {
     constructor(list) {
         this.list = list;
