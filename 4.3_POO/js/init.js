@@ -15,7 +15,7 @@ const loseUrl = "img/you-lose.gif";
 //dimensions
 const heroHeight = 32; //hero
 const heroWidth = 32;
-const heroSpeed = 10;
+const heroSpeed = 1;
 const monstHeight = 32; //monstre
 const monstWidth = 30;
 const cWidth = 1000; //canvas
@@ -36,21 +36,9 @@ var plateau = new Plateau(cWidth, cHeight, cUrl, ctx);
 var canvas = drawCanvas();
 var ctx = canvas.getContext('2d');
 
-//event listeners
-window.addEventListener('keydown', function (e) {
-    ctx.key = e.keyCode;
-    hero.updateMove(ctx);
-    // this.console.log("keydown detected: " + e.keyCode)
-})
-window.addEventListener('keyup', function (e) {
-    ctx.key = false;
-})
-
-
 //body
 plateau.drawBg("board"); //set bg in css to avoid layering problems
 hero.draw(ctx, hero.x, hero.y);
-
 
 //functions
 //create canvas object
@@ -64,7 +52,4 @@ function drawCanvas() {
     return canvas2;
 }
 
-//check win condition/score
-function winCondition() {
 
-}

@@ -1,11 +1,9 @@
-
 export class Object {
     constructor(width, height, url) {
         this.width = width;
         this.height = height;
         this.url = url;
     }
-
 
     draw(ctx, x, y) {
         // console.log("drawing image: " + " on " + ctx);

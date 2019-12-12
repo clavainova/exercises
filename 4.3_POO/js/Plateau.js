@@ -10,11 +10,11 @@ export class Plateau {
         return this[index];
     }
 
-    refresh(ctx){
+    refresh(ctx) {
         ctx.clearRect(0, 0, this.width, this.height);
     }
 
-    drawBg(str) { //use image so always behind
+    drawBg(str) {
         // let img = new Image;
         // img.src = this.url;
         // img.onload = function () {
@@ -22,9 +22,6 @@ export class Plateau {
         //     ctx.drawImage(img, 0, 0, this.width, this.height);
         // }
         document.getElementById(str).style.background = ("url('" + this.url + "')");
-    }
-
-    clear() {
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        //use image so always behind
     }
 }
