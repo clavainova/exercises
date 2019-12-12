@@ -15,6 +15,7 @@ const loseUrl = "img/you-lose.gif";
 //dimensions
 const heroHeight = 32; //hero
 const heroWidth = 32;
+const heroSpeed = 10;
 const monstHeight = 32; //monstre
 const monstWidth = 30;
 const cWidth = 1000; //canvas
@@ -27,7 +28,7 @@ var score;
 var highScore;
 
 //objects
-var hero = new Hero(0, 0, heroWidth, heroHeight, heroUrl, 10, 10); //(width, height, x, y, url, speedX, speedY)
+var hero = new Hero(0, 0, heroWidth, heroHeight, heroUrl, 0, 0, heroSpeed);
 var monster = new Monstre(monstWidth, monstHeight, monstUrl);
 var plateau = new Plateau(cWidth, cHeight, cUrl, ctx);
 

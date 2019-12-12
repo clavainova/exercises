@@ -5,34 +5,33 @@ import { Humanoid } from "./Humanoide.js";
 //methods inherited from object:    draw(), despawn()
 //methods inherited from humanoid:  ---
 
+//request animation frame
+
 export class Hero extends Humanoid {
-    constructor(x, y, width, height, url, speedX, speedY, speedCoefficient) {
+    constructor(x, y, width, height, url, rateX, rateY, speed) {
         super(x, y, width, height, url);
-        this.speedX = speedX;
-        this.speedY = speedY;
+        this.rateX = rateX;
+        this.rateY = rateY;
+        this.speed = speed;
     }
 
+    //check if it leaves the canvas
     updateMove(ctx) {
-        this.speedX = 0;
-        this.speedY = 0;
-        if (ctx.key && ctx.key == 37) {
-            this.speedX = -10;
-        }
-        if (ctx.key && ctx.key == 39) {
-            this.speedX = 10;
-        }
-        if (ctx.key && ctx.key == 38) {
-            this.speedY = -10;
-        }
-        if (ctx.key && ctx.key == 40) {
-            this.speedY = 10;
+        this.rateX = 0;
+        this.rateY = 0;
+        switch (ctx.key) {
+            case (37): this.rateX -= this.speed; break; //left
+            case (39): this.rateX += this.speed; break; //right
+            case (38): this.rateY -= this.speed; break; //up
+            case (40): this.rateY += this.speed; break; //down
         }
         this.move(ctx);
     }
 
     move(ctx) {
-        this.x += this.speedX;
-        this.y += this.speedY;
+        this.despawn(this.x, this.y, ctx);
+        this.x += this.rateX;
+        this.y += this.rateY;
         this.draw(ctx, this.x, this.y);
     }
 }

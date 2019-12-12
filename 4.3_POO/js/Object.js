@@ -17,8 +17,8 @@ export class Object {
         }
     }
 
-    despawn(ctx, x, y) {
-
+    despawn(x, y, ctx) {
+        ctx.clearRect(x, y, this.width, this.height);
     }
 
 }
