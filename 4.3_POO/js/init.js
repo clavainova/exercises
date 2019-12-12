@@ -3,11 +3,13 @@ import { Monstre } from "./Monstre.js";
 import { Plateau } from "./Plateau.js";
 import { Bomb } from "./Bombe.js";
 import { List } from "./List.js";
+//"object" is imported in heros, monstre & bombes
 "use strict";
 
 //******************** -- to do -- *********************//
 
 //increments/frames - request animation frame?? need to end lag and make smoother
+//                  - use grid like example? 32x32px?
 //array of positions - to prevent overlap
 //                   - also for collision detection
 //actually do something with plateau object?? position array history in there?
@@ -25,23 +27,20 @@ const heroUrl = "img/hero.png";
 const monstUrl = "img/monster.png";
 const bombUrl = "img/pixel-bomb-bombe-explosion.png";
 const explUrl = "img/ground-explode.gif";
-const loseUrl = "img/you-lose.gif";
-//morally refuse to use this ugly text, 
-//find something less likely to cause an epileptic seizure
-
+const loseUrl = "img/you-lose.gif"; //need alternative 
 //dimensions
-//bomb
+// >bomb
 const bombNum = 10;
 const bombWidth = 32;
 const bombHeight = 32;
-//hero
+// >hero
 const heroHeight = 32;
 const heroWidth = 32;
 const heroSpeed = 10;
-//monstre
+// >monstre
 const monstHeight = 32;
 const monstWidth = 30;
-//canvas
+// >canvas
 const cWidth = 1000;
 const cHeight = 800;
 //time + score
@@ -88,6 +87,7 @@ function drawCanvas() {
 
 //place items - initiate position
 function initPos() {
+    "use strict";
     bombeList.placeItems((cWidth - bombWidth), (cHeight - bombHeight)); //place bombs
     monstre.place((cWidth - monstWidth), (cHeight - monstHeight)); //place monstre
     hero.place((cWidth - heroWidth), (cHeight - heroHeight)); //place hero
@@ -127,4 +127,3 @@ function keysReleased(event) {
     "use strict";
     keys[event.keyCode] = false;
 }
-
