@@ -70,12 +70,9 @@ plateau.drawBg("board"); //set bg in css to avoid layering problems
 //******************** -- body -- ***********************//
 
 //body
-hero.draw(ctx, hero.x, hero.y);
-bombeList.placeBombs((cWidth - 32), (cHeight - 32), ctx); //place bombs
-monstreList.placeBombs((cWidth - 32), (cHeight - 32), ctx); //place monstre
-console.log("before: " + bombeList.get(1));
-bombeList.remove("1");
-console.log("after: " + bombeList.get(1));
+hero.draw(ctx, hero.x, hero.y); //draw hero in starting position
+bombeList.placeItems((cWidth - 32), (cHeight - 32), ctx); //place bombs
+monstreList.placeItems((cWidth - 32), (cHeight - 32), ctx); //place monstre
 
 //******************** -- canvas -- *********************//
 

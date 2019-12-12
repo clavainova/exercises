@@ -9,6 +9,6 @@ export class Monstre extends Bomb {
     }
 
     slain(){
-        
+        this.despawn();
     }
 }

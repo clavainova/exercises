@@ -11,14 +11,14 @@ export class List {
         return this.list[index];
     }
 
-    remove(value) {
+    delete(elem) {
         this.list = this.list.filter(function (elem) {
-            return elem != value;
+            return elem != elem;
         });
         // splice -- alternatif
     }
 
-    placeBombs(maxX, maxY, ctx) {
+    placeItems(maxX, maxY, ctx) {
         this.list.forEach(element => {
             let x = randomNum(maxX, 0);
             let y = randomNum(maxY, 0);

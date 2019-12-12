@@ -11,20 +11,14 @@ export class Object {
         let img = new Image();
         img.src = this.url;
         img.onload = function () {
-            //avoid going out of bounds, problem with clear not working here
-            if (x > xmax) {
-                x = xmax;
-            }
-            else if (x <= 0) {
-                x = 0;
-            }
-            if (y > ymax) {
-                y = ymax;
-            }
-            else if (y <= 0) {
-                y = 0;
-            }
-            if (this.width = 178) { 
+            //avoid going out of bounds, 
+            //problem with clear not working here
+            //here for safety
+            if (x > xmax) { x = xmax; }
+            else if (x <= 0) { x = 0; }
+            if (y > ymax) { y = ymax; }
+            else if (y <= 0) { y = 0; }
+            if (this.width == 178) {
                 //catch bizarre glitch where bomb size incorrectly passed
                 ctx.drawImage(img, x, y, 32, 32);
             }
@@ -38,7 +32,7 @@ export class Object {
         ctx.clearRect(x, y, this.width, this.height);
     }
 
-    move(){
-        
+    move() {
+
     }
 }
