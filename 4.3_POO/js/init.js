@@ -4,7 +4,6 @@ import { Plateau } from "./Plateau.js";
 import { Bomb } from "./Bombe.js";
 import { BombList } from "./BombeList.js";
 
-
 "use strict";
 
 //urls
@@ -16,15 +15,19 @@ const explUrl = "img/ground-explode.gif";
 const loseUrl = "img/you-lose.gif";
 
 //dimensions
-const bombNum = 10;
+//bomb
+const bombNum = 10; 
 const bombWidth = 32;
 const bombHeight = 32;
-const heroHeight = 32; //hero
+//hero
+const heroHeight = 32; 
 const heroWidth = 32;
 const heroSpeed = 10;
-const monstHeight = 32; //monstre
+//monstre
+const monstHeight = 32; 
 const monstWidth = 30;
-const cWidth = 1000; //canvas
+//canvas
+const cWidth = 1000; 
 const cHeight = 800;
 
 //time + score
@@ -41,15 +44,28 @@ var hero = new Hero(0, 0, heroWidth, heroHeight, heroUrl, 0, 0, heroSpeed);
 var monster = new Monstre(monstWidth, monstHeight, monstUrl);
 var plateau = new Plateau(cWidth, cHeight, cUrl, ctx);
 
+//*****************************************************//
+
+//initialize bomb array
+let arr = [];
+var bombeList = new BombList(arr);
+for (let i = 0; i < bombNum; i++) {
+    var bombe = new Bomb(bombWidth, bombHeight, bombUrl);
+    bombeList.push(bombe);
+}
+
 //draw canvas
 var canvas = drawCanvas();
 var ctx = canvas.getContext('2d');
+plateau.drawBg("board"); //set bg in css to avoid layering problems
+
+//*****************************************************//
 
 //body
-plateau.drawBg("board"); //set bg in css to avoid layering problems
 hero.draw(ctx, hero.x, hero.y);
 
-//functions
+//*****************************************************//
+
 //create canvas object
 function drawCanvas() {
     let canvas2 = document.createElement('canvas');
@@ -61,13 +77,7 @@ function drawCanvas() {
     return canvas2;
 }
 
-//initialize bomb array
-let arr = [];
-var bombeList = new BombList(arr);
-for (let i = 0; i < bombNum; i++) {
-    var bombe = new Bomb(bombWidth, bombHeight, bombUrl);
-    bombeList.push(bombe);
-}
+//*****************************************************//
 
 //event listeners -- controls
 window.addEventListener('keydown', keysPressed, false);
