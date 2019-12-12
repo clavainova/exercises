@@ -15,6 +15,7 @@ import { List } from "./List.js";
 //explosions/animations
 //timer
 //score
+//sounds
 
 //******************** -- variables and constants -- *********************//
 
@@ -54,23 +55,23 @@ var keys = [];
 var hero = new Hero(0, 0, heroWidth, heroHeight, heroUrl, 0, 0, heroSpeed);
 var monstre = new Monstre(monstWidth, monstHeight, monstUrl);
 var bombeList = new List([]);
+var plateau = new Plateau(cWidth, cHeight, cUrl);
+
+//******************** -- body -- ***********************//
+
 //initialize bomb array
 for (let i = 0; i < bombNum; i++) {
     let bombe = new Bomb(bombWidth, bombHeight, bombUrl, i);
     bombeList.push(bombe);
 }
-//draw canvas
+
+//draw board
 var canvas = drawCanvas();
-window.ctx = canvas.getContext('2d');
-var plateau = new Plateau(cWidth, cHeight, cUrl, window.ctx);
+window.ctx = canvas.getContext('2d'); //global because pretty much everything needs to access it
 plateau.drawBg("board"); //set bg in css to avoid layering problems
 
-//******************** -- body -- ***********************//
-
 //place items
-bombeList.placeItems((cWidth - bombWidth), (cHeight - bombHeight)); //place bombs
-monstre.place((cWidth - monstWidth), (cHeight - monstHeight)); //place monstre
-hero.place((cWidth - heroWidth), (cHeight - heroHeight)); //place hero
+initPos();
 
 //******************** -- functions -- *********************//
 
@@ -81,9 +82,15 @@ function drawCanvas() {
     canvas2.setAttribute("id", "board");
     canvas2.width = cWidth;
     canvas2.height = cHeight;
-
     document.body.appendChild(canvas2);
     return canvas2;
+}
+
+//place items - initiate position
+function initPos() {
+    bombeList.placeItems((cWidth - bombWidth), (cHeight - bombHeight)); //place bombs
+    monstre.place((cWidth - monstWidth), (cHeight - monstHeight)); //place monstre
+    hero.place((cWidth - heroWidth), (cHeight - heroHeight)); //place hero
 }
 
 //******************** -- controls -- *********************//

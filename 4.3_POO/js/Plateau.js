@@ -1,11 +1,10 @@
 export class Plateau {
     "use strict";
 
-    constructor(width, height, url, ctx) {
+    constructor(width, height, url) {
         this.width = width;
         this.height = height;
         this.url = url;
-        this.ctx = ctx;
     }
 
     getProp(index) {
@@ -13,7 +12,7 @@ export class Plateau {
     }
 
     refresh() {
-        this.ctx.clearRect(0, 0, this.width, this.height);
+        window.ctx.clearRect(0, 0, this.width, this.height);
     }
 
     drawBg(str) {
