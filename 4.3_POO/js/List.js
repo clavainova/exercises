@@ -21,9 +21,9 @@ export class List {
     }
 
     //places every object in the array -- useful for doing all bombs at once
-    placeItems(maxX, maxY, ctx) {
+    placeItems(maxX, maxY) {
         this.list.forEach(element => {
-            element.place(maxX, maxY, ctx);
+            element.place(maxX, maxY, window.ctx);
         });
     }
 }

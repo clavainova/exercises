@@ -15,10 +15,10 @@ export class Hero extends Object {
         this.speed = speed;
     }
 
-    move(ctx) {
-        this.despawn(this.x, this.y, ctx);
+    move() {
+        this.despawn(this.x, this.y);
         this.x += this.rateX;
         this.y += this.rateY;
-        this.draw(ctx, this.x, this.y);
+        this.draw(this.x, this.y);
     }
 }

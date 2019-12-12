@@ -61,16 +61,16 @@ for (let i = 0; i < bombNum; i++) {
 }
 //draw canvas
 var canvas = drawCanvas();
-var ctx = canvas.getContext('2d');
-var plateau = new Plateau(cWidth, cHeight, cUrl, ctx);
+window.ctx = canvas.getContext('2d');
+var plateau = new Plateau(cWidth, cHeight, cUrl, window.ctx);
 plateau.drawBg("board"); //set bg in css to avoid layering problems
 
 //******************** -- body -- ***********************//
 
 //place items
-bombeList.placeItems((cWidth - bombWidth), (cHeight - bombHeight), ctx); //place bombs
-monstre.place((cWidth - monstWidth), (cHeight - monstHeight), ctx); //place monstre
-hero.place((cWidth - heroWidth), (cHeight - heroHeight), ctx); //place hero
+bombeList.placeItems((cWidth - bombWidth), (cHeight - bombHeight)); //place bombs
+monstre.place((cWidth - monstWidth), (cHeight - monstHeight)); //place monstre
+hero.place((cWidth - heroWidth), (cHeight - heroHeight)); //place hero
 
 //******************** -- functions -- *********************//
 
@@ -110,8 +110,8 @@ function keysPressed(event) {
     }
     event.preventDefault();
     // console.log("rate x: " + hero.rateX + " rate y: " + hero.rateY + " x: " + hero.x + " y: " + hero.y);
-    hero.despawn(hero.x, hero.y, ctx);
-    hero.draw(ctx, (hero.x += hero.rateX), (hero.y += hero.rateY), (cWidth - hero.width), (cHeight - hero.height));
+    hero.despawn(hero.x, hero.y);
+    hero.draw((hero.x += hero.rateX), (hero.y += hero.rateY), (cWidth - hero.width), (cHeight - hero.height));
     hero.rateX = 0;    //annul previous momentum so speed doesn't keep building
     hero.rateY = 0;
 }
