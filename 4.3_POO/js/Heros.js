@@ -1,16 +1,16 @@
-import { Humanoid } from "./Humanoide.js";
+import { Object } from "./Object.js";
 
 //props inherited from object:      url, width, height
-//props inherited from humanoid:    x, y
 //methods inherited from object:    draw(), despawn()
-//methods inherited from humanoid:  ---
 
 //request animation frame
 
-export class Hero extends Humanoid {
+export class Hero extends Object {
     "use strict";
     constructor(x, y, width, height, url, rateX, rateY, speed) {
-        super(x, y, width, height, url);
+        super(width, height, url);
+        this.x = x;
+        this.y = y;
         this.rateX = rateX;
         this.rateY = rateY;
         this.speed = speed;

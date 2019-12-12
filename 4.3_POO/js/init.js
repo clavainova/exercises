@@ -2,9 +2,11 @@ import { Hero } from "./Heros.js";
 import { Monstre } from "./Monstre.js";
 import { Plateau } from "./Plateau.js";
 import { Bomb } from "./Bombe.js";
-import { BombList } from "./BombeList.js";
+import { List } from "./List.js";
 
 "use strict";
+
+//******************** -- variables and constants -- *********************//
 
 //urls
 const cUrl = "img/background.jpg";
@@ -16,18 +18,18 @@ const loseUrl = "img/you-lose.gif";
 
 //dimensions
 //bomb
-const bombNum = 10; 
+const bombNum = 10;
 const bombWidth = 32;
 const bombHeight = 32;
 //hero
-const heroHeight = 32; 
+const heroHeight = 32;
 const heroWidth = 32;
 const heroSpeed = 10;
 //monstre
-const monstHeight = 32; 
+const monstHeight = 32;
 const monstWidth = 30;
 //canvas
-const cWidth = 1000; 
+const cWidth = 1000;
 const cHeight = 800;
 
 //time + score
@@ -44,27 +46,38 @@ var hero = new Hero(0, 0, heroWidth, heroHeight, heroUrl, 0, 0, heroSpeed);
 var monster = new Monstre(monstWidth, monstHeight, monstUrl);
 var plateau = new Plateau(cWidth, cHeight, cUrl, ctx);
 
-//*****************************************************//
+//******************** -- initialize array and canvas -- *********************//
 
 //initialize bomb array
 let arr = [];
-var bombeList = new BombList(arr);
+var bombeList = new List(arr);
 for (let i = 0; i < bombNum; i++) {
-    var bombe = new Bomb(bombWidth, bombHeight, bombUrl);
+    let bombe = new Bomb(bombWidth, bombHeight, bombUrl, i);
     bombeList.push(bombe);
 }
+
+//initalize monstre position
+let arr2 = [];
+var monstreList = new List(arr2);
+let monstre = new Monstre(monstWidth, monstHeight, monstUrl);
+monstreList.push(monstre);
 
 //draw canvas
 var canvas = drawCanvas();
 var ctx = canvas.getContext('2d');
 plateau.drawBg("board"); //set bg in css to avoid layering problems
 
-//*****************************************************//
+//******************** -- body -- ***********************//
 
 //body
 hero.draw(ctx, hero.x, hero.y);
+bombeList.placeBombs((cWidth - 32), (cHeight - 32), ctx); //place bombs
+monstreList.placeBombs((cWidth - 32), (cHeight - 32), ctx); //place monstre
+console.log("before: " + bombeList.get(1));
+bombeList.remove("1");
+console.log("after: " + bombeList.get(1));
 
-//*****************************************************//
+//******************** -- canvas -- *********************//
 
 //create canvas object
 function drawCanvas() {
@@ -77,7 +90,7 @@ function drawCanvas() {
     return canvas2;
 }
 
-//*****************************************************//
+//******************** -- controls -- *********************//
 
 //event listeners -- controls
 window.addEventListener('keydown', keysPressed, false);

@@ -4,22 +4,10 @@ import { Object } from "./Object.js";
 //methods inherited from object:    draw(), despawn()
 
 export class Bomb extends Object {
-    constructor() {
-        super();
+    constructor(width, height, url, id) {
+        super(width, height, url);
+        this.id = id;
     }
-    explode() {
-
-    }
-
-    spawn() {
-        let bombs = [];
-        //<> = cWidth, 0
-        //^v = cheight, 0
-    }
-}
-
-function randomNum(max, min) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 //detect collision

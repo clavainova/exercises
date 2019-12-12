@@ -21,15 +21,20 @@ export class Object {
             if (y > ymax) {
                 y = ymax;
             }
-            else if (y <= 0){
+            else if (y <= 0) {
                 y = 0;
             }
-            ctx.drawImage(img, x, y, this.width, this.height);
+            if (this.width = 178) { 
+                //catch bizarre glitch where bomb size incorrectly passed
+                ctx.drawImage(img, x, y, 32, 32);
+            }
+            else {
+                ctx.drawImage(img, x, y, this.width, this.height);
+            }
         }
     }
 
     despawn(x, y, ctx) {
         ctx.clearRect(x, y, this.width, this.height);
     }
-
 }
