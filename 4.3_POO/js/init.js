@@ -3,8 +3,14 @@ import { Monstre } from "./Monstre.js";
 import { Plateau } from "./Plateau.js";
 import { Bomb } from "./Bombe.js";
 import { List } from "./List.js";
-
 "use strict";
+
+//******************** -- to do -- *********************//
+//increments/frames - request animation frame??
+//collision detection
+//spawn position - array of previous positions to prevent overlap
+//fix hero control
+//actually do something with plateau object like idk the plateau things
 
 //******************** -- variables and constants -- *********************//
 
@@ -14,7 +20,8 @@ const heroUrl = "img/hero.png";
 const monstUrl = "img/monster.png";
 const bombUrl = "img/pixel-bomb-bombe-explosion.png";
 const explUrl = "img/ground-explode.gif";
-const loseUrl = "img/you-lose.gif"; //morally refuse to use this ugly text, 
+const loseUrl = "img/you-lose.gif"; 
+//morally refuse to use this ugly text, 
 //find something less likely to cause an epileptic seizure
 
 //dimensions
@@ -32,7 +39,6 @@ const monstWidth = 30;
 //canvas
 const cWidth = 1000;
 const cHeight = 800;
-
 //time + score
 const timeLimit = 15;
 var countdown;
@@ -73,6 +79,7 @@ hero.place((cWidth - 32), (cHeight - 32), ctx); //place hero
 
 //create canvas object
 function drawCanvas() {
+    "use strict";
     let canvas2 = document.createElement('canvas');
     canvas2.setAttribute("id", "board");
     canvas2.width = cWidth;
@@ -89,6 +96,7 @@ window.addEventListener('keydown', keysPressed, false);
 window.addEventListener('keyup', keysReleased, false);
 
 function keysPressed(event) {
+    "use strict";
     //movement very shaky rn, bad fps, bad turning
     keys[event.keyCode] = true;
     if (keys[37]) {
@@ -112,6 +120,7 @@ function keysPressed(event) {
 }
 
 function keysReleased(event) {
+    "use strict";
     keys[event.keyCode] = false;
 }
 

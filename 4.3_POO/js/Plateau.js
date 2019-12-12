@@ -1,4 +1,6 @@
 export class Plateau {
+    "use strict";
+
     constructor(width, height, url, ctx) {
         this.width = width;
         this.height = height;

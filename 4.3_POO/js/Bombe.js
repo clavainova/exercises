@@ -4,6 +4,8 @@ import { Object } from "./Object.js";
 //methods inherited from object:    draw(), despawn(), place()
 
 export class Bomb extends Object {
+    "use strict";
+
     constructor(width, height, url, id) {
         super(width, height, url);
         this.id = id;
@@ -13,7 +15,3 @@ export class Bomb extends Object {
         this.despawn();
     }
 }
-
-//detect collision
-
-//spawn position - array of previous positions to prevent overlap

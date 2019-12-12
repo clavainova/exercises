@@ -1,4 +1,6 @@
 export class Object {
+    "use strict";
+
     constructor(width, height, url) {
         this.width = width;
         this.height = height;
@@ -35,7 +37,15 @@ export class Object {
         //delete an object in the place and of the width of the object specified
         //x and y passed in instead of properties because they are defined later on
         //and frequently changed
-        ctx.clearRect(x, y, this.width, this.height);
+
+        //need this to be slightly bigger than obj rn, might cause problems later
+        //alternative: ctx.clearRect(x, y, this.width, this.height);
+        x -= 20;
+        y -= 20;
+        let width = this.width + 20;
+        let height = this.height + 20;
+
+        ctx.clearRect(x, y, width, height);
     }
 
     //randomly place everything at the beginning or end of the round

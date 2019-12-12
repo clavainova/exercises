@@ -1,4 +1,6 @@
 export class List {
+    "use strict";
+
     constructor(list) {
         this.list = list;
     }
@@ -28,6 +30,3 @@ export class List {
 
 
 
-//detect collision
-
-//spawn position - array of previous positions to prevent overlap

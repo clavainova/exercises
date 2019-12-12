@@ -3,7 +3,6 @@ import { Object } from "./Object.js";
 //props inherited from object:      width, height, url
 //methods inherited from object:    draw(), despawn(), place()
 
-//request animation frame
 
 export class Hero extends Object {
     "use strict";
