@@ -15,7 +15,7 @@ const loseUrl = "img/you-lose.gif";
 //dimensions
 const heroHeight = 32; //hero
 const heroWidth = 32;
-const heroSpeed = 1;
+const heroSpeed = 10;
 const monstHeight = 32; //monstre
 const monstWidth = 30;
 const cWidth = 1000; //canvas
@@ -26,6 +26,9 @@ const timeLimit = 15;
 var countdown;
 var score;
 var highScore;
+
+//controls
+var keys = [];
 
 //objects
 var hero = new Hero(0, 0, heroWidth, heroHeight, heroUrl, 0, 0, heroSpeed);
@@ -52,4 +55,34 @@ function drawCanvas() {
     return canvas2;
 }
 
+//event listeners -- controls
+window.addEventListener('keydown', keysPressed, false);
+window.addEventListener('keyup', keysReleased, false);
 
+function keysPressed(event) {
+    //movement very shaky rn, bad fps, bad turning
+    keys[event.keyCode] = true;
+    if (keys[37]) {
+        hero.rateX -= hero.speed;
+    }
+    if (keys[39]) {
+        hero.rateX += hero.speed;
+    }
+    if (keys[38]) {
+        hero.rateY -= hero.speed;
+    }
+    if (keys[40]) {
+        hero.rateY += hero.speed;
+    }
+    event.preventDefault();
+    // console.log("rate x: " + hero.rateX + " rate y: " + hero.rateY + " x: " + hero.x + " y: " + hero.y);
+    hero.despawn(hero.x, hero.y, ctx);
+    hero.draw(ctx, (hero.x += hero.rateX), (hero.y += hero.rateY));
+    hero.rateX = 0;    //annul previous momentum so speed doesn't keep building
+    hero.rateY = 0;
+}
+
+function keysReleased(event) {
+    keys[event.keyCode] = false;
+
+}
