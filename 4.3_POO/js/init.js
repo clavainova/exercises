@@ -6,11 +6,15 @@ import { List } from "./List.js";
 "use strict";
 
 //******************** -- to do -- *********************//
-//increments/frames - request animation frame??
-//collision detection
-//spawn position - array of previous positions to prevent overlap
-//fix hero control
-//actually do something with plateau object like idk the plateau things
+
+//increments/frames - request animation frame?? need to end lag and make smoother
+//array of positions - to prevent overlap
+//                   - also for collision detection
+//actually do something with plateau object?? position array history in there?
+//                                                (rn it offers no utility)
+//explosions/animations
+//timer
+//score
 
 //******************** -- variables and constants -- *********************//
 
@@ -20,7 +24,7 @@ const heroUrl = "img/hero.png";
 const monstUrl = "img/monster.png";
 const bombUrl = "img/pixel-bomb-bombe-explosion.png";
 const explUrl = "img/ground-explode.gif";
-const loseUrl = "img/you-lose.gif"; 
+const loseUrl = "img/you-lose.gif";
 //morally refuse to use this ugly text, 
 //find something less likely to cause an epileptic seizure
 
@@ -44,38 +48,31 @@ const timeLimit = 15;
 var countdown;
 var score;
 var highScore;
-
 //controls
 var keys = [];
-
 //objects
 var hero = new Hero(0, 0, heroWidth, heroHeight, heroUrl, 0, 0, heroSpeed);
 var monstre = new Monstre(monstWidth, monstHeight, monstUrl);
-var plateau = new Plateau(cWidth, cHeight, cUrl, ctx);
-
-//******************** -- initialize array and canvas -- *********************//
-
+var bombeList = new List([]);
 //initialize bomb array
-let arr = [];
-var bombeList = new List(arr);
 for (let i = 0; i < bombNum; i++) {
     let bombe = new Bomb(bombWidth, bombHeight, bombUrl, i);
     bombeList.push(bombe);
 }
-
 //draw canvas
 var canvas = drawCanvas();
 var ctx = canvas.getContext('2d');
+var plateau = new Plateau(cWidth, cHeight, cUrl, ctx);
 plateau.drawBg("board"); //set bg in css to avoid layering problems
 
 //******************** -- body -- ***********************//
 
-//body
-bombeList.placeItems((cWidth - 32), (cHeight - 32), ctx); //place bombs
-monstre.place((cWidth - 32), (cHeight - 32), ctx); //place monstre
-hero.place((cWidth - 32), (cHeight - 32), ctx); //place hero
+//place items
+bombeList.placeItems((cWidth - bombWidth), (cHeight - bombHeight), ctx); //place bombs
+monstre.place((cWidth - monstWidth), (cHeight - monstHeight), ctx); //place monstre
+hero.place((cWidth - heroWidth), (cHeight - heroHeight), ctx); //place hero
 
-//******************** -- canvas -- *********************//
+//******************** -- functions -- *********************//
 
 //create canvas object
 function drawCanvas() {

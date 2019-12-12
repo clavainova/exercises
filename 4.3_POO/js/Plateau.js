@@ -12,8 +12,8 @@ export class Plateau {
         return this[index];
     }
 
-    refresh(ctx) {
-        ctx.clearRect(0, 0, this.width, this.height);
+    refresh() {
+        this.ctx.clearRect(0, 0, this.width, this.height);
     }
 
     drawBg(str) {
