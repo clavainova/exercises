@@ -6,21 +6,28 @@ import { List } from "./List.js";
 //"object" is imported in heros, monstre & bombes
 "use strict";
 
+//                    *************
 //******************** -- to do -- *********************//
+//                    *************
 
-//increments/frames - request animation frame?? need to end lag and make smoother
-//                  - use grid like example? 32x32px?
+//increments/frames  - request animation frame?? need to end lag and make smoother
+//                   - use grid like example? 32x32px?
+//                   - 8 possible moves, use moveTo()
 //array of positions - to prevent overlap
 //                   - also for collision detection
 //actually do something with plateau object?? position array history in there?
-//                                                (rn it offers no utility)
-//explosions/animations
+//                   - rn it offers no utility
+//animations
+//                   -explosion
+//                   -you lose
 //timer
 //score
 //sounds
 
-//******************** -- variables and constants -- *********************//
 
+//                    *******************************
+//******************** -- variables and constants -- *********************//
+//                    *******************************
 //urls
 const cUrl = "img/background.jpg";
 const heroUrl = "img/hero.png";
@@ -55,6 +62,8 @@ var hero = new Hero(0, 0, heroWidth, heroHeight, heroUrl, 0, 0, heroSpeed);
 var monstre = new Monstre(monstWidth, monstHeight, monstUrl);
 var bombeList = new List([]);
 var plateau = new Plateau(cWidth, cHeight, cUrl);
+//coords array
+var coords = [];
 
 //******************** -- body -- ***********************//
 
@@ -101,7 +110,6 @@ window.addEventListener('keyup', keysReleased, false);
 
 function keysPressed(event) {
     "use strict";
-    //movement very shaky rn, bad fps, bad turning
     keys[event.keyCode] = true;
     if (keys[37]) {
         hero.rateX -= hero.speed;
@@ -118,7 +126,12 @@ function keysPressed(event) {
     event.preventDefault();
     // console.log("rate x: " + hero.rateX + " rate y: " + hero.rateY + " x: " + hero.x + " y: " + hero.y);
     hero.despawn(hero.x, hero.y);
-    hero.draw((hero.x += hero.rateX), (hero.y += hero.rateY), (cWidth - hero.width), (cHeight - hero.height));
+    //check if out of bounds
+            if (hero.x > (cWidth - hero.width)) { hero.x = (cWidth - hero.width); }
+            else if (hero.x <= 0) { hero.x = 0; }
+            if (hero.y > (cHeight - hero.height)) { hero.y = (cHeight - hero.height); }
+            else if (hero.y <= 0) { hero.y = 0; }
+    hero.draw((hero.x += hero.rateX), (hero.y += hero.rateY));
     hero.rateX = 0;    //annul previous momentum so speed doesn't keep building
     hero.rateY = 0;
 }

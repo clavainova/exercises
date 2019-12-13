@@ -21,4 +21,8 @@ export class Hero extends Object {
         this.y += this.rateY;
         this.draw(this.x, this.y);
     }
+
+    get coords(){
+        
+    }
 }

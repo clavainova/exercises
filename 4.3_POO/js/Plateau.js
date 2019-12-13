@@ -13,7 +13,7 @@ export class Plateau {
 
     refresh() {
         window.ctx.clearRect(0, 0, this.width, this.height);
-    }
+    } 
 
     drawBg(str) {
         // let img = new Image;

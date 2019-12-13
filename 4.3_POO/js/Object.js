@@ -8,19 +8,12 @@ export class Object {
     }
 
     //draw the object
-    draw(x, y, xmax, ymax) {
+    draw(x, y) {
         // console.log("drawing image: " + " on " + ctx);
         // console.log("x: " + x + " y: " + y + " width: " + this.width + " height: " + this.height);
         let img = new Image();
         img.src = this.url;
         img.onload = function () {
-            //avoid going out of bounds, 
-            //problem with clear not working here
-            //here for safety
-            if (x > xmax) { x = xmax; }
-            else if (x <= 0) { x = 0; }
-            if (y > ymax) { y = ymax; }
-            else if (y <= 0) { y = 0; }
             //catch bizarre glitch where bomb size incorrectly passed
             if (this.width == 178) {
                 window.ctx.drawImage(img, x, y, 32, 32);
