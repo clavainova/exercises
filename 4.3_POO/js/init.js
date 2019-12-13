@@ -62,7 +62,7 @@ var hero = new Hero(0, 0, heroWidth, heroHeight, heroUrl, 0, 0, heroSpeed);
 var monstre = new Monstre(monstWidth, monstHeight, monstUrl);
 var bombeList = new List([]);
 var plateau = new Plateau(cWidth, cHeight, cUrl);
-//coords array
+//coords array -- not yet implemented
 var coords = [];
 
 //******************** -- body -- ***********************//
@@ -127,10 +127,19 @@ function keysPressed(event) {
     // console.log("rate x: " + hero.rateX + " rate y: " + hero.rateY + " x: " + hero.x + " y: " + hero.y);
     hero.despawn(hero.x, hero.y);
     //check if out of bounds
-            if (hero.x > (cWidth - hero.width)) { hero.x = (cWidth - hero.width); }
-            else if (hero.x <= 0) { hero.x = 0; }
-            if (hero.y > (cHeight - hero.height)) { hero.y = (cHeight - hero.height); }
-            else if (hero.y <= 0) { hero.y = 0; }
+    if (hero.x > (cWidth - hero.width)) {
+        hero.x = (cWidth - hero.width);
+    }
+    else if (hero.x <= 0) {
+        hero.x = 0;
+    }
+    if (hero.y > (cHeight - hero.height)) {
+        hero.y = (cHeight - hero.height);
+    }
+    else if (hero.y <= 0) {
+        hero.y = 0;
+    }
+    //actually move it
     hero.draw((hero.x += hero.rateX), (hero.y += hero.rateY));
     hero.rateX = 0;    //annul previous momentum so speed doesn't keep building
     hero.rateY = 0;

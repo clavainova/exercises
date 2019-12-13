@@ -13,9 +13,9 @@ export class List {
         return this.list[index];
     }
 
-    delete(elem) {
+    delete(thisElem) {
         this.list = this.list.filter(function (elem) {
-            return elem != elem;
+            return elem != thisElem;
         });
         // splice -- alternatif
     }
