@@ -62,7 +62,7 @@ var highScore;
 var keys = [];
 //objects
 var hero = new Hero(0, 0, heroWidth, heroHeight, heroUrl, 0, 0, heroSpeed);
-var monstre = new Monstre(monstWidth, monstHeight, monstUrl);
+var monstre = new Monstre(monstWidth, monstHeight, monstUrl, 0, 0);
 var bombeList = new List([]);
 var plateau = new Plateau(cWidth, cHeight, cUrl);
 
@@ -70,7 +70,7 @@ var plateau = new Plateau(cWidth, cHeight, cUrl);
 
 //initialize bomb array
 for (let i = 0; i < bombNum; i++) {
-    let bombe = new Bomb(bombWidth, bombHeight, bombUrl, i);
+    let bombe = new Bomb(bombWidth, bombHeight, bombUrl, i, 0, 0);
     bombeList.push(bombe);
 }
 
@@ -103,6 +103,30 @@ function initPos() {
     hero.place((cWidth - heroWidth), (cHeight - heroHeight)); //place hero
 }
 
+function collisionDetect() {
+    "use strict";
+    //if hero x and monstre x collide or hero y and monstre y collide
+    // console.log("hero monstre x differential: " + (hero.x - monstre.x));
+    // console.log("hero monstre y differential: " + (hero.y - monstre.y));
+    if ((((hero.x - monstre.x) < 32) && ((hero.x - monstre.x) > -32))
+        && (((hero.y - monstre.y) < 32) && ((hero.y - monstre.y) > -32))) {
+        monstre.despawn(); //despawn this monstre
+        monstre.place(cWidth, cHeight); //get a new monstre
+        score++; //increase score
+    }
+    for (let i = 0; i < bombNum; i++) {
+        //for each bomb, is it colliding with the player?
+        if ((((hero.x - bombeList.get(i).x) < 32) && ((hero.x - bombeList.get(i).x) > -32))
+            && (((hero.y - bombeList.get(i).y) < 32) && ((hero.y - bombeList.get(i).y) > -32))) {
+            //explode
+            //reset game
+            console.log("you lose");
+            break;
+        }
+    }
+
+}
+
 //******************** -- controls -- *********************//
 
 //event listeners -- controls
@@ -126,9 +150,10 @@ function keysPressed(event) {
     }
     event.preventDefault();
 
-    //actually move it
+    //update coords in preparation to move
     hero.updateCoords(cWidth, cHeight);
-    //collision detection
+    //collision detection would be here
+    collisionDetect();
     //move the hero
     hero.move();
 }

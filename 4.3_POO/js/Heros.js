@@ -6,16 +6,14 @@ import { Object } from "./Object.js";
 export class Hero extends Object {
     "use strict";
     constructor(x, y, width, height, url, rateX, rateY, speed) {
-        super(width, height, url);
-        this.x = x;
-        this.y = y;
+        super(width, height, url, x, y);
         this.rateX = rateX;
         this.rateY = rateY;
         this.speed = speed;
     }
 
     updateCoords(cWidth, cHeight) {
-        this.despawn(this.x, this.y); //despawn old hero
+        this.despawn(); //despawn old hero
         this.inBounds(cWidth, cHeight);  //check if out of bounds
         this.x += this.rateX; //add speed to coords
         this.y += this.rateY;

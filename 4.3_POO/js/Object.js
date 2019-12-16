@@ -1,10 +1,12 @@
 export class Object {
     "use strict";
 
-    constructor(width, height, url) {
+    constructor(width, height, url, x, y) {
         this.width = width;
         this.height = height;
         this.url = url;
+        this.x = x;
+        this.y = y;
     }
 
     //draw the object
@@ -26,15 +28,11 @@ export class Object {
     }
 
     //despawn the object
-    despawn(x, y) {
-        //delete an object in the place and of the width of the object specified
-        //x and y passed in instead of properties because they are defined later on
-        //and frequently changed
-
+    despawn() {
         //need this to be slightly bigger than obj rn, might cause problems later
         //alternative: ctx.clearRect(x, y, this.width, this.height);
-        x -= 20;
-        y -= 20;
+        let x = this.x-20;
+        let y = this.y-20;
         let width = this.width + 20;
         let height = this.height + 20;
 
@@ -43,17 +41,10 @@ export class Object {
 
     //randomly place everything at the beginning or end of the round
     place(maxX, maxY) {
-        let x = randomNum(maxX, 0);
-        let y = randomNum(maxY, 0);
+        this.x = randomNum(maxX, 0);
+        this.y = randomNum(maxY, 0);
         // console.log("drawing bomb at x: " + x + " y: " + y);
-        this.draw(x, y);
-        // console.log("element width: " + element.width);
-        try { //this block is only for the hero - the others don't have x and y properties
-            this.x = x;
-            this.y = y;
-        } catch (error) {
-            return;
-        }
+        this.draw(this.x, this.y);
     }
 }
 
