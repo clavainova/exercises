@@ -15,6 +15,9 @@ import { List } from "./List.js";
 //                   - 8 possible moves, use moveTo()
 //array of positions - to prevent overlap
 //                   - also for collision detection
+//                   - bomblist already has a list of coords for bombs
+//                   - need to distinguish one position from another
+//                   - 2D array for grid?
 //actually do something with plateau object?? position array history in there?
 //                   - rn it offers no utility
 //animations
@@ -62,8 +65,6 @@ var hero = new Hero(0, 0, heroWidth, heroHeight, heroUrl, 0, 0, heroSpeed);
 var monstre = new Monstre(monstWidth, monstHeight, monstUrl);
 var bombeList = new List([]);
 var plateau = new Plateau(cWidth, cHeight, cUrl);
-//coords array -- not yet implemented
-var coords = [];
 
 //******************** -- body -- ***********************//
 
