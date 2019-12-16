@@ -14,4 +14,8 @@ export class Bomb extends Object {
     explode(){
         this.despawn();
     }
+
+    animate(){
+        
+    }
 }

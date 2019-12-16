@@ -103,6 +103,7 @@ function initPos() {
     hero.place((cWidth - heroWidth), (cHeight - heroHeight)); //place hero
 }
 
+//detect collision on each player movement
 function collisionDetect() {
     "use strict";
     //if hero x and monstre x collide or hero y and monstre y collide
@@ -113,6 +114,7 @@ function collisionDetect() {
         monstre.despawn(); //despawn this monstre
         monstre.place(cWidth, cHeight); //get a new monstre
         score++; //increase score
+        console.log("score: " + score);
     }
     for (let i = 0; i < bombNum; i++) {
         //for each bomb, is it colliding with the player?
