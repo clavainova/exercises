@@ -125,25 +125,12 @@ function keysPressed(event) {
         hero.rateY += hero.speed;
     }
     event.preventDefault();
-    // console.log("rate x: " + hero.rateX + " rate y: " + hero.rateY + " x: " + hero.x + " y: " + hero.y);
-    hero.despawn(hero.x, hero.y);
-    //check if out of bounds
-    if (hero.x > (cWidth - hero.width)) {
-        hero.x = (cWidth - hero.width);
-    }
-    else if (hero.x <= 0) {
-        hero.x = 0;
-    }
-    if (hero.y > (cHeight - hero.height)) {
-        hero.y = (cHeight - hero.height);
-    }
-    else if (hero.y <= 0) {
-        hero.y = 0;
-    }
+
     //actually move it
-    hero.draw((hero.x += hero.rateX), (hero.y += hero.rateY));
-    hero.rateX = 0;    //annul previous momentum so speed doesn't keep building
-    hero.rateY = 0;
+    hero.updateCoords(cWidth, cHeight);
+    //collision detection
+    //move the hero
+    hero.move();
 }
 
 function keysReleased(event) {

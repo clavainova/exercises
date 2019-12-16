@@ -14,14 +14,32 @@ export class Hero extends Object {
         this.speed = speed;
     }
 
-    move() {
-        this.despawn(this.x, this.y);
-        this.x += this.rateX;
+    updateCoords(cWidth, cHeight) {
+        this.despawn(this.x, this.y); //despawn old hero
+        this.inBounds(cWidth, cHeight);  //check if out of bounds
+        this.x += this.rateX; //add speed to coords
         this.y += this.rateY;
-        this.draw(this.x, this.y);
     }
 
-    get coords(){
-        
+    move(){
+        this.draw(this.x, this.y); //update visual
+        this.rateX = 0;  //annul previous momentum so speed doesn't keep building
+        this.rateY = 0;
+    }
+
+    inBounds(cWidth, cHeight) {
+        //check if out of bounds, if so update position with closest inbounds
+        if (this.x > (cWidth - this.width)) {
+            this.x = (cWidth - this.width);
+        }
+        else if (this.x <= 0) {
+            this.x = 0;
+        }
+        if (this.y > (cHeight - this.height)) {
+            this.y = (cHeight - this.height);
+        }
+        else if (this.y <= 0) {
+            this.y = 0;
+        }
     }
 }
