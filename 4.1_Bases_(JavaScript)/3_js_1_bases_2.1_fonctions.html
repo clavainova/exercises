@@ -1,37 +1,12 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>functions</title>
-    <script type="text/javascript" src="../ressources/jquery-3.4.1.js"></script>
-
-    <style>
-    </style>
-
-    <script>
-
-        $(document).ready(function () {
-            $("button").click(function () {
-                console.log("button");
-                $.getJSON("../ressources/macbeth_entier.json", function (result) {
-                    console.log("json acquired");
-                    console.log(result);
-                    $.each(result, function (i, field) {
-                        $("div").append(field + " ");
-                    });
-                });
-            });
-        });
-
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
-
 <body>
-
-    "getJSON does an ajax request. Ajax requests are subject to the Same Origin Policy. Unless your page is loaded from
-    http://test.com (or a couple of other caveats), it won't work."<br>
-    <button>display</button>
-    <div></div>
+    <script src="chapitres.js"></script>
 </body>
-
 </html>
