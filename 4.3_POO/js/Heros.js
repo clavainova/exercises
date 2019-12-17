@@ -1,6 +1,6 @@
 import { Object } from "./Object.js";
 
-//props inherited from object:      width, height, url
+//props inherited from object:      width, height, url, x, y
 //methods inherited from object:    draw(), despawn(), place()
 
 export class Hero extends Object {
