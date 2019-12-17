@@ -7,6 +7,28 @@
 </head>
 
 <body>
+    console ==>
+    <script>
+
+        var num = 0;
+        setInterval(increment, 1000);
+
+        function increment() {
+            num++;
+            console.log("number: " + num);
+            let promise = new Promise(function (resolve, reject) {
+                if (num < 10) {
+                    reject(" is less than 10");
+                }
+                else if (num >= 10) {
+                    resolve(" is greater or equal to 10");
+                }
+            });
+            promise.catch(function (str) { document.write(num + str + "<br>"); })
+            promise.then(function (str) { document.write(num + str + "<br>"); })
+        }
+
+    </script>
 </body>
 
 </html>
