@@ -24,7 +24,7 @@ function getText() {
             $div.append($span);
 
             console.log("div: " + $div.html());
-            document.getElementById("target").append($div);
+            $("#target").append($div);
         }
     });
 }

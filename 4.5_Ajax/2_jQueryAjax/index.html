@@ -9,18 +9,32 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body onload="getText();">
+<body>
     <nav>
         <ul>
-            <li><a href='accueil.html'>Accueil</a></li>
-            <li><a href='page1.html'>Page 1</a></li>
-            <li><a href='page2.html'>Page 2</a></li>
+            <li onclick="changePage('accueil');">Accueil</li>
+            <li onclick="changePage('page1');">Page 1</li>
+            <li onclick="changePage('page2');">Page 2</li>
         </ul>
     </nav>
     <section id="target"></section>
-    
+
     <script src="../../ressources/jquery-3.4.1.js"></script>
-    <script src="js/main.js"></script>
+    <script>
+
+        function changePage(nom) {
+            effacer();
+            let url = nom + ".html";
+            $.get(url, function (html_string) {
+                $("#target").append(html_string);
+            });
+        }
+
+        function effacer() {
+            document.getElementById("target").innerHTML = "";
+        }
+
+    </script>
 </body>
 
 </html>
