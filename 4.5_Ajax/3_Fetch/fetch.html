@@ -6,13 +6,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style></style>
+    <style>
+        button {
+            background-color: rgb(209, 129, 0);
+            color: white;
+            font-weight: 600;
+            font-size: 40px;
+            border-radius: 25px;
+            border: none;
+            height: 50px;
+            width: 50px;
+            float: right;
+        }
+
+        button:before {
+            content: "+";
+        }
+
+        article {
+            width: 80vw;
+            margin-left: 10vw;
+        }
+
+        div {
+            display: none;
+            grid-template-columns: 1fr 5fr;
+            margin-bottom: 50px;
+        }
+
+        h2,
+        button {
+            display: inline-block;
+        }
+
+        h3 {
+            color: grey;
+            font-weight: 1000;
+        }
+
+        img {
+            text-align: right;
+            background-color: black;
+            height: 100px;
+            width: 100px;
+            object-fit: cover;
+            border-radius: 50px;
+        }
+    </style>
 </head>
 
 <body id="target">
+    <h1>Game of Thrones, les maisons, les personnages</h1>
+
 
     <script src="../../ressources/jquery-3.4.1.js"></script>
     <script>
+
+        var xmlhttp = new XMLHttpRequest();
+        var url = "got.json";
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var arr = JSON.parse(this.responseText);
+                print(arr);
+            }
+        }
+
+        function showHide(id) {
+            document.getElementById(id);
+            let arr = id.childNodes;
+            //starts at 1 because the first node is not removed - the title
+            for (let i = 1; i < arr.length; i++) {
+                console.log(arr[i].style.visibility);
+                if (arr[i].style.display == "none") {
+                    arr[i].style.display = "grid";
+                }
+                else {
+                    arr[i].style.display = "none"
+                }
+            }
+        }
+
+        function print(arr) {
+            arr.forEach(element => {
+
+                let article = document.createElement("article");
+                article.setAttribute("id", element.nom);
+
+                //titre de house
+                let span = document.createElement("span");
+                let h2 = document.createElement("h2");
+                h2.appendChild(document.createTextNode(element.nom));
+                span.appendChild(h2);
+                let button = document.createElement("button");
+                let functionStr = "showHide(" + element.nom + ");";
+                button.setAttribute("onclick", functionStr);
+                span.appendChild(button);
+                article.appendChild(span);
+
+                for (let i = 0; i < element.gens.length; i++) {
+                    let div = document.createElement("div");
+
+                    let img = document.createElement("img");
+                    img.src = element.gens[i].image;
+                    div.appendChild(img);
+
+                    let span2 = document.createElement("span");
+
+                    let h3 = document.createElement("h3");
+                    let text2 = document.createTextNode(element.gens[i].nom);
+                    h3.appendChild(text2);
+                    span2.appendChild(h3);
+
+                    let p = document.createElement("p");
+                    text2 = document.createTextNode(element.gens[i].description);
+                    p.appendChild(text2);
+                    span2.appendChild(p);
+
+                    div.appendChild(span2);
+                    article.appendChild(div);
+                }
+                document.getElementById("target").appendChild(article);
+            });
+
+        }
+
     </script>
 </body>
 
