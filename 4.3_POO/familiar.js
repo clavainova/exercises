@@ -2,12 +2,16 @@ export class Familiar {
     constructor(id, name, frames, width, height, scale) {
         this.id = id;
         this.name = name;
-        this.framesFreq = frames;
+        this.frames = frames;
         this.width = width;
         this.height = height;
         this.scale = scale;
         this.scaledWidth = this.width * this.scale;
         this.scaledHeight = this.height * this.scale;
+    }
+
+    getProp(index){
+        return this[index];
     }
 
     getImgUrl() {

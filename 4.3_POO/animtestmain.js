@@ -1,44 +1,73 @@
 import { Familiar } from "./familiar.js";
+import { FamiliarList } from "./familiarList.js";
 
 //need to specify frame number or calculate it somehow
-var bossIds = ["399", "398", "365", "364", "327", "326", "289", "288", "269", "268", "263", "262", "261", "260", "215", "214", "197", "196", "185", "184", "175", "174", "161", "162"]; //boss ids - bigger
-const upperLimit = 457; //range of images available - updated 18.12.2019
-const lowerLimit = 150;
 const scale = 1;
-//dimensions
-const width = 125;
-const height = 130;
-const scaledWidth = scale * width;
-const scaledHeight = scale * height;
-//boss dimensions
-const bossWidth = 215;
-const bossHeight = 215;
-const bossScaledWidth = scale * bossWidth;
-const bossScaledHeight = scale * bossHeight;
+const famNum = 457; //number of familiars that exist
 
-//create the canvas and options
-let select = document.createElement("select");
-select.setAttribute("id", "select");
-for (let i = lowerLimit; i < upperLimit; i++) {
-    let option = document.createElement("option");
-    option.setAttribute("value", i);
-    option.innerHTML = i;
-    select.appendChild(option);
+//list of familiars and their respective data
+let arr = [];
+var famList = new FamiliarList(arr);
+
+
+//eventlistener
+document.getElementById("button").addEventListener("click", go)
+
+let jsonloaded = JSONget();
+jsonloaded.then(function () {    //create the options
+    let select = document.createElement("select");
+    select.setAttribute("id", "select");
+    for (let i = 0; i < (famNum - 1); i++) {
+        let option = document.createElement("option");
+        option.setAttribute("value", i);
+        if (famList.getFamById(i).name != "") {
+            option.innerHTML = famList.getFamById(i).name;
+        } else {
+            option.innerHTML = i;
+        }
+        select.appendChild(option);
+    }
+    document.getElementById("target").appendChild(select); //add to body
+}); //after the json is loaded
+
+//read the familiar list and store the data in objects
+function JSONget() {
+    return new Promise(function (resolve) {
+        $.getJSON("spritesheet.json", function (data) {
+            for (let i = 1; i < data.length; i++) {
+                let id = data[i].id;
+                let name = data[i].name;
+                let frames = data[i].frames;
+                let width;
+                let height;
+                if (data[i].size == "normal") {
+                    width = 125;
+                    height = 130;
+                }
+                else {
+                    width = 215;
+                    height = 215;
+                }
+                let fam = new Familiar(id, name, frames, width, height, scale);
+                famList.push(fam);
+            }
+            resolve();
+        });
+    });
 }
-document.getElementById("target").appendChild(select);
-//add to body
-
-/*for animations*/
 
 function go() {
-    var id = document.getElementById("select").value;
+    //get the selected familiar and produce the relevant image
+    var index = document.getElementById("select").value;
+    var selectedFam = famList.getFamById(index);
     let img = new Image();
-    str = "spritesheet/" + id + ".png";
+    let str = selectedFam.getImgUrl();
     img.src = str;
     img.onload = function () {
         init();
     };
 
+    //delete old canvas, make new one
     document.querySelector('canvas').remove();
     let canv = document.createElement('canvas');
     canv.setAttribute("height", 500);
@@ -48,17 +77,11 @@ function go() {
     let canvas = document.querySelector('canvas');
     let ctx = canvas.getContext('2d');
 
+    //draw a frame
     function drawFrame(frameX, frameY) {
-        if (bossIds.includes(id)) {
-            ctx.drawImage(img,
-                frameX * bossWidth, frameY * bossHeight, bossWidth, bossHeight,
-                0, 0, bossScaledWidth, bossScaledHeight);
-        }
-        else {
-            ctx.drawImage(img,
-                frameX * width, frameY * height, width, height,
-                0, 0, scaledWidth, scaledHeight);
-        }
+        ctx.drawImage(img,
+            frameX * selectedFam.width, frameY * selectedFam.height, selectedFam.width, selectedFam.height,
+            0, 0, selectedFam.scaledWidth, selectedFam.scaledHeight);
     }
 
     function init() {
@@ -66,7 +89,7 @@ function go() {
     }
 
     window.requestAnimationFrame(step);
-    const cycleLoop = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+    var cycleLoop = selectedFam.getCycleLoop();
     let currentLoopIndex = 0;
     let frameCount = 0;
 
