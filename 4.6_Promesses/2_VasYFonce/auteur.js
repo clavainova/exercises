@@ -1,5 +1,4 @@
 export class Auteur {
-    "use strict";
     constructor(nom, promesse, jsonUrl, description, wikiUrl) {
         this.nom = nom;
         this.promesse = promesse;

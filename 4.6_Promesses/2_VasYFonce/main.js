@@ -1,5 +1,4 @@
 import { Auteur } from "./auteur.js";
-"use strict";
 
 let nom;
 let promesse;
@@ -9,16 +8,16 @@ let wikiUrl;
 
 var people = [];
 
-makePerson("promesses.json")
+makePerson("promesses.json"); //would repeat this for each person with each url
     // .then(() => {
     //     people.forEach(element =>
     //         console.log("element: " + element))
     // });
 
-
-function makePerson(url1) {
+//loads 2 jsons, stores data in object, pushes object to people[]
+function makePerson(url) {
     //get the personal info first
-    let promArr = JSONget(url1);
+    let promArr = JSONget(url);
     promArr.then(function (value) {
         nom = value.auteur;
         promesse = value.promesse;
@@ -40,7 +39,7 @@ function makePerson(url1) {
     });
 }
 
-
+//load a json using a promise, return the contents
 function JSONget(url) {
     return new Promise(function (resolve, reject) {
         let xmlhttp = new XMLHttpRequest();
