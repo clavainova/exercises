@@ -1,6 +1,9 @@
 import { Familiar } from "./familiar.js";
 import { FamiliarList } from "./familiarList.js";
 
+//add speeds - 10, 15, 20
+//make still ones function without animation
+
 //need to specify frame number or calculate it somehow
 const scale = 1;
 const famNum = 457; //number of familiars that exist
@@ -110,7 +113,7 @@ function go() {
 
     function step() {
         frameCount++;
-        if (frameCount < 20) {
+        if (frameCount < 15) {
             window.requestAnimationFrame(step);
             return;
         }
