@@ -3,11 +3,6 @@
 
 <head>
     <style>
-        canvas {
-            height: 400px;
-            width: 750px;
-        }
-
         select,
         button,
         option {
@@ -15,35 +10,65 @@
         }
     </style>
     <script>
-        
+        var bossIds = ["399", "398"]; //boss ids - bigger
+        const upperLimit = 457; //number of images available
+        const scale = 1;
+        //dimensions
+        const width = 125;
+        const height = 150;
+        const scaledWidth = scale * width;
+        const scaledHeight = scale * height;
+        //boss dimensions
+        const bossWidth = 215;
+        const bossHeight = 215;
+        const bossScaledWidth = scale * bossWidth;
+        const bossScaledHeight = scale * bossHeight;
+
+        function init() {
+            let select = document.createElement("select");
+            select.setAttribute("id", "select");
+            for (let i = 1; i < upperLimit; i++) {
+                let option = document.createElement("option");
+                option.setAttribute("value", i);
+                option.innerHTML = i;
+                select.appendChild(option);
+            }
+            document.getElementById("target").appendChild(select);
+            //add to body
+        }
+
+
         /*for idle animations*/
 
         function go() {
-            let str = document.getElementById("select").value;
+            var id = document.getElementById("select").value;
             let img = new Image();
-            str = "spritesheet/" + str + ".png";
+            str = "spritesheet/" + id + ".png";
             img.src = str;
             img.onload = function () {
                 init();
             };
 
             document.querySelector('canvas').remove();
-            var canv = document.createElement('canvas');
+            let canv = document.createElement('canvas');
+            canv.setAttribute("height", 500);
+            canv.setAttribute("width", 500);
             document.body.appendChild(canv);
 
             let canvas = document.querySelector('canvas');
             let ctx = canvas.getContext('2d');
 
-            const scale = 1;
-            const width = 125;
-            const height = 150;
-            const scaledWidth = scale * width;
-            const scaledHeight = scale * height;
-
-            function drawFrame(frameX, frameY, canvasX, canvasY) {
-                ctx.drawImage(img,
-                    frameX * width, frameY * height, width, height,
-                    canvasX, canvasY, scaledWidth, scaledHeight);
+            function drawFrame(frameX, frameY) {
+                if (bossIds.includes(id)) {
+                    ctx.drawImage(img,
+                        frameX * bossWidth, frameY * bossHeight, bossWidth, bossHeight,
+                        0, 0, bossScaledWidth, bossScaledHeight);
+                }
+                else {
+                    ctx.drawImage(img,
+                        frameX * width, frameY * height, width, height,
+                        0, 0, scaledWidth, scaledHeight);
+                }
             }
 
             function init() {
@@ -51,7 +76,6 @@
             }
 
             window.requestAnimationFrame(step);
-
             const cycleLoop = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
             let currentLoopIndex = 0;
             let frameCount = 0;
@@ -75,28 +99,11 @@
     </script>
 </head>
 
-<body onload="go();">
+<body onload="init();">
+    <section id="target">
+    </section>
     <canvas></canvas>
-    <select id="select">
-        <option value="10">10 griffon</option>
-        <option value="16">16 bird</option>
-        <option value="100">100 white griffon</option>
-        <option value="120">120 snail</option>
-        <option value="150">150 centaur</option>
-        <option value="256">256 wisp</option>
-        <option value="287">287 purple merperson</option>
-        <option value="311">311 harpy</option>
-        <option value="314">314 green fire cat</option>
-        <option value="350">350 deer</option>
-        <option value="351">351 deer 2</option>
-        <option value="361">361 mushroom man</option>
-        <option value="370">370 purple frog</option>
-        <option value="371">371 aqua frog</option>
-        <option value="378">378 chimera</option>
-        <option value="390">390 chair</option>
-        <option value="400">400 otter</option>
-        <option value="450">450 hare-pheasant</option>
-    </select>
+
     <button onclick="go();">submit</button>
 
 </body>
