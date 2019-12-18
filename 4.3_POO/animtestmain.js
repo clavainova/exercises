@@ -17,14 +17,19 @@ let jsonloaded = JSONget();
 jsonloaded.then(function () {    //create the options
     let select = document.createElement("select");
     select.setAttribute("id", "select");
-    for (let i = 0; i < (famNum - 1); i++) {
+    for (let i = 0; i < famNum; i++) {
         let option = document.createElement("option");
         option.setAttribute("value", i);
-        if (famList.getFamById(i).name != "") {
-            option.innerHTML = famList.getFamById(i).name;
-        } else {
-            let j = i + 1;
-            option.innerHTML = j;
+        try {
+            if (famList.getFamById(i).name != "") {
+                option.innerHTML = famList.getFamById(i).name;
+            } else {
+                let j = i + 1;
+                option.innerHTML = j;
+            }
+        }
+        catch (e) {
+            break;
         }
         select.appendChild(option);
     }
@@ -35,7 +40,7 @@ jsonloaded.then(function () {    //create the options
 function JSONget() {
     return new Promise(function (resolve) {
         $.getJSON("spritesheet.json", function (data) {
-            for (let i = 1; i < data.length; i++) {
+            for (let i = 0; i < data.length; i++) {
                 let id = data[i].id;
                 let name = data[i].name;
                 let frames = data[i].frames;
@@ -74,25 +79,34 @@ function go() {
     canv.setAttribute("height", 500);
     canv.setAttribute("width", 500);
     document.body.appendChild(canv);
-
     let canvas = document.querySelector('canvas');
-    let ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext('2d');
+
 
     //draw a frame
+    window.requestAnimationFrame(step);
+    var cycleLoop = selectedFam.getCycleLoop();
+    var currentLoopIndex = 0;
+    var frameCount = 0;
+
+    function init() {
+        if (selectedFam.frames > 1) {
+            console.log("animating");
+            window.requestAnimationFrame(step);
+        }
+        else {
+            console.log("drawing still");
+            ctx.drawImage(img,
+                0, 0, selectedFam.width, selectedFam.height,
+                0, 0, selectedFam.scaledWidth, selectedFam.scaledHeight);
+        }
+    }
+
     function drawFrame(frameX, frameY) {
         ctx.drawImage(img,
             frameX * selectedFam.width, frameY * selectedFam.height, selectedFam.width, selectedFam.height,
             0, 0, selectedFam.scaledWidth, selectedFam.scaledHeight);
     }
-
-    function init() {
-        window.requestAnimationFrame(step);
-    }
-
-    window.requestAnimationFrame(step);
-    var cycleLoop = selectedFam.getCycleLoop();
-    let currentLoopIndex = 0;
-    let frameCount = 0;
 
     function step() {
         frameCount++;

@@ -1,55 +1,55 @@
 [
     {
         "id": "1",
-        "name": "",
+        "name": "Dryad",
         "frames": "12",
         "size": "normal"
     },
     {
         "id": "2",
-        "name": "",
+        "name": "Autumn Dryad",
         "frames": "12",
         "size": "normal"
     },
     {
         "id": "3",
-        "name": "",
+        "name": "Dwarf Truffle",
         "frames": "10",
         "size": "normal"
     },
     {
         "id": "4",
-        "name": "",
+        "name": "Cursed Bat",
         "frames": "1",
         "size": "normal"
     },
     {
         "id": "5",
-        "name": "",
+        "name": "Runic Bat",
         "frames": "1",
         "size": "normal"
     },
     {
         "id": "6",
-        "name": "",
+        "name": "Baku",
         "frames": "1",
         "size": "normal"
     },
     {
         "id": "7",
-        "name": "",
+        "name": "Dreameater",
         "frames": "1",
         "size": "normal"
     },
     {
         "id": "8",
-        "name": "",
+        "name": "Elk",
         "frames": "16",
         "size": "normal"
     },
     {
         "id": "9",
-        "name": "",
+        "name": "Snowfall Elk",
         "frames": "16",
         "size": "normal"
     },
