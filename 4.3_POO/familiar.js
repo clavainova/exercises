@@ -1,16 +1,17 @@
 export class Familiar {
     constructor(id, name, frames, width, height, scale) {
-        this.id = id;
+        this.id = parseInt(id, 10);
         this.name = name;
-        this.frames = frames;
-        this.width = width;
-        this.height = height;
-        this.scale = scale;
+        let fr = parseInt(frames, 10);
+        this.frames = fr - 1;
+        this.width = parseInt(width, 10);
+        this.height = parseInt(height, 10);
+        this.scale = parseInt(scale, 10);
         this.scaledWidth = this.width * this.scale;
         this.scaledHeight = this.height * this.scale;
     }
 
-    getProp(index){
+    getProp(index) {
         return this[index];
     }
 

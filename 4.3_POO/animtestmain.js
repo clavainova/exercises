@@ -23,7 +23,8 @@ jsonloaded.then(function () {    //create the options
         if (famList.getFamById(i).name != "") {
             option.innerHTML = famList.getFamById(i).name;
         } else {
-            option.innerHTML = i;
+            let j = i + 1;
+            option.innerHTML = j;
         }
         select.appendChild(option);
     }
