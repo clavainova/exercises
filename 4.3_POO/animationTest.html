@@ -10,8 +10,10 @@
         }
     </style>
     <script>
-        var bossIds = ["399", "398"]; //boss ids - bigger
-        const upperLimit = 457; //number of images available
+        //need to specify frame number or calculate it somehow
+        var bossIds = ["399", "398", "365", "364", "327", "326"]; //boss ids - bigger
+        const upperLimit = 457; //range of images available
+        const lowerLimit = 298;
         const scale = 1;
         //dimensions
         const width = 125;
@@ -27,7 +29,7 @@
         function init() {
             let select = document.createElement("select");
             select.setAttribute("id", "select");
-            for (let i = 1; i < upperLimit; i++) {
+            for (let i = lowerLimit; i < upperLimit; i++) {
                 let option = document.createElement("option");
                 option.setAttribute("value", i);
                 option.innerHTML = i;
