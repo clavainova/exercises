@@ -34,7 +34,7 @@ function makePerson(url1) {
             let anatole = new Auteur(nom, promesse, jsonUrl, description, wikiUrl);
             //now we push the object onto the array
             people.push(anatole);
-            console.log("updating array:");
+            document.write("updating array: <br> see console");
             console.log(people);
         });
     });
