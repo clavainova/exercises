@@ -1,5 +1,5 @@
 export class Familiar {
-    constructor(id, name, frames, width, height, scale) {
+    constructor(id, name, frames, width, height) {
         this.id = parseInt(id, 10);
         this.name = name;
         let fr = parseInt(frames, 10);
@@ -7,8 +7,6 @@ export class Familiar {
         this.width = parseInt(width, 10);
         this.height = parseInt(height, 10);
         this.scale = parseInt(scale, 10);
-        this.scaledWidth = this.width * this.scale;
-        this.scaledHeight = this.height * this.scale;
     }
 
     getProp(index) {
@@ -20,14 +18,20 @@ export class Familiar {
     }
 
     getCycleLoop() {
-        let arr = [];
-        for (let i = 0; i < this.frames; i++) {
-            arr.push(i);
+        if(this.frames == 0){
+            let arr = [0, 0, 0];
         }
-        for (let i = this.frames; i > 0; i--) {
-            arr.push(i);
+        else{
+            let arr = [];
+            for (let i = 0; i < this.frames; i++) {
+                arr.push(i);
+            }
+            for (let i = this.frames; i > 0; i--) {
+                arr.push(i);
+            }
+            console.log(arr);
+            return arr;
         }
-        console.log(arr);
-        return arr;
+        
     }
 }

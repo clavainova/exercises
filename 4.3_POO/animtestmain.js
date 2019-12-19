@@ -1,20 +1,17 @@
 import { Familiar } from "./familiar.js";
 import { FamiliarList } from "./familiarList.js";
 
-//add speeds - 10, 15, 20
 //make still ones function without animation
 
-//need to specify frame number or calculate it somehow
-const scale = 1;
 const famNum = 457; //number of familiars that exist
+
+//these two are customizable
+var scale = 1;
+var speed = 15;
 
 //list of familiars and their respective data
 let arr = [];
 var famList = new FamiliarList(arr);
-
-
-//eventlistener
-document.getElementById("button").addEventListener("click", go)
 
 let jsonloaded = JSONget();
 jsonloaded.then(function () {    //create the options
@@ -37,6 +34,14 @@ jsonloaded.then(function () {    //create the options
         select.appendChild(option);
     }
     document.getElementById("target").appendChild(select); //add to body
+    //create button after that is loaded so ppl can't choose stuff too early
+    let button = document.createElement("button");
+    button.setAttribute("id", "button");
+    button.innerHTML = "submit";
+    document.getElementById("target").appendChild(button); //add to body
+
+    //eventlistener
+    document.getElementById("button").addEventListener("click", go)
 }); //after the json is loaded
 
 //read the familiar list and store the data in objects
@@ -57,7 +62,7 @@ function JSONget() {
                     width = 215;
                     height = 215;
                 }
-                let fam = new Familiar(id, name, frames, width, height, scale);
+                let fam = new Familiar(id, name, frames, width, height);
                 famList.push(fam);
             }
             resolve();
@@ -76,6 +81,12 @@ function go() {
         init();
     };
 
+    //set scale and speed
+    scale = document.getElementById("scale").value;
+    speed = document.getElementById("speed").value;
+
+    //get the settings
+
     //delete old canvas, make new one
     document.querySelector('canvas').remove();
     let canv = document.createElement('canvas');
@@ -87,7 +98,10 @@ function go() {
 
 
     //draw a frame
-    window.requestAnimationFrame(step);
+    if (selectedFam.frames > 1) {
+        window.requestAnimationFrame(step);
+    }
+
     var cycleLoop = selectedFam.getCycleLoop();
     var currentLoopIndex = 0;
     var frameCount = 0;
@@ -101,19 +115,19 @@ function go() {
             console.log("drawing still");
             ctx.drawImage(img,
                 0, 0, selectedFam.width, selectedFam.height,
-                0, 0, selectedFam.scaledWidth, selectedFam.scaledHeight);
+                0, 0, selectedFam.width * scale, selectedFam.height * scale);
         }
     }
 
     function drawFrame(frameX, frameY) {
         ctx.drawImage(img,
             frameX * selectedFam.width, frameY * selectedFam.height, selectedFam.width, selectedFam.height,
-            0, 0, selectedFam.scaledWidth, selectedFam.scaledHeight);
+            0, 0, selectedFam.width * scale, selectedFam.height * scale);
     }
 
     function step() {
         frameCount++;
-        if (frameCount < 15) {
+        if (frameCount < speed) {
             window.requestAnimationFrame(step);
             return;
         }
