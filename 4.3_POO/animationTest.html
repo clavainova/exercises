@@ -7,9 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Familiar Sprite Viewer</title>
     <style>
-        footer {
-            position: absolute;
-            margin-top: 600px;
+        section {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            width: 600px;
+            background-color: rgb(115, 192, 255);
+            border-radius: 2px;
+            padding: 5px 5px;
         }
 
         button {
@@ -18,38 +24,36 @@
             border-radius: 2px;
         }
 
-        button:nth-of-type(1),
-        section h2:nth-of-type(1) {
-            background-color: rgb(171, 255, 255);
-        }
-
-        button:nth-of-type(2),
-        section h2:nth-of-type(2) {
-            background-color: pink;
-        }
-
-        button:nth-of-type(3),
-        section h2:nth-of-type(3) {
-            background-color: rgb(255, 193, 135);
-        }
-
         h2 {
             margin: 0;
             vertical-align: center;
             text-align: center;
         }
 
-        canvas {
-            margin-top: 50px;
-            margin-left: 50px;
+        section button:nth-of-type(1),
+        section h2:nth-of-type(1) {
+            background-color: rgb(171, 255, 255);
         }
 
-        section {
-            display: grid;
-            justify-content: center;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
-            width: 600px;
+        section button:nth-of-type(2),
+        section h2:nth-of-type(2) {
+            background-color: pink;
+        }
+
+        section button:nth-of-type(3),
+        section h2:nth-of-type(3) {
+            background-color: rgb(255, 193, 135);
+        }
+
+        canvas {
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+
+        footer {
+            position: absolute;
+            margin-top: 600px;
+            font-style: oblique;
         }
     </style>
 </head>
