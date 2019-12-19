@@ -1,9 +1,7 @@
 import { Familiar } from "./familiar.js";
 import { FamiliarList } from "./familiarList.js";
 
-//make still ones function without animation
-
-const famNum = 457; //number of familiars that exist
+const famNum = 457; //number of familiars that exist in the json
 
 //these two are customizable
 var scale = 1;
@@ -12,6 +10,7 @@ var speed = 15;
 //list of familiars and their respective data
 let arr = [];
 var famList = new FamiliarList(arr);
+var index;
 
 let jsonloaded = JSONget();
 jsonloaded.then(function () {    //create the options
@@ -20,28 +19,37 @@ jsonloaded.then(function () {    //create the options
     for (let i = 0; i < famNum; i++) {
         let option = document.createElement("option");
         option.setAttribute("value", i);
-        try {
-            if (famList.getFamById(i).name != "") {
-                option.innerHTML = famList.getFamById(i).name;
-            } else {
-                let j = i + 1;
-                option.innerHTML = j;
-            }
-        }
-        catch (e) {
-            break;
+        if (famList.getFamById(i).name != "") {
+            option.innerHTML = famList.getFamById(i).name;
+        } else {
+            let j = i + 1;
+            option.innerHTML = j;
         }
         select.appendChild(option);
     }
     document.getElementById("target").appendChild(select); //add to body
+
+    let but3 = document.createElement("button");
+    but3.setAttribute("id", "deincrement");
+    but3.innerHTML = "previous";
+    document.getElementById("target").appendChild(but3); //add to body
+    let but1 = document.createElement("button");
+    but1.setAttribute("id", "increment");
+    but1.innerHTML = "next";
+    document.getElementById("target").appendChild(but1); //add to body
+    let but2 = document.createElement("button");
+    but2.setAttribute("id", "button");
+    but2.innerHTML = "submit";
+    document.getElementById("target").appendChild(but2); //add to body
+
+
     //create button after that is loaded so ppl can't choose stuff too early
-    let button = document.createElement("button");
-    button.setAttribute("id", "button");
-    button.innerHTML = "submit";
-    document.getElementById("target").appendChild(button); //add to body
 
     //eventlistener
-    document.getElementById("button").addEventListener("click", go)
+    document.getElementById("button").addEventListener("click", go);
+    document.getElementById("increment").addEventListener("click", increment);
+    document.getElementById("deincrement").addEventListener("click", deincrement);
+
 }); //after the json is loaded
 
 //read the familiar list and store the data in objects
@@ -58,6 +66,10 @@ function JSONget() {
                     width = 125;
                     height = 130;
                 }
+                else if (data[i].size == "yeti") {
+                    width = 175;
+                    height = 175;
+                }
                 else {
                     width = 215;
                     height = 215;
@@ -70,9 +82,31 @@ function JSONget() {
     });
 }
 
+function increment() {
+    //make it loop
+    if (document.getElementById("select").value >= (famNum - 1)) {
+        document.getElementById("select").value = 0;
+    }
+    else {
+        document.getElementById("select").value++;
+    }
+    go();
+}
+
+function deincrement() {
+    //make it loop
+    if (document.getElementById("select").value <= 0) {
+        document.getElementById("select").value = parseInt((famNum - 1), 10);
+    }
+    else {
+        document.getElementById("select").value--;
+    }
+    go();
+}
+
 function go() {
     //get the selected familiar and produce the relevant image
-    var index = document.getElementById("select").value;
+    index = document.getElementById("select").value;
     var selectedFam = famList.getFamById(index);
     let img = new Image();
     let str = selectedFam.getImgUrl();
@@ -96,23 +130,20 @@ function go() {
     let canvas = document.querySelector('canvas');
     var ctx = canvas.getContext('2d');
 
-
+    var cycleLoop = selectedFam.getCycleLoop();
+    var currentLoopIndex = 0;
+    var frameCount = 0;
     //draw a frame
     if (selectedFam.frames > 1) {
         window.requestAnimationFrame(step);
     }
 
-    var cycleLoop = selectedFam.getCycleLoop();
-    var currentLoopIndex = 0;
-    var frameCount = 0;
 
     function init() {
         if (selectedFam.frames > 1) {
-            console.log("animating");
             window.requestAnimationFrame(step);
         }
         else {
-            console.log("drawing still");
             ctx.drawImage(img,
                 0, 0, selectedFam.width, selectedFam.height,
                 0, 0, selectedFam.width * scale, selectedFam.height * scale);

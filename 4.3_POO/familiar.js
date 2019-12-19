@@ -29,7 +29,7 @@ export class Familiar {
             for (let i = this.frames; i > 0; i--) {
                 arr.push(i);
             }
-            console.log(arr);
+            // console.log(arr);
             return arr;
         }
         

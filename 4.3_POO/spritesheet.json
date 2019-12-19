@@ -3,139 +3,162 @@
         "id": "1",
         "name": "Dryad",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Woodland Path"
     },
     {
         "id": "2",
         "name": "Autumn Dryad",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Woodland Path"
     },
     {
         "id": "3",
         "name": "Dwarf Truffle",
         "frames": "10",
-        "size": "normal"
+        "size": "normal",
+        "level": "Forgotten Cave"
     },
     {
         "id": "4",
         "name": "Cursed Bat",
         "frames": "1",
-        "size": "normal"
+        "size": "normal",
+        "level": "Forgotten Cave"
     },
     {
         "id": "5",
         "name": "Runic Bat",
         "frames": "1",
-        "size": "normal"
+        "size": "normal",
+        "level": "Forgotten Cave"
     },
     {
         "id": "6",
         "name": "Baku",
         "frames": "1",
-        "size": "normal"
+        "size": "normal",
+        "level": "Bamboo Falls"
     },
     {
         "id": "7",
         "name": "Dreameater",
         "frames": "1",
-        "size": "normal"
+        "size": "normal",
+        "level": "Bamboo Falls"
     },
     {
         "id": "8",
         "name": "Elk",
         "frames": "16",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "9",
         "name": "Snowfall Elk",
         "frames": "16",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "10",
-        "name": "",
+        "name": "Sunspot Clouddancer",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Harpy's Roost"
     },
     {
         "id": "11",
-        "name": "",
+        "name": "Shalebuck",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "12",
-        "name": "",
+        "name": "Venerable Shalebuck",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "13",
-        "name": "",
-        "frames": "10",
-        "size": "normal"
+        "name": "Leafy Moth",
+        "frames": "8",
+        "size": "normal",
+        "level": "Training Grounds"
     },
     {
         "id": "14",
-        "name": "",
+        "name": "Amaranth Moth",
         "frames": "10",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Grounds"
     },
     {
         "id": "15",
-        "name": "",
+        "name": "Luna Mith",
         "frames": "10",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Grounds"
     },
     {
         "id": "16",
-        "name": "",
+        "name": "Ruby Webwing",
         "frames": "16",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Grounds"
     },
     {
         "id": "17",
-        "name": "",
+        "name": "Emerald Webwing",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Grounds"
     },
     {
         "id": "18",
-        "name": "",
+        "name": "Grey River Flight",
         "frames": "6",
-        "size": "normal"
+        "size": "normal",
+        "level": "Waterway"
     },
     {
         "id": "19",
-        "name": "",
+        "name": "Brown River Flight",
         "frames": "6",
-        "size": "normal"
+        "size": "normal",
+        "level": "Waterway"
     },
     {
         "id": "20",
-        "name": "",
+        "name": "Rainbow Sprite",
         "frames": "10",
-        "size": "normal"
+        "size": "normal",
+        "level": "Waterway"
     },
     {
         "id": "21",
-        "name": "",
+        "name": "Scarlet Flycatcher",
         "frames": "10",
-        "size": "normal"
+        "size": "normal",
+        "level": "Waterway"
     },
     {
         "id": "22",
-        "name": "",
+        "name": "Wildwood Owl",
         "frames": "5",
-        "size": "normal"
+        "size": "normal",
+        "level": "Woodland Path"
     },
     {
         "id": "23",
-        "name": "",
+        "name": "Sakura Owl",
         "frames": "5",
-        "size": "normal"
+        "size": "normal",
+        "level": "Woodland Path"
     },
     {
         "id": "24",
@@ -259,9 +282,10 @@
     },
     {
         "id": "44",
-        "name": "",
+        "name": "Stonewatch Harpy",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Harpy's Roost"
     },
     {
         "id": "45",
@@ -271,9 +295,10 @@
     },
     {
         "id": "46",
-        "name": "",
+        "name": "Masked Harpy",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Harpy's Roost"
     },
     {
         "id": "47",
@@ -319,13 +344,13 @@
     },
     {
         "id": "54",
-        "name": "",
+        "name": "Gale Wolf",
         "frames": "12",
         "size": "normal"
     },
     {
         "id": "55",
-        "name": "",
+        "name": "Steam Gyre",
         "frames": "12",
         "size": "normal"
     },
@@ -355,7 +380,7 @@
     },
     {
         "id": "60",
-        "name": "",
+        "name": "Greater Sandstrike",
         "frames": "10",
         "size": "normal"
     },
@@ -368,7 +393,7 @@
     {
         "id": "62",
         "name": "",
-        "frames": "16",
+        "frames": "11",
         "size": "normal"
     },
     {
@@ -427,15 +452,17 @@
     },
     {
         "id": "72",
-        "name": "",
+        "name": "Peacock Scorpion",
         "frames": "18",
-        "size": "normal"
+        "size": "normal",
+        "level": "Sandswept Delta"
     },
     {
         "id": "73",
-        "name": "",
+        "name": "Fan Scorpion",
         "frames": "18",
-        "size": "normal"
+        "size": "normal",
+        "level": "Sandswept Delta"
     },
     {
         "id": "74",
@@ -495,13 +522,15 @@
         "id": "83",
         "name": "???",
         "frames": "1",
-        "size": "normal"
+        "size": "normal",
+        "level": ""
     },
     {
         "id": "84",
-        "name": "",
+        "name": "Poultrygeist",
         "frames": "8",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "85",
@@ -523,13 +552,13 @@
     },
     {
         "id": "88",
-        "name": "",
+        "name": "Maned Rasa",
         "frames": "15",
         "size": "normal"
     },
     {
         "id": "89",
-        "name": "",
+        "name": "Squall Rasa",
         "frames": "15",
         "size": "normal"
     },
@@ -601,9 +630,10 @@
     },
     {
         "id": "101",
-        "name": "",
+        "name": "Coarsefur Yeti",
         "frames": "9",
-        "size": "boss"
+        "size": "yeti",
+        "level": "Boreal Wood"
     },
     {
         "id": "102",
@@ -757,19 +787,19 @@
     },
     {
         "id": "127",
-        "name": "",
+        "name": "Yellow-Throated Sparrowmouse",
         "frames": "15",
         "size": "normal"
     },
     {
         "id": "128",
-        "name": "",
+        "name": "Dark-Tufted Sparrowmouse",
         "frames": "15",
         "size": "normal"
     },
     {
         "id": "129",
-        "name": "",
+        "name": "Glowing Pocket Mouse",
         "frames": "15",
         "size": "normal"
     },
@@ -961,13 +991,13 @@
     },
     {
         "id": "161",
-        "name": "",
+        "name": "Frost Delver",
         "frames": "14",
         "size": "boss"
     },
     {
         "id": "162",
-        "name": "",
+        "name": "Stone Borer",
         "frames": "14",
         "size": "boss"
     },
@@ -1039,98 +1069,100 @@
     },
     {
         "id": "174",
-        "name": "",
-        "frames": "14",
-        "size": "boss"
+        "name": "Mantarune",
+        "frames": "12",
+        "size": "boss",
+        "level": "Kelp Beds"
     },
     {
         "id": "175",
-        "name": "",
-        "frames": "14",
-        "size": "boss"
+        "name": "Wave Sweeper",
+        "frames": "12",
+        "size": "boss",
+        "level": "Kelp Beds"
     },
     {
         "id": "176",
         "name": "",
-        "frames": "14",
+        "frames": "12",
         "size": "normal"
     },
     {
         "id": "177",
         "name": "",
-        "frames": "14",
+        "frames": "12",
         "size": "normal"
     },
     {
         "id": "178",
         "name": "",
-        "frames": "14",
+        "frames": "12",
         "size": "normal"
     },
     {
         "id": "179",
         "name": "",
-        "frames": "14",
+        "frames": "12",
         "size": "normal"
     },
     {
         "id": "180",
         "name": "",
-        "frames": "14",
+        "frames": "12",
         "size": "normal"
     },
     {
         "id": "181",
         "name": "",
-        "frames": "14",
+        "frames": "12",
         "size": "normal"
     },
     {
         "id": "182",
         "name": "",
-        "frames": "14",
+        "frames": "12",
         "size": "normal"
     },
     {
         "id": "183",
         "name": "",
-        "frames": "14",
+        "frames": "12",
         "size": "normal"
     },
     {
         "id": "184",
-        "name": "",
-        "frames": "14",
+        "name": "Silverbeast",
+        "frames": "12",
         "size": "boss"
     },
     {
         "id": "185",
-        "name": "",
-        "frames": "14",
+        "name": "Goldenbeast",
+        "frames": "12",
         "size": "boss"
     },
     {
         "id": "186",
         "name": "",
-        "frames": "14",
+        "frames": "12",
         "size": "normal"
     },
     {
         "id": "187",
         "name": "",
-        "frames": "14",
+        "frames": "12",
         "size": "normal"
     },
     {
         "id": "188",
         "name": "",
-        "frames": "14",
+        "frames": "12",
         "size": "normal"
     },
     {
         "id": "189",
         "name": "",
-        "frames": "14",
+        "frames": "12",
         "size": "normal"
     },
     {
@@ -1171,13 +1203,13 @@
     },
     {
         "id": "196",
-        "name": "",
+        "name": "Wartoad",
         "frames": "14",
         "size": "boss"
     },
     {
         "id": "197",
-        "name": "",
+        "name": "Molten Wartoad",
         "frames": "14",
         "size": "boss"
     },
@@ -1279,13 +1311,13 @@
     },
     {
         "id": "214",
-        "name": "",
+        "name": "Crystalhide Jester",
         "frames": "14",
         "size": "boss"
     },
     {
         "id": "215",
-        "name": "",
+        "name": "Hawksbill Goliath",
         "frames": "14",
         "size": "boss"
     },
@@ -1555,25 +1587,25 @@
     },
     {
         "id": "260",
-        "name": "",
+        "name": "Malevolent Spirit",
         "frames": "14",
         "size": "boss"
     },
     {
         "id": "261",
-        "name": "",
+        "name": "Disoriented Spirit",
         "frames": "14",
         "size": "boss"
     },
     {
         "id": "262",
-        "name": "",
+        "name": "Roc",
         "frames": "14",
         "size": "boss"
     },
     {
         "id": "263",
-        "name": "",
+        "name": "Crowned Roc",
         "frames": "14",
         "size": "boss"
     },
@@ -1603,15 +1635,17 @@
     },
     {
         "id": "268",
-        "name": "",
+        "name": "Featherback Boar",
         "frames": "14",
-        "size": "boss"
+        "size": "boss",
+        "level": "Arena"
     },
     {
         "id": "269",
-        "name": "",
+        "name": "Undying Featherback",
         "frames": "14",
-        "size": "boss"
+        "size": "boss",
+        "level": "Arena"
     },
     {
         "id": "270",
@@ -1723,13 +1757,13 @@
     },
     {
         "id": "288",
-        "name": "",
+        "name": "Deeprealm Hunter",
         "frames": "14",
         "size": "boss"
     },
     {
         "id": "289",
-        "name": "",
+        "name": "Spiney Whale",
         "frames": "14",
         "size": "boss"
     },
@@ -1951,13 +1985,13 @@
     },
     {
         "id": "326",
-        "name": "",
+        "name": "Tunnel Hydra",
         "frames": "14",
         "size": "boss"
     },
     {
         "id": "327",
-        "name": "",
+        "name": "Hydra",
         "frames": "14",
         "size": "boss"
     },
@@ -2137,7 +2171,7 @@
     },
     {
         "id": "357",
-        "name": "",
+        "name": "Spotted Fawn",
         "frames": "14",
         "size": "normal"
     },
@@ -2179,13 +2213,13 @@
     },
     {
         "id": "364",
-        "name": "",
+        "name": "Flowering Pohip",
         "frames": "14",
         "size": "boss"
     },
     {
         "id": "365",
-        "name": "",
+        "name": "Mossy Pohip",
         "frames": "14",
         "size": "boss"
     },
@@ -2311,14 +2345,14 @@
     },
     {
         "id": "386",
-        "name": "",
-        "frames": "15",
+        "name": "Transmuted Treasure",
+        "frames": "14",
         "size": "normal"
     },
     {
         "id": "387",
-        "name": "",
-        "frames": "15",
+        "name": "Poltergeist Pile",
+        "frames": "14",
         "size": "normal"
     },
     {
@@ -2389,7 +2423,7 @@
     },
     {
         "id": "399",
-        "name": "",
+        "name": "Ghostly Rat Lord",
         "frames": "14",
         "size": "boss"
     },
@@ -2511,7 +2545,7 @@
         "id": "419",
         "name": "",
         "frames": "14",
-        "size": "normal"
+        "size": "boss"
     },
     {
         "id": "420",
@@ -2529,7 +2563,7 @@
         "id": "422",
         "name": "",
         "frames": "14",
-        "size": "normal"
+        "size": "boss"
     },
     {
         "id": "423",
@@ -2635,87 +2669,101 @@
     },
     {
         "id": "440",
-        "name": "",
+        "name": "Glassbound Solarvul",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "441",
-        "name": "",
+        "name": "Glassbound Gustvul",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "442",
-        "name": "",
+        "name": "Mammophant",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "443",
-        "name": "",
+        "name": "Bullephant",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "444",
-        "name": "",
+        "name": "Snowy Owlynx",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "445",
-        "name": "",
+        "name": "Teardrop Owlynx",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "446",
-        "name": "",
+        "name": "Bramblecrown Stoat",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "447",
-        "name": "",
+        "name": "Pebblehide Stoat",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "448",
-        "name": "",
+        "name": "Deadwood Strangler",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "449",
-        "name": "",
+        "name": "Frosttangle Strangler",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "450",
-        "name": "",
+        "name": "Treehorn Wolpertiger",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "451",
-        "name": "",
+        "name": "Wolpertiger",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "452",
-        "name": "",
+        "name": "Auburn Wooly Walrus",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "453",
-        "name": "",
+        "name": "Wooly Walrus",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "454",
