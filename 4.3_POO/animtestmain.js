@@ -70,6 +70,10 @@ function JSONget() {
                     width = 175;
                     height = 175;
                 }
+                else if(data[i].size == "tiny"){
+                    width = 80;
+                    height = 80;
+                }
                 else {
                     width = 215;
                     height = 215;

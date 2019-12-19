@@ -88,35 +88,35 @@
         "name": "Leafy Moth",
         "frames": "8",
         "size": "normal",
-        "level": "Training Grounds"
+        "level": "Woodland Path"
     },
     {
         "id": "14",
         "name": "Amaranth Moth",
         "frames": "10",
         "size": "normal",
-        "level": "Training Grounds"
+        "level": "Training Fields"
     },
     {
         "id": "15",
         "name": "Luna Mith",
         "frames": "10",
         "size": "normal",
-        "level": "Training Grounds"
+        "level": "Training Fields"
     },
     {
         "id": "16",
         "name": "Ruby Webwing",
         "frames": "16",
         "size": "normal",
-        "level": "Training Grounds"
+        "level": "Training Fields"
     },
     {
         "id": "17",
         "name": "Emerald Webwing",
         "frames": "12",
         "size": "normal",
-        "level": "Training Grounds"
+        "level": "Training Fields"
     },
     {
         "id": "18",
@@ -162,123 +162,143 @@
     },
     {
         "id": "24",
-        "name": "",
+        "name": "Radioactive Slime",
         "frames": "9",
-        "size": "normal"
+        "size": "normal",
+        "level": "Waterway"
     },
     {
         "id": "25",
-        "name": "",
+        "name": "Strangler",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Woodland Path"
     },
     {
         "id": "26",
-        "name": "",
+        "name": "River Muck",
         "frames": "9",
-        "size": "normal"
+        "size": "normal",
+        "level": "Waterway"
     },
     {
         "id": "27",
-        "name": "",
+        "name": "Blooming Strangler",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Woodland Path"
     },
     {
         "id": "28",
-        "name": "",
+        "name": "Ancient Fungus",
         "frames": "10",
-        "size": "normal"
+        "size": "normal",
+        "level": "Forgotten Cave"
     },
     {
         "id": "29",
-        "name": "",
+        "name": "Silver Springbok",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Arena"
     },
     {
         "id": "30",
-        "name": "",
+        "name": "Chimera",
         "frames": "13",
-        "size": "normal"
+        "size": "normal",
+        "level": "Arena"
     },
     {
         "id": "31",
-        "name": "",
+        "name": "Longneck Skirmisher",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Arena"
     },
     {
         "id": "32",
-        "name": "",
+        "name": "Longneck Interloper",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Arena"
     },
     {
         "id": "33",
-        "name": "",
+        "name": "Zeeba",
         "frames": "11",
-        "size": "normal"
+        "size": "normal",
+        "level": "Scorched Forest"
     },
     {
         "id": "34",
-        "name": "",
+        "name": "Mammertee",
         "frames": "20",
-        "size": "normal"
+        "size": "normal",
+        "level": "Kelp Beds"
     },
     {
         "id": "35",
-        "name": "",
+        "name": "Rambra",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Scorched Forest"
     },
     {
         "id": "36",
-        "name": "",
+        "name": "Parasitic Fungus",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Forgotten Cave"
     },
     {
         "id": "37",
-        "name": "",
+        "name": "Bramble Guardian",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Forgotten Cave"
     },
     {
         "id": "38",
-        "name": "",
+        "name": "Blue Dragon Reef Snail",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Forgotten Cave"
     },
     {
         "id": "39",
-        "name": "",
+        "name": "Crimson Reef Snail",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Forgotten Cave"
     },
     {
         "id": "40",
-        "name": "",
+        "name": "Bluefin Charger",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Woodland Path"
     },
     {
         "id": "41",
-        "name": "",
+        "name": "Clown Charger",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Woodland Path"
     },
     {
         "id": "42",
-        "name": "",
+        "name": "Red-Winged Owlcat",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Scorched Forest"
     },
     {
         "id": "43",
-        "name": "",
+        "name": "Banded Owlcat",
         "frames": "11",
-        "size": "normal"
+        "size": "normal",
+        "level": "Scorched Forest"
     },
     {
         "id": "44",
@@ -289,9 +309,10 @@
     },
     {
         "id": "45",
-        "name": "",
+        "name": "Granite Thresher",
         "frames": "10",
-        "size": "normal"
+        "size": "normal",
+        "level": "Waterway"
     },
     {
         "id": "46",
@@ -302,153 +323,178 @@
     },
     {
         "id": "47",
-        "name": "",
+        "name": "Shale Thresher",
         "frames": "10",
-        "size": "normal"
+        "size": "normal",
+        "level": "Waterway"
     },
     {
         "id": "48",
-        "name": "",
+        "name": "Crowned Bonepriest",
         "frames": "10",
-        "size": "normal"
+        "size": "normal",
+        "level": "Sandswept Delta"
     },
     {
         "id": "49",
-        "name": "",
+        "name": "Corspe Cleaner",
         "frames": "9",
-        "size": "normal"
+        "size": "normal",
+        "level": "Sandswept Delta"
     },
     {
         "id": "50",
-        "name": "",
+        "name": "Citrine Cave Jewel",
         "frames": "10",
-        "size": "normal"
+        "size": "normal",
+        "level": "Forgotten Cave"
     },
     {
         "id": "51",
-        "name": "",
+        "name": "Emerald Cave Jewel",
         "frames": "11",
-        "size": "normal"
+        "size": "normal",
+        "level": "Forgotten Cave"
     },
     {
         "id": "52",
-        "name": "",
+        "name": "Smoke Gyre",
         "frames": "10",
-        "size": "normal"
+        "size": "normal",
+        "level": "Scorched Forest"
     },
     {
         "id": "53",
-        "name": "",
+        "name": "Umbra Wolf",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Bamboo Falls"
     },
     {
         "id": "54",
         "name": "Gale Wolf",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Bamboo Falls"
     },
     {
         "id": "55",
         "name": "Steam Gyre",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Scorched Forest"
     },
     {
         "id": "56",
         "name": "Shattered Serpent",
         "frames": "10",
-        "size": "normal"
+        "size": "normal",
+        "level": "Sandswept Delta"
     },
     {
         "id": "57",
-        "name": "",
+        "name": "Shadow Serpent",
         "frames": "10",
-        "size": "normal"
+        "size": "normal",
+        "level": "Sandswept Delta"
     },
     {
         "id": "58",
-        "name": "",
+        "name": "Cumulus Seal",
         "frames": "10",
-        "size": "normal"
+        "size": "normal",
+        "level": "Waterway"
     },
     {
         "id": "59",
-        "name": "",
+        "name": "Dappled Seal",
         "frames": "10",
-        "size": "normal"
+        "size": "normal",
+        "level": "Waterway"
     },
     {
         "id": "60",
         "name": "Greater Sandstrike",
         "frames": "10",
-        "size": "normal"
+        "size": "normal",
+        "level": "Waterway"
     },
     {
         "id": "61",
-        "name": "",
+        "name": "Everglade Lasher",
         "frames": "10",
-        "size": "normal"
+        "size": "normal",
+        "level": "Waterway"
     },
     {
         "id": "62",
-        "name": "",
+        "name": "Storm Seeker",
         "frames": "11",
-        "size": "normal"
+        "size": "normal",
+        "level": "Sandswept Delta"
     },
     {
         "id": "63",
-        "name": "",
+        "name": "Death Seeker",
         "frames": "11",
-        "size": "normal"
+        "size": "normal",
+        "level": "Harpy's Roost"
     },
     {
         "id": "64",
-        "name": "",
+        "name": "Ethereal Trickster",
         "frames": "10",
-        "size": "normal"
+        "size": "normal",
+        "level": "Bamboo Falls"
     },
     {
         "id": "65",
-        "name": "",
+        "name": "Trick of the Light",
         "frames": "10",
-        "size": "normal"
+        "size": "normal",
+        "level": "Bamboo Falls"
     },
     {
         "id": "66",
-        "name": "",
+        "name": "Basilisk",
         "frames": "9",
-        "size": "normal"
+        "size": "normal",
+        "level": "Woodland Path"
     },
     {
         "id": "67",
-        "name": "",
+        "name": "Cockatrice",
         "frames": "9",
-        "size": "normal"
+        "size": "normal",
+        "level": "Woodland Path"
     },
     {
         "id": "68",
-        "name": "",
+        "name": "Opheodrys Serthis",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Sandswept Delta"
     },
     {
         "id": "69",
-        "name": "",
+        "name": "Carmine Serthis",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Sandswept Delta"
     },
     {
         "id": "70",
-        "name": "",
+        "name": "Tengu",
         "frames": "16",
-        "size": "normal"
+        "size": "normal",
+        "level": "Ghostlight Ruins"
     },
     {
         "id": "71",
-        "name": "",
+        "name": "Wandering Surgepriest",
         "frames": "16",
-        "size": "normal"
+        "size": "normal",
+        "level": "Ghostlight Ruins"
     },
     {
         "id": "72",
@@ -466,57 +512,66 @@
     },
     {
         "id": "74",
-        "name": "",
+        "name": "Celestial Antelope",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Arena"
     },
     {
         "id": "75",
-        "name": "",
+        "name": "Double-Tailed Warcat",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Arena"
     },
     {
         "id": "76",
-        "name": "",
+        "name": "Warcat Protector",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Arena"
     },
     {
         "id": "77",
-        "name": "",
+        "name": "Snow Streak",
         "frames": "9",
-        "size": "normal"
+        "size": "normal",
+        "level": "Harpy's Roost"
     },
     {
         "id": "78",
-        "name": "",
+        "name": "Fallen Streak",
         "frames": "9",
-        "size": "normal"
+        "size": "normal",
+        "level": "Harpy's Roost"
     },
     {
         "id": "79",
-        "name": "",
+        "name": "Noggle",
         "frames": "16",
-        "size": "normal"
+        "size": "normal",
+        "level": "Waterway"
     },
     {
         "id": "80",
-        "name": "",
+        "name": "Sunset Lasher",
         "frames": "16",
-        "size": "normal"
+        "size": "normal",
+        "level": "Waterway"
     },
     {
         "id": "81",
-        "name": "",
+        "name": "Longneck Magi",
         "frames": "21",
-        "size": "normal"
+        "size": "normal",
+        "level": "Arena"
     },
     {
         "id": "82",
-        "name": "",
+        "name": "Longneck Mender",
         "frames": "18",
-        "size": "normal"
+        "size": "normal",
+        "level": "Arena"
     },
     {
         "id": "83",
@@ -534,99 +589,115 @@
     },
     {
         "id": "85",
-        "name": "",
+        "name": "Bamboo Phytocat",
         "frames": "10",
-        "size": "normal"
+        "size": "normal",
+        "level": "Woodland Path"
     },
     {
         "id": "86",
-        "name": "",
+        "name": "Iridescent Scaleback",
         "frames": "16",
-        "size": "normal"
+        "size": "normal",
+        "level": "Sandswept Delta"
     },
     {
         "id": "87",
-        "name": "",
+        "name": "Scaleback",
         "frames": "16",
-        "size": "normal"
+        "size": "normal",
+        "level": "Sandswept Delta"
     },
     {
         "id": "88",
         "name": "Maned Rasa",
         "frames": "15",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "89",
         "name": "Squall Rasa",
         "frames": "15",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "90",
-        "name": "",
+        "name": "Winter Wolf",
         "frames": "17",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "91",
-        "name": "",
+        "name": "Black Wolf",
         "frames": "17",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "92",
-        "name": "",
+        "name": "Death's-Head Stag",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Scorched Forest"
     },
     {
         "id": "93",
-        "name": "",
+        "name": "Crimson Emperor",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Woodland Path"
     },
     {
         "id": "94",
-        "name": "",
+        "name": "Nightsky Fuiran",
         "frames": "11",
-        "size": "normal"
+        "size": "normal",
+        "level": "Sandswept Delta"
     },
     {
         "id": "95",
-        "name": "",
+        "name": "Fuiran",
         "frames": "11",
-        "size": "normal"
+        "size": "normal",
+        "level": "Sandswept Delta"
     },
     {
         "id": "96",
-        "name": "",
+        "name": "Hainu",
         "frames": "16",
-        "size": "normal"
+        "size": "normal",
+        "level": "Bamboo Falls"
     },
     {
         "id": "97",
-        "name": "",
+        "name": "Red-Breasted Hainu",
         "frames": "16",
-        "size": "normal"
+        "size": "normal",
+        "level": "Bamboo Falls"
     },
     {
         "id": "98",
-        "name": "",
+        "name": "Bluemoon Aviar",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Harpy's Roost"
     },
     {
         "id": "99",
-        "name": "",
+        "name": "Renegade Aviar",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Harpy's Roost"
     },
     {
         "id": "100",
-        "name": "",
+        "name": "Clouddancer",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Harpy's Roost"
     },
     {
         "id": "101",
@@ -637,435 +708,507 @@
     },
     {
         "id": "102",
-        "name": "",
+        "name": "Hoarfrost Mauler",
         "frames": "9",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "103",
-        "name": "",
+        "name": "Venomous Toridae",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Mire"
     },
     {
         "id": "104",
-        "name": "",
+        "name": "Poisonous Toridae",
         "frames": "18",
-        "size": "normal"
+        "size": "normal",
+        "level": "Mire"
     },
     {
         "id": "105",
-        "name": "",
+        "name": "Brilliant Psywurm",
         "frames": "11",
-        "size": "normal"
+        "size": "normal",
+        "level": "Mire"
     },
     {
         "id": "106",
-        "name": "",
+        "name": "Psywurm",
         "frames": "11",
-        "size": "normal"
+        "size": "normal",
+        "level": "Mire"
     },
     {
         "id": "107",
-        "name": "",
+        "name": "Southmarsh Podid",
         "frames": "16",
-        "size": "normal"
+        "size": "normal",
+        "level": "Mire"
     },
     {
         "id": "108",
-        "name": "",
+        "name": "Common Podid",
         "frames": "16",
-        "size": "normal"
+        "size": "normal",
+        "level": "Mire"
     },
     {
         "id": "109",
-        "name": "",
-        "frames": "15",
-        "size": "normal"
+        "name": "Scythe Kamaitachi",
+        "frames": "14",
+        "size": "normal",
+        "level": "Mire"
     },
     {
         "id": "110",
-        "name": "",
+        "name": "Salve Kamaitachi",
         "frames": "15",
-        "size": "normal"
+        "size": "normal",
+        "level": "Mire"
     },
     {
         "id": "111",
-        "name": "",
+        "name": "Sickle Kamaitachi",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Mire"
     },
     {
         "id": "112",
-        "name": "",
+        "name": "Shellion",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Mire"
     },
     {
         "id": "113",
-        "name": "",
+        "name": "Mistwatch Shellion",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Mire"
     },
     {
         "id": "114",
         "name": "Blackwing Croaker",
         "frames": "11",
-        "size": "normal"
+        "size": "normal",
+        "level": "Mire"
     },
     {
         "id": "115",
         "name": "Heartred Croaker",
         "frames": "11",
-        "size": "normal"
+        "size": "normal",
+        "level": "Mire"
     },
     {
         "id": "116",
         "name": "Fungalhoof Qiriq",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Bamboo Falls"
     },
     {
         "id": "117",
         "name": "Umberhorn Qiriq",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Bamboo Falls"
     },
     {
         "id": "118",
         "name": "Bumble",
         "frames": "17",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Fields"
     },
     {
         "id": "119",
         "name": "Coral Carpenter",
         "frames": "17",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Fields"
     },
     {
         "id": "120",
         "name": "Greatshell",
         "frames": "15",
-        "size": "normal"
+        "size": "normal",
+        "level": "Sandswept Delta"
     },
     {
         "id": "121",
         "name": "Blueridge Greatshell",
         "frames": "16",
-        "size": "normal"
+        "size": "normal",
+        "level": "Sandswept Delta"
     },
     {
         "id": "122",
         "name": "Blue Tang Hippogriff",
         "frames": "16",
-        "size": "normal"
+        "size": "normal",
+        "level": "Harpy's Roost"
     },
     {
         "id": "123",
         "name": "Cardinal Hippogriff",
         "frames": "16",
-        "size": "normal"
+        "size": "normal",
+        "level": "Harpy's Roost"
     },
     {
         "id": "124",
         "name": "Dodo",
         "frames": "9",
-        "size": "normal"
+        "size": "normal",
+        "level": "Harpy's Roost"
     },
     {
         "id": "125",
         "name": "Brush Dodo",
         "frames": "9",
-        "size": "normal"
+        "size": "normal",
+        "level": "Harpy's Roost"
     },
     {
         "id": "126",
         "name": "Hooded Dodo",
         "frames": "9",
-        "size": "normal"
+        "size": "normal",
+        "level": "Harpy's Roost"
     },
     {
         "id": "127",
         "name": "Yellow-Throated Sparrowmouse",
         "frames": "15",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Fields"
     },
     {
         "id": "128",
         "name": "Dark-Tufted Sparrowmouse",
         "frames": "15",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Fields"
     },
     {
         "id": "129",
         "name": "Glowing Pocket Mouse",
         "frames": "15",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Fields"
     },
     {
         "id": "130",
         "name": "Ember Mouse",
         "frames": "15",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Fields"
     },
     {
         "id": "131",
         "name": "Sprangyroo",
         "frames": "20",
-        "size": "normal"
+        "size": "normal",
+        "level": "Arena"
     },
     {
         "id": "132",
         "name": "Charcoal Sprangyroo",
         "frames": "20",
-        "size": "normal"
+        "size": "normal",
+        "level": "Arena"
     },
     {
         "id": "133",
         "name": "Kelp Tender",
         "frames": "20",
-        "size": "normal"
+        "size": "normal",
+        "level": "Kelp Beds"
     },
     {
         "id": "134",
         "name": "Jewelled Octoflyer",
         "frames": "20",
-        "size": "normal"
+        "size": "normal",
+        "level": "Kelp Beds"
     },
     {
         "id": "135",
-        "name": "",
+        "name": "Octoflyer",
         "frames": "20",
-        "size": "normal"
+        "size": "normal",
+        "level": "Kelp Beds"
     },
     {
         "id": "136",
-        "name": "",
+        "name": "Relic Eel",
         "frames": "20",
-        "size": "normal"
+        "size": "normal",
+        "level": "Kelp Beds"
     },
     {
         "id": "137",
-        "name": "",
+        "name": "Abyss Striker",
         "frames": "20",
-        "size": "normal"
+        "size": "normal",
+        "level": "Kelp Beds"
     },
     {
         "id": "138",
-        "name": "",
+        "name": "Maren Wavesinger",
         "frames": "20",
-        "size": "normal"
+        "size": "normal",
+        "level": "Kelp Beds"
     },
     {
         "id": "139",
-        "name": "",
+        "name": "Maren Scout",
         "frames": "20",
-        "size": "normal"
+        "size": "normal",
+        "level": "Kelp Beds"
     },
     {
         "id": "140",
-        "name": "",
+        "name": "Golden Porpoise",
         "frames": "20",
-        "size": "normal"
+        "size": "normal",
+        "level": "Kelp Beds"
     },
     {
         "id": "141",
-        "name": "",
+        "name": "Maren Warrior",
         "frames": "20",
-        "size": "normal"
+        "size": "normal",
+        "level": "Kelp Beds"
     },
     {
         "id": "142",
-        "name": "",
+        "name": "Maren Ambusher",
         "frames": "20",
-        "size": "normal"
+        "size": "normal",
+        "level": "Kelp Beds"
     },
     {
         "id": "143",
-        "name": "",
+        "name": "Cloud Chaser",
         "frames": "20",
-        "size": "normal"
+        "size": "normal",
+        "level": "Kelp Beds"
     },
     {
         "id": "144",
-        "name": "",
+        "name": "Nochnyr",
         "frames": "20",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "145",
-        "name": "",
+        "name": "Permafrost Impaler",
         "frames": "20",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "146",
-        "name": "",
-        "frames": "14",
-        "size": "normal"
+        "name": "Greenroot Janustrap",
+        "frames": "12",
+        "size": "normal",
+        "level": "Woodland Path"
     },
     {
         "id": "147",
-        "name": "",
-        "frames": "14",
-        "size": "normal"
+        "name": "Janustrap",
+        "frames": "12",
+        "size": "normal",
+        "level": "Woodland Path"
     },
     {
         "id": "148",
-        "name": "",
-        "frames": "14",
-        "size": "normal"
+        "name": "Painted Centaur",
+        "frames": "12",
+        "size": "normal",
+        "level": "Scorched Forest"
     },
     {
         "id": "149",
-        "name": "",
-        "frames": "14",
-        "size": "normal"
+        "name": "Wintermane Spearman",
+        "frames": "12",
+        "size": "normal",
+        "level": "Scorched Forest"
     },
     {
         "id": "150",
-        "name": "",
+        "name": "Wintermane Bowman",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Scorched Forest"
     },
     {
         "id": "151",
-        "name": "",
+        "name": "Centaur Archer",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Scorched Forest"
     },
     {
         "id": "152",
-        "name": "",
+        "name": "Serthis Potionmaster",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Sandswept Delta"
     },
     {
         "id": "153",
-        "name": "",
+        "name": "Serthis Alchemist",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Sandswept Delta"
     },
     {
         "id": "154",
-        "name": "",
+        "name": "Raptorik Ringmaster",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Arena"
     },
     {
         "id": "155",
-        "name": "",
+        "name": "Stormclaw Showman",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Arena"
     },
     {
         "id": "156",
-        "name": "",
+        "name": "Mesacliff Harpy",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Harpy's Roost"
     },
     {
         "id": "157",
-        "name": "",
-        "frames": "14",
-        "size": "normal"
+        "name": "Windcarve Harpy",
+        "frames": "8",
+        "size": "normal",
+        "level": "Harpy's Roost"
     },
     {
         "id": "158",
-        "name": "",
-        "frames": "8",
-        "size": "normal"
+        "name": "Woodland Turkey",
+        "frames": "14",
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "159",
-        "name": "",
+        "name": "Swift Volt",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Golem Workshop"
     },
     {
         "id": "160",
-        "name": "",
+        "name": "Swift Lumen",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Golem Workshop"
     },
     {
         "id": "161",
         "name": "Frost Delver",
         "frames": "14",
-        "size": "boss"
+        "size": "boss",
+        "level": "Golem Workshop"
     },
     {
         "id": "162",
         "name": "Stone Borer",
         "frames": "14",
-        "size": "boss"
+        "size": "boss",
+        "level": "Golem Workshop"
     },
     {
         "id": "163",
-        "name": "",
+        "name": "Mistral Minion",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Golem Workshop"
     },
     {
         "id": "164",
-        "name": "",
+        "name": "Spellbound Golem",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Golem Workshop"
     },
     {
         "id": "165",
-        "name": "",
+        "name": "Black Iron Creeper",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Golem Workshop"
     },
     {
         "id": "166",
-        "name": "",
+        "name": "Coppercoil Creeper",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Golem Workshop"
     },
     {
         "id": "167",
-        "name": "",
+        "name": "Scrapmetal Tracker",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Golem Workshop"
     },
     {
         "id": "168",
-        "name": "",
+        "name": "Steelhound",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Golem Workshop"
     },
     {
         "id": "169",
-        "name": "",
+        "name": "Construction Mith",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Golem Workshop"
     },
     {
         "id": "170",
-        "name": "",
+        "name": "Sentinel Mith",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Golem Workshop"
     },
     {
         "id": "171",
-        "name": "",
+        "name": "Snarling Mimic",
         "frames": "6",
-        "size": "normal"
+        "size": "normal",
+        "level": "Nocturne"
     },
     {
         "id": "172",
-        "name": "",
+        "name": "Ectoplasmime",
         "frames": "6",
-        "size": "normal"
+        "size": "normal",
+        "level": "Nocturne"
     },
     {
         "id": "173",
-        "name": "",
+        "name": "Jawlocker",
         "frames": "6",
-        "size": "normal"
+        "size": "normal",
+        "level": "Nocturne"
     },
     {
         "id": "174",
@@ -1083,555 +1226,647 @@
     },
     {
         "id": "176",
-        "name": "",
+        "name": "Clown Hippocampus",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Rainsong Jungle"
     },
     {
         "id": "177",
-        "name": "",
+        "name": "Hippocampus",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Rainsong Jungle"
     },
     {
         "id": "178",
-        "name": "",
+        "name": "Ringlet Amphithere",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Rainsong Jungle"
     },
     {
         "id": "179",
-        "name": "",
+        "name": "Ultramel Amphithere",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Rainsong Jungle"
     },
     {
         "id": "180",
-        "name": "",
+        "name": "Manticore Screamer",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Rainsong Jungle"
     },
     {
         "id": "181",
-        "name": "",
+        "name": "Proto Manticore",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Rainsong Jungle"
     },
     {
         "id": "182",
-        "name": "",
+        "name": "Budwing Morpho",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Rainsong Jungle"
     },
     {
         "id": "183",
-        "name": "",
+        "name": "Petal Jumper",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Rainsong Jungle"
     },
     {
         "id": "184",
         "name": "Silverbeast",
         "frames": "12",
-        "size": "boss"
+        "size": "boss",
+        "level": "Rainsong Jungle"
     },
     {
         "id": "185",
         "name": "Goldenbeast",
         "frames": "12",
-        "size": "boss"
+        "size": "boss",
+        "level": "Rainsong Jungle"
     },
     {
         "id": "186",
-        "name": "",
+        "name": "Zalis",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Rainsong Jungle"
     },
     {
         "id": "187",
-        "name": "",
+        "name": "Paradise Zalis",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Rainsong Jungle"
     },
     {
         "id": "188",
-        "name": "",
+        "name": "Barkback Boar",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Rainsong Jungle"
     },
     {
         "id": "189",
-        "name": "",
+        "name": "Deadwood Boar",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Rainsong Jungle"
     },
     {
         "id": "190",
-        "name": "",
+        "name": "Longneck Hunter",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "191",
-        "name": "",
+        "name": "Longneck Wanderer",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Boreal Wood"
     },
     {
         "id": "192",
-        "name": "",
+        "name": "Tigerblood Foo",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Bamboo Falls"
     },
     {
         "id": "193",
-        "name": "",
+        "name": "Mantled Foo",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Bamboo Falls"
     },
     {
         "id": "194",
-        "name": "",
+        "name": "Wetland Unicorn",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Mire"
     },
     {
         "id": "195",
-        "name": "",
+        "name": "Mossy Cerdae",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Mire"
     },
     {
         "id": "196",
         "name": "Wartoad",
         "frames": "14",
-        "size": "boss"
+        "size": "boss",
+        "level": "Mire"
     },
     {
         "id": "197",
         "name": "Molten Wartoad",
         "frames": "14",
-        "size": "boss"
+        "size": "boss",
+        "level": "Mire"
     },
     {
         "id": "198",
-        "name": "",
+        "name": "Parda",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Rainsong Jungle"
     },
     {
         "id": "199",
-        "name": "",
+        "name": "King Parda",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Rainsong Jungle"
     },
     {
         "id": "200",
-        "name": "",
+        "name": "Depin",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Kelp Beds"
     },
     {
         "id": "201",
-        "name": "",
+        "name": "Corrosive Depin",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Kelp Beds"
     },
     {
         "id": "202",
-        "name": "",
+        "name": "Chromefeather Lookout",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Golem Workshop"
     },
     {
         "id": "203",
-        "name": "",
+        "name": "Sentry Squawker",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Golem Workshop"
     },
     {
         "id": "204",
-        "name": "",
+        "name": "Searing Jackalope",
         "frames": "14",
-        "size": "normal"
+        "size": "tiny",
+        "level": "Scorched Forest"
     },
     {
         "id": "205",
-        "name": "",
+        "name": "Extinguished Jackalope",
         "frames": "14",
-        "size": "normal"
+        "size": "tiny",
+        "level": "Scorched Forest"
     },
     {
         "id": "206",
-        "name": "",
+        "name": "Apatite Fisher",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Crystal Pools"
     },
     {
         "id": "207",
-        "name": "",
+        "name": "Rhodocrosite Crane",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Crystal Pools"
     },
     {
         "id": "208",
-        "name": "",
+        "name": "Hippalectryon",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Crystal Pools"
     },
     {
         "id": "209",
-        "name": "",
+        "name": "Arctic Hippalectryon",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Crystal Pools"
     },
     {
         "id": "210",
-        "name": "",
+        "name": "Moonbeam Crayfish",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Crystal Pools"
     },
     {
         "id": "211",
-        "name": "",
+        "name": "Chalcedony Snipper",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Crystal Pools"
     },
     {
         "id": "212",
-        "name": "",
+        "name": "Clearwater Oracle",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Crystal Pools"
     },
     {
         "id": "213",
-        "name": "",
+        "name": "Maren Warlock",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Crystal Pools"
     },
     {
         "id": "214",
         "name": "Crystalhide Jester",
         "frames": "14",
-        "size": "boss"
+        "size": "boss",
+        "level": "Crystal Pools"
     },
     {
         "id": "215",
         "name": "Hawksbill Goliath",
         "frames": "14",
-        "size": "boss"
+        "size": "boss",
+        "level": "Crystal Pools"
     },
     {
         "id": "216",
-        "name": "",
+        "name": "Sparkling Stinger",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Crystal Pools"
     },
     {
         "id": "217",
-        "name": "",
+        "name": "Crystalplate Stinger",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Crystal Pools"
     },
     {
         "id": "218",
-        "name": "",
+        "name": "Almandine Sturgeon",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Crystal Pools"
     },
     {
         "id": "219",
-        "name": "",
+        "name": "Amber Gulper",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Crystal Pools"
     },
     {
         "id": "220",
-        "name": "",
+        "name": "Windcarve Fugitive",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Crystal Pools"
     },
     {
         "id": "221",
-        "name": "",
+        "name": "Stonewatch Prince",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Crystal Pools"
     },
     {
         "id": "222",
-        "name": "",
+        "name": "Grouse Basilisk",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Woodland Path"
     },
     {
         "id": "223",
-        "name": "",
+        "name": "Coral Basilisk",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Woodland Path"
     },
     {
         "id": "224",
-        "name": "",
+        "name": "Venomblade Assassain",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Forgotten Cave"
     },
     {
         "id": "225",
-        "name": "",
+        "name": "Blueband Duellist",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Forgotten Cave"
     },
     {
         "id": "226",
-        "name": "",
+        "name": "Deepmine Aardvark",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Forgotten Cave"
     },
     {
         "id": "227",
-        "name": "",
+        "name": "Peacevine Aardvark",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Forgotten Cave"
     },
     {
         "id": "228",
-        "name": "",
+        "name": "Centaur Berserker",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Forgotten Cave"
     },
     {
         "id": "229",
-        "name": "",
+        "name": "Swiftfoot Slayer",
         "frames": "12",
-        "size": "normal"
+        "size": "normal",
+        "level": "Forgotten Cave"
     },
     {
         "id": "230",
-        "name": "",
+        "name": "Opposing Forces",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Nocturne"
     },
     {
         "id": "231",
-        "name": "",
+        "name": "Unlikely Alliance",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Nocturne"
     },
     {
         "id": "232",
-        "name": "",
+        "name": "Magic Mirror",
         "frames": "34",
-        "size": "normal"
+        "size": "normal",
+        "level": "Nocturne"
     },
     {
         "id": "233",
-        "name": "",
+        "name": "Deadly Reflection",
         "frames": "34",
-        "size": "normal"
+        "size": "normal",
+        "level": "Nocturne"
     },
     {
         "id": "234",
-        "name": "",
+        "name": "Spellbound Tome",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Nocturne"
     },
     {
         "id": "235",
-        "name": "",
+        "name": "Ensorcelled Volume",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Nocturne"
     },
     {
         "id": "236",
-        "name": "",
+        "name": "Animated Statue",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Nocturne"
     },
     {
         "id": "237",
-        "name": "",
+        "name": "Living Sculpture",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Nocturne"
     },
     {
         "id": "238",
-        "name": "",
+        "name": "Painted Marionette",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Nocturne"
     },
     {
         "id": "239",
-        "name": "",
+        "name": "Wooden Marionette",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Nocturne"
     },
     {
         "id": "240",
-        "name": "",
+        "name": "Clatterclog Engineer",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Golem Workshop"
     },
     {
         "id": "241",
-        "name": "",
+        "name": "Monkey Wrench",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Golem Workshop"
     },
     {
         "id": "242",
-        "name": "",
+        "name": "Maren Shark Hunter",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Waterway"
     },
     {
         "id": "243",
-        "name": "",
+        "name": "Maren Currentfinder",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Waterway"
     },
     {
         "id": "244",
-        "name": "",
+        "name": "Infestation Hound",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Ghostlight Ruins"
     },
     {
         "id": "245",
-        "name": "",
+        "name": "Wraith Hound",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Ghostlight Ruins"
     },
     {
         "id": "246",
-        "name": "",
+        "name": "Longneck Scholar",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Ghostlight Ruins"
     },
     {
         "id": "247",
-        "name": "",
+        "name": "Longneck Medium",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Ghostlight Ruins"
     },
     {
         "id": "248",
-        "name": "",
+        "name": "Tengu Caller",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Ghostlight Ruins"
     },
     {
         "id": "249",
-        "name": "",
+        "name": "Greybeak Reaper",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Ghostlight Ruins"
     },
     {
         "id": "250",
-        "name": "",
+        "name": "Carrioncorn",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Ghostlight Ruins"
     },
     {
         "id": "251",
-        "name": "",
+        "name": "Nightmare",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Ghostlight Ruins"
     },
     {
         "id": "252",
-        "name": "",
+        "name": "Otherworldly Aura",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Ghostlight Ruins"
     },
     {
         "id": "253",
-        "name": "",
+        "name": "Somber Spirit",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Ghostlight Ruins"
     },
     {
         "id": "254",
-        "name": "",
-        "frames": "",
-        "size": "normal"
+        "name": "Tatterwing Carcass",
+        "frames": "14",
+        "size": "normal",
+        "level":"Ghostlight Ruins"
     },
     {
         "id": "255",
-        "name": "",
+        "name": "Shatterbone Vulture",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Ghostlight Ruins"
     },
     {
         "id": "256",
-        "name": "",
+        "name": "Aer Phantom",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Ghostlight Ruins"
     },
     {
         "id": "257",
-        "name": "",
+        "name": "Lux Spectre",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Ghostlight Ruins"
     },
     {
         "id": "258",
-        "name": "",
+        "name": "Pronghorn Hunter",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Ghostlight Ruins"
     },
     {
         "id": "259",
-        "name": "",
+        "name": "Pronghorn Stomper",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Ghostlight Ruins"
     },
     {
         "id": "260",
         "name": "Malevolent Spirit",
         "frames": "14",
-        "size": "boss"
+        "size": "boss",
+        "level": "Ghostlight Ruins"
     },
     {
         "id": "261",
         "name": "Disoriented Spirit",
         "frames": "14",
-        "size": "boss"
+        "size": "boss",
+        "level": "Ghostlight Ruins"
     },
     {
         "id": "262",
         "name": "Roc",
         "frames": "14",
-        "size": "boss"
+        "size": "boss",
+        "level": "Harpy's Roost"
     },
     {
         "id": "263",
         "name": "Crowned Roc",
         "frames": "14",
-        "size": "boss"
+        "size": "boss",
+        "level": "Harpy's Roost"
     },
     {
         "id": "264",
-        "name": "",
+        "name": "Boran Veteran",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Arena"
     },
     {
         "id": "265",
-        "name": "",
+        "name": "Spellwall Boran",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Arena"
     },
     {
         "id": "266",
-        "name": "",
+        "name": "Goldenplains Poodle Mith",
         "frames": "16",
-        "size": "normal"
+        "size": "normal",
+        "level":"Arena"
     },
     {
         "id": "267",
-        "name": "",
+        "name": "Marshland Poodle Mith",
         "frames": "16",
-        "size": "normal"
+        "size": "normal",
+        "level":"Arena"
     },
     {
         "id": "268",
@@ -1649,123 +1884,143 @@
     },
     {
         "id": "270",
-        "name": "",
+        "name": "Augite Protector",
         "frames": "28",
-        "size": "normal"
+        "size": "normal",
+        "level":"Scorched Forest"
     },
     {
         "id": "271",
-        "name": "",
+        "name": "Moss-Covered Golem",
         "frames": "28",
-        "size": "normal"
+        "size": "normal",
+        "level":"Scorched Forest"
     },
     {
         "id": "272",
-        "name": "",
+        "name": "Murkbottom Gull",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Redrock Cove"
     },
     {
         "id": "273",
-        "name": "",
+        "name": "Tradewinds Gull",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Redrock Cove"
     },
     {
         "id": "274",
-        "name": "",
+        "name": "Noxious Coralclimber",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Redrock Cove"
     },
     {
         "id": "275",
-        "name": "",
+        "name": "Leopard Coralclimber",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Redrock Cove"
     },
     {
         "id": "276",
-        "name": "",
+        "name": "Mirage Puffer",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Redrock Cove"
     },
     {
         "id": "277",
-        "name": "",
+        "name": "Daydream Puffer",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Redrock Cove"
     },
     {
         "id": "278",
-        "name": "",
+        "name": "Maren Defender",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Redrock Cove"
     },
     {
         "id": "279",
-        "name": "",
+        "name": "Maren Spearmaiden",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Redrock Cove"
     },
     {
         "id": "280",
-        "name": "",
+        "name": "Mottled Sea Serpent",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Redrock Cove"
     },
     {
         "id": "281",
-        "name": "",
+        "name": "Highfin Sea Serpent",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Redrock Cove"
     },
     {
         "id": "282",
-        "name": "",
+        "name": "Sandshore Snipper",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Redrock Cove"
     },
     {
         "id": "283",
-        "name": "",
+        "name": "Riptide Clipper",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Redrock Cove"
     },
     {
         "id": "284",
-        "name": "",
+        "name": "Vivid Wavehopper",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Redrock Cove"
     },
     {
         "id": "285",
-        "name": "",
+        "name": "Dainty Wavehopper",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Redrock Cove"
     },
     {
         "id": "286",
-        "name": "",
+        "name": "Oceansurf Magnus",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Redrock Cove"
     },
     {
         "id": "287",
-        "name": "",
+        "name": "Waveswell Sorcerer",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level":"Redrock Cove"
     },
     {
         "id": "288",
         "name": "Deeprealm Hunter",
         "frames": "14",
-        "size": "boss"
+        "size": "boss",
+        "level": "Redrock Cove"
     },
     {
         "id": "289",
         "name": "Spiney Whale",
         "frames": "14",
-        "size": "boss"
+        "size": "boss",
+        "level": "Redrock Cove"
     },
     {
         "id": "290",
@@ -1987,13 +2242,15 @@
         "id": "326",
         "name": "Tunnel Hydra",
         "frames": "14",
-        "size": "boss"
+        "size": "boss",
+        "level": "Volcanic Vents"
     },
     {
         "id": "327",
         "name": "Hydra",
         "frames": "14",
-        "size": "boss"
+        "size": "boss",
+        "level": "Volcanic Vents"
     },
     {
         "id": "328",
@@ -2033,87 +2290,101 @@
     },
     {
         "id": "334",
-        "name": "",
+        "name": "Bluelight Chipskink",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Fields"
     },
     {
         "id": "335",
-        "name": "",
+        "name": "Chipskink",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Fields"
     },
     {
         "id": "336",
-        "name": "",
+        "name": "Ceanothus Brawler",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Fields"
     },
     {
         "id": "337",
-        "name": "",
+        "name": "Mith Bruiser",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Fields"
     },
     {
         "id": "338",
-        "name": "",
+        "name": "Brown-Spotted Mith",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Fields"
     },
     {
         "id": "339",
-        "name": "",
+        "name": "Primrose Mith",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Fields"
     },
     {
         "id": "340",
-        "name": "",
+        "name": "Frosted Pocketmouse",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Fields"
     },
     {
         "id": "341",
-        "name": "",
+        "name": "Satin Pocketmouse",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Fields"
     },
     {
         "id": "342",
-        "name": "",
+        "name": "Sweetpuff",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Fields"
     },
     {
         "id": "343",
-        "name": "",
+        "name": "Ragepuff",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Fields"
     },
     {
         "id": "344",
-        "name": "",
+        "name": "Silky Webwing",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Fields"
     },
     {
         "id": "345",
-        "name": "",
+        "name": "Webwing Alpha",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Training Fields"
     },
     {
         "id": "346",
-        "name": "",
+        "name": "Flora Cerdae",
         "frames": "28",
-        "size": "normal"
+        "size": "normal",
+        "level": "Blooming Grove"
     },
     {
         "id": "347",
-        "name": "",
+        "name": "Maned Cerdae",
         "frames": "28",
-        "size": "normal"
+        "size": "normal",
+        "level": "Blooming Grove"
     },
     {
         "id": "348",
@@ -2371,13 +2642,15 @@
         "id": "386",
         "name": "Transmuted Treasure",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Nocturne"
     },
     {
         "id": "387",
         "name": "Poltergeist Pile",
         "frames": "14",
-        "size": "normal"
+        "size": "normal",
+        "level": "Nocturne"
     },
     {
         "id": "388",
@@ -2443,13 +2716,15 @@
         "id": "398",
         "name": "Rat King",
         "frames": "14",
-        "size": "boss"
+        "size": "boss",
+        "level": "Waterway"
     },
     {
         "id": "399",
         "name": "Ghostly Rat Lord",
         "frames": "14",
-        "size": "boss"
+        "size": "boss",
+        "level": "Waterway"
     },
     {
         "id": "400",
