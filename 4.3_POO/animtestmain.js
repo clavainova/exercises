@@ -62,21 +62,23 @@ function JSONget() {
                 let frames = data[i].frames;
                 let width;
                 let height;
-                if (data[i].size == "normal") {
-                    width = 125;
-                    height = 130;
-                }
-                else if (data[i].size == "yeti") {
-                    width = 175;
-                    height = 175;
-                }
-                else if(data[i].size == "tiny"){
-                    width = 80;
-                    height = 80;
-                }
-                else {
-                    width = 215;
-                    height = 215;
+                switch (data[i].size) {
+                    case "yeti":
+                        width = 175;
+                        height = 175;
+                        break;
+                    case "tiny":
+                        width = 80;
+                        height = 80;
+                        break;
+                    case "boss":
+                        width = 215;
+                        height = 215;
+                        break;
+                    default:
+                        width = 125;
+                        height = 130;
+                        break;
                 }
                 let fam = new Familiar(id, name, frames, width, height);
                 famList.push(fam);
