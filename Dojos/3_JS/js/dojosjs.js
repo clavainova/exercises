@@ -5,6 +5,7 @@ var footList = [];
 //JSON
 
 let promArr = JSONget("./data/menu.json");
+//get JSON then create objects 
 promArr.then(function (value) {
     value.principal.forEach(function (item) {
         try {
@@ -21,10 +22,12 @@ promArr.then(function (value) {
         let navObj = new Nav(item.nom, item.lien, []);
         footList.push(navObj);
     });
+    //then manipulate DOM 
 }).then(addToDOM)
-.then(function () {
-    document.getElementsByTagName("a")[1].setAttribute("onclick", "showMenus()");    
-});
+    //then setAttribute (onclick for submenu)
+    .then(function () {
+        document.getElementsByTagName("a")[1].setAttribute("onclick", "showMenus()");
+    });
 
 
 function JSONget(url) {
