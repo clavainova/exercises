@@ -8,10 +8,11 @@ let promArr = JSONget("./data/menu.json");
 promArr.then(function (value) {
     value.principal.forEach(function (item) {
         try {
-            let arr = value.sousmenus;
+            let arr = item.sousmenus;
             let navObj = new Nav(item.nom, item.lien, arr);
             navList.push(navObj);
         } catch (e) {
+            console.log("no");
             let navObj = new Nav(item.nom, item.lien, []);
             navList.push(navObj);
         }
@@ -46,7 +47,6 @@ function addToDOM() {
         a.setAttribute("href", item.lien);
         document.getElementsByTagName("nav")[0].appendChild(a);
         try { //if submenu
-            console.log("does this have submenus? " + item.children);
             item.children.forEach(function (elem) {
                 let nomS = document.createTextNode(elem.nom);
                 let aS = document.createElement("a");
