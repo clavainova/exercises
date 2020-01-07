@@ -70,7 +70,7 @@ function hideAll() {
 function hideElem(elem) {
     console.log("hiding children of " + elem);
     let childList = elem.children;
-    for (let i = 1; i < childList.length; i++) {
+    for (let i = 1; i < childList.length; i++) { //from 1 because 0 is the title
         childList[i].style.visibility = "hidden";
         childList[i].style.height = "0";
     }

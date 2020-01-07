@@ -21,9 +21,11 @@ promArr.then(function (value) {
         let navObj = new Nav(item.nom, item.lien, []);
         footList.push(navObj);
     });
-}).then(addToDOM).then(function () {
+}).then(addToDOM)
+.then(function () {
     document.getElementsByTagName("a")[1].setAttribute("onclick", "showMenus()");    
 });
+
 
 function JSONget(url) {
     return new Promise(function (resolve, reject) {
@@ -39,7 +41,6 @@ function JSONget(url) {
         }
     });
 }
-
 
 function addToDOM() {
     navList.forEach(function (item) {
