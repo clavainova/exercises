@@ -21,7 +21,9 @@ promArr.then(function (value) {
         let navObj = new Nav(item.nom, item.lien, []);
         footList.push(navObj);
     });
-}).then(addToDOM);
+}).then(addToDOM).then(function () {
+    document.getElementsByTagName("a")[1].setAttribute("onclick", "showMenus()");    
+});
 
 function JSONget(url) {
     return new Promise(function (resolve, reject) {
@@ -52,7 +54,6 @@ function addToDOM() {
                 let aS = document.createElement("a");
                 aS.appendChild(nomS);
                 aS.setAttribute("href", elem.lien);
-                aS.setAttribute("class", "sousmenu");
                 document.getElementsByTagName("nav")[0].appendChild(aS);
             });
         } catch (e) {

@@ -75,3 +75,13 @@ function hideElem(elem) {
         childList[i].style.height = "0";
     }
 }
+
+function showMenus() {
+    if (document.getElementsByTagName("a")[2].style.display != "block") {
+        document.getElementsByTagName("a")[2].style.display = "block";
+        document.getElementsByTagName("a")[3].style.display = "block";
+    } else {
+        document.getElementsByTagName("a")[2].style.display = "none";
+        document.getElementsByTagName("a")[3].style.display = "none";
+    }
+}
