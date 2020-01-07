@@ -52,6 +52,7 @@ function addToDOM() {
                 let aS = document.createElement("a");
                 aS.appendChild(nomS);
                 aS.setAttribute("href", elem.lien);
+                aS.setAttribute("class", "sousmenu");
                 document.getElementsByTagName("nav")[0].appendChild(aS);
             });
         } catch (e) {

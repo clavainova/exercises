@@ -35,6 +35,10 @@ main>header>nav>a {
     text-decoration: none;
 }
 
+.sousmenu {
+    background: rgb(255, 194, 194);
+}
+
 main>header>nav>a:hover {
     background: none;
     color: white;
