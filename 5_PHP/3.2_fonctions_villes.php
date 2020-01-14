@@ -62,6 +62,8 @@
     <th>Population</th>
     <th>Densité</th></tr>";
 
+    //the ampersand operator means it's passed by reference not value
+    //in value any modifications don't affect the original object
     foreach ($results as &$value) {
         if ($value["ville"] == "PAU") {
             echo "<tr class='pau'>";
