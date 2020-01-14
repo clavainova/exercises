@@ -7,14 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        table,
-        th,
+        table {
+            background-color: darkslategrey;
+        }
+
         tr {
-            border: 2px solid black;
+            background-color: white;
+        }
+
+        th {
+            background-color: lightgrey;
+        }
+
+        th,
+        td {
+            padding: 5px 5px;
         }
 
         .pau {
-            background-color: green;
+            background-color: yellowgreen !important;
         }
     </style>
 </head>
@@ -70,12 +81,12 @@
         } else {
             echo "<tr>";
         }
-        echo "<th>", $value["ville"], "</th>";
-        echo "<th>", $value["departement"], "</th>";
-        echo "<th>", $value["latitude"], "</th>";
-        echo "<th>", $value["longitude"], "</th>";
-        echo "<th>", $value["population"], "</th>";
-        echo "<th>", $value["densite"], "</th></tr>";
+        echo "<td>", $value["ville"], "</td>";
+        echo "<td>", $value["departement"], "</td>";
+        echo "<td>", $value["latitude"], "</td>";
+        echo "<td>", $value["longitude"], "</td>";
+        echo "<td>", $value["population"], "</td>";
+        echo "<td>", $value["densite"], "</td></tr>";
     }
 
     echo "</table>";
