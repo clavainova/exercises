@@ -64,35 +64,43 @@
         return strcmp($a["ville"], $b["ville"]);
     }
     usort($results, "cmp");
-
-    //beginning best done manually
-    echo "<table><tr><th>Ville</th>
-    <th>Departement</th>
-    <th>Latitude</th>
-    <th>Longitude</th>
-    <th>Population</th>
-    <th>Densité</th></tr>";
-
-    //the ampersand operator means it's passed by reference not value
-    //in value any modifications don't affect the original object
-    foreach ($results as &$value) {
-        if ($value["ville"] == "PAU") {
-            echo "<tr class='pau'>";
-        } else {
-            echo "<tr>";
-        }
-        echo "<td>", $value["ville"], "</td>";
-        echo "<td>", $value["departement"], "</td>";
-        echo "<td>", $value["latitude"], "</td>";
-        echo "<td>", $value["longitude"], "</td>";
-        echo "<td>", $value["population"], "</td>";
-        echo "<td>", $value["densite"], "</td></tr>";
-    }
-
-    echo "</table>";
-
-
     ?>
+    <table>
+        <tr>
+            <th>Ville</th>
+            <th>Departement</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Population</th>
+            <th>Densité</th>
+        </tr>
+        <?php
+        //the ampersand operator means it's passed by reference not value
+        //in value any modifications don't affect the original object
+        foreach ($results as &$value) {
+            if ($value["ville"] == "PAU") {
+        ?>
+                <tr class='pau'>
+                <?php
+            } else {
+                ?>
+                <tr>
+                <?php
+            }
+                ?>
+
+                <td><?= $value["ville"] ?></td>
+                <td><?= $value["departement"] ?></td>
+                <td><?= $value["latitude"] ?></td>
+                <td><?= $value["longitude"] ?></td>
+                <td><?= $value["population"] ?></td>
+                <td><?= $value["densite"] ?></td>
+                </tr>
+
+            <?php
+        }
+            ?>
+    </table>
 </body>
 
 </html>
