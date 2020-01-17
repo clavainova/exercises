@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include 'components/head.html'
-?>
+<?php     
+require 'components/config.php';
+    include constant("head");
+    ?>
 
 <body>
 
     <?php
-    include 'components/nav.html';
+    include constant("nav");
     ?>
 
     <!-- First Container -->
@@ -35,7 +37,7 @@
     </div>
 
     <?php
-    include 'components/footer.html';
+    include constant("footer");
     ?>
 
 </body>

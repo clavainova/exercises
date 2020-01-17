@@ -2,13 +2,15 @@
 <html lang="en">
 
 
-<?php include 'components/head.html'
+<?php
+require 'components/config.php';
+include constant("head");
 ?>
 
 <body>
 
     <?php
-    include 'components/nav.html';
+    include constant("nav");
     ?>
 
 
@@ -31,8 +33,8 @@
     </div>
 
     <?php
-    include 'components/grid.html';
-    include 'components/footer.html';
+    include constant("grid");
+    include constant("footer");
     ?>
 
 </body>
