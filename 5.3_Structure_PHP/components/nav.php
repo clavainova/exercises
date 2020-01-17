@@ -6,7 +6,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a id="logo" class="navbar-brand" href="index.php"><img src="
+            <a id="logo" class="navbar-brand" href="index.php?page=index"><img src="
                 <?php
                 print $birdurl;
                 ?>
@@ -15,19 +15,19 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="index.php">ACCUEIL</a>
+                    <a href="index.php?page=index">ACCUEIL</a>
                 </li>
                 <li>
-                    <a href="produits.php">NOS PRODUITS</a>
+                    <a href="index.php?page=produits">NOS PRODUITS</a>
                 </li>
                 <li>
-                    <a href="blog.php">BLOG</a>
+                    <a href="index.php?page=blog">BLOG</a>
                 </li>
                 <li>
-                    <a href="contact.php">CONTACT</a>
+                    <a href="index.php?page=contact">CONTACT</a>
                 </li>
                 <li>
-                    <a href="about.php">A propos</a>
+                    <a href="index.php?page=about">A propos</a>
                 </li>
             </ul>
         </div>
