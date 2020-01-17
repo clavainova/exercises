@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <!-- Theme Made By www.w3schools.com - No Copyright -->
-    <title>Bootstrap Theme Simply Me</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-        <?php include 'components/style.css'
-        ?>
-    </style>
-</head>
+<?php include 'components/head.html'
+?>
 
 <body>
 
@@ -43,30 +31,8 @@
         </a>
     </div>
 
-    <!-- Third Container (Grid) -->
-    <div class="container-fluid bg-3 text-center">
-        <h3 class="margin">Nos activités</h3>
-        <br>
-        <div class="row">
-            <div class="col-sm-4">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.</p>
-                <img src="images/birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-            </div>
-            <div class="col-sm-4">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.</p>
-                <img src="images/birds2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-            </div>
-            <div class="col-sm-4">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.</p>
-                <img src="images/birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-            </div>
-        </div>
-    </div>
-
     <?php
+    include 'components/grid.html';
     include 'components/footer.html';
     ?>
 

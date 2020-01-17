@@ -18,6 +18,7 @@ function fillTable()
 
 <?php
 //generate 5 random numbers
+//array_flip() for swapping the indexes and the data
 function getFiveNum()
 {
     $arr = array();
@@ -28,6 +29,7 @@ function getFiveNum()
 }
 
 //same with while
+//instead, can use array_rand(), to work with previous array
 function whileGetFiveNum()
 {
     $arr = array();
@@ -71,6 +73,7 @@ $freq = 0;
 $wins = array();
 $mynum = [2, 4, 23, 42, 49];
 //see how many matches
+//easier way array_intersect() for seeing the overlap between arrays
 for ($i = 0; $i < count($allgen); $i++) {
     for ($j = 0; $j < count($mynum); $j++) {
         if ($allgen[$i] == $mynum[$j]) {
