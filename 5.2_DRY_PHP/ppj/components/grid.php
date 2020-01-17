@@ -1,13 +1,15 @@
-<div class="container-fluid bg-3 text-center">
-    <h3 class="margin">Where To Find Me?</h3>
+<div <?php if ($page != "produits") :  ?> class="container-fluid bg-3 text-center" <?php
+                                                                                else : ?> class="col-md-6 col-md-offset-3" <?php endif ?>;id="grid">
+    <?php if ($page != "produits") :  ?><h3 class="margin">Where To Find Me?</h3><?php endif ?>
     <br>
     <div class="row">
         <div class="col-sm-4">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.</p>
-            <img src="
+            <?php if ($page != "produits") :  ?>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua.</p>
+                <img src="
             <?php
-            print $birds1url;
+                print $birds1url;
             ?>
             " class="img-responsive margin" style="width:100%" alt="Image">
         </div>
@@ -16,7 +18,7 @@
                 magna aliqua.</p>
             <img src="
             <?php
-            print $birds2url;
+                print $birds2url;
             ?>" class="img-responsive margin" style="width:100%" alt="Image">
         </div>
         <div class="col-sm-4">
@@ -24,8 +26,36 @@
                 magna aliqua.</p>
             <img src="
             <?php
-            print $birds3url;
+                print $birds3url;
             ?>" class="img-responsive margin" style="width:100%" alt="Image">
+        <?php else : ?>
+
+            <img src="
+            <?php
+                print $birds1url;
+            ?>
+            " class="img-responsive margin" style="width:100%" alt="Image">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua.</p>
+        </div>
+        <div class="col-sm-4">
+
+            <img src="
+            <?php
+                print $birds2url;
+            ?>" class="img-responsive margin" style="width:100%" alt="Image">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua.</p>
+        </div>
+        <div class="col-sm-4">
+            <img src="
+            
+            <?php
+                print $birds3url;
+            ?>" class="img-responsive margin" style="width:100%" alt="Image">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua.</p>
+        <?php endif ?>
         </div>
     </div>
 </div>

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <?php
+$page = "produits";
 require 'components/config.php';
-$page = "blog";
 include constant("head");
 ?>
 
@@ -11,11 +12,9 @@ include constant("head");
 
     <?php
     include constant("nav");
-
-    include constant("blogarticle");
-    include constant("blogarticle");
-    include constant("blogarticle");
-
+    include constant("grid");
+    include constant("grid");
+    include constant("grid");
     include constant("footer");
     ?>
 

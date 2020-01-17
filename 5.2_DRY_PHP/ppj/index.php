@@ -3,6 +3,7 @@
 
 <?php
 require 'components/config.php';
+$page = "index";
 include constant("head");
 ?>
 

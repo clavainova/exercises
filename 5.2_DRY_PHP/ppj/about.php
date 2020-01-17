@@ -4,6 +4,7 @@
 
 <?php
 require 'components/config.php';
+$page = "about";
 include constant("head");
 ?>
 

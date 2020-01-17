@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php     
+<?php
 require 'components/config.php';
-    include constant("head");
-    ?>
+$page = "contact";
+include constant("head");
+?>
 
 <body>
 

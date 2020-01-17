@@ -3,8 +3,9 @@
 $titre = "Pierre, Paul et Jacquot";
 
 //parent
+define("assets", "assets/");
 define("config", "components/");
-define("image", "img/");
+define("image", assets."img/");
 
 //general components
 define("footer", config."footer.html");
@@ -26,6 +27,10 @@ define("aboutsecondcontainer", config.about."secondcontainer.php");
 define("contact", "contact/");
 define("contactfirstcontainer", config.contact."firstcontainer.php");
 
+//blog - subcomponents
+define("blog", "blog/");
+define("blogarticle",config.blog."article.php");
+
 //images
 $birdurl = image.'bird.jpg';
 $birds1url = image.'birds1.jpg';
@@ -33,4 +38,4 @@ $birds2url = image.'birds2.jpg';
 $birds3url = image.'birds3.jpg';
 
 //stylesheet
-$cssurl = config.'style.css';
+$cssurl = assets.'style.css';
