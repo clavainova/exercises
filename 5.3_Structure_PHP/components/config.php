@@ -2,6 +2,9 @@
 //titre
 $titre = "Pierre, Paul et Jacquot";
 
+//functions
+define("functions", "functions/");
+
 //parent
 define("assets", "assets/");
 define("config", "components/");
