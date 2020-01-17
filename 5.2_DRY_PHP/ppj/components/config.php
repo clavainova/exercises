@@ -1,15 +1,36 @@
 <?php
-//components
-define("footer", "components/footer.html");
-define("grid", "components/grid.php");
-define("head", "components/head.php");
-define("nav", "components/nav.php");
+//titre
+$titre = "Pierre, Paul et Jacquot";
+
+//parent
+define("config", "components/");
+define("image", "img/");
+
+//general components
+define("footer", config."footer.html");
+define("grid", config."grid.php");
+define("head", config."head.php");
+define("nav", config."nav.php");
+
+//index -- subcomponents
+define("index", "index/");
+define("indexfirstcontainer", config.index."firstcontainer.php");
+define("indexsecondcontainer", config.index."secondcontainer.php");
+
+//about -- subcomponents
+define("about", "about/");
+define("aboutfirstcontainer", config.about."firstcontainer.php");
+define("aboutsecondcontainer", config.about."secondcontainer.php");
+
+//contact -- subcomponents
+define("contact", "contact/");
+define("contactfirstcontainer", config.contact."firstcontainer.php");
 
 //images
-$birdurl = 'images/bird.jpg';
-$birds1url = 'images/birds1.jpg';
-$birds2url = 'images/birds2.jpg';
-$birds3url = 'images/birds3.jpg';
+$birdurl = image.'bird.jpg';
+$birds1url = image.'birds1.jpg';
+$birds2url = image.'birds2.jpg';
+$birds3url = image.'birds3.jpg';
 
 //stylesheet
-$cssurl = 'components/style.css';
+$cssurl = config.'style.css';

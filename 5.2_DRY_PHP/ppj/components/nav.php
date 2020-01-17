@@ -21,7 +21,7 @@
                     <a href="">NOS PRODUITS</a>
                 </li>
                 <li>
-                    <a href="">BLOG</a>
+                    <a href="blog.php">BLOG</a>
                 </li>
                 <li>
                     <a href="contact.php">CONTACT</a>
