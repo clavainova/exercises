@@ -5,5 +5,5 @@
         print $birdurl;
         ?>
         " class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
-    <h3>I'm an adventurer</h3>
+    <h3>I'm an adventurer</h3> 
 </div>

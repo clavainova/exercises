@@ -13,7 +13,7 @@ define("image", assets . "img/");
 
 //layouts
 define("layouts", "layouts/");
-define("aboutinner", config.layouts."about.php");
+define("aboutinner", config . layouts . "about.php");
 
 //general components
 define("footer", config . "footer.html");
@@ -41,9 +41,9 @@ define("blogarticle", config . blog . "article.php");
 
 //images
 $birdurl = image . 'bird.jpg';
-$birds1url = image . 'birds1.jpg';
-$birds2url = image . 'birds2.jpg';
-$birds3url = image . 'birds3.jpg';
+$birds1url =  image . 'birds1.jpg';
+$birds2url =  image . 'birds2.jpg';
+$birds3url =  image . 'birds3.jpg';
 
 //stylesheet
 $cssurl = assets . 'style.css';

@@ -17,7 +17,7 @@ include constant("head");
     switch ($page) {
         case ("about"):
             //GO FROM HERE
-            includePage(constant("aboutinner"));
+            includePage("aboutinner");
             // include constant("aboutfirstcontainer");
             // include constant("aboutsecondcontainer");
             // include constant("grid");
