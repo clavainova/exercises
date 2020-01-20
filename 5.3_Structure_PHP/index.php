@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-require 'components/config.php';
+require 'config.php';
 require 'functions/includePage.php';
 include constant("head");
 ?>
