@@ -11,9 +11,9 @@ define("assets", "assets/");
 define("config", "components/");
 define("image", assets . "img/");
 
-//pages
-define("innerpages", "layouts/");
-define("aboutinner", innerpages."about.php");
+//layouts
+define("layouts", "layouts/");
+define("aboutinner", config.layouts."about.php");
 
 //general components
 define("footer", config . "footer.html");

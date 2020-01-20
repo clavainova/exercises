@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Alatsi|Open+Sans&display=swap" rel="stylesheet">
-
     <style>
         body {
             margin: 0;
@@ -224,8 +223,8 @@
     </ul>
 
     <ul>
-        <h1>5.3 Structure (PHP)</h1>
-        <li class="pascommence"><a href="5.3_Structure_PHP/index.php?page=index">1</a></li>
+        <h1>5.3 Structure d'application (PHP)</h1>
+        <li class="pascommence"><a href="5.3_Structure_PHP/index.php?page=index">Structure</a></li>
     </ul>
 
     <ul>
@@ -235,7 +234,18 @@
         <li><a href="Dojos/3_JS/index.html">JavaScript</a></li>
     </ul>
 
-    <footer>Des exos de <em>Clavain Ramsden</em> → Dernier misa à jour : <em>17.01.2020</em> → Github : <em>Clavainova</em></footer>
+    <ul>
+        <h1>LiveCoding</h1>
+        <li><a href="Veille_LiveCoding/cookies.php">Cookies</a></li>
+        <li><a href="Veille_LiveCoding/sessions.php">Sessions</a></li>
+    </ul>
+
+    <footer>Des exos de <em>Clavain Ramsden</em> → Github : <em>Clavainova</em> → Dernier misa à jour : <em id="date"></em></footer>
+
+<script>
+let x = new Date(document.lastModified);
+document.getElementById("date").innerHTML = x;
+</script>
 </body>
 
 </html>

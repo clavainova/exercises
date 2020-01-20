@@ -3,7 +3,7 @@
 
 <?php
 require 'components/config.php';
-require 'functions/include.php';
+require 'functions/includePage.php';
 include constant("head");
 ?>
 
@@ -16,10 +16,11 @@ include constant("head");
     //custom stuff inserted here
     switch ($page) {
         case ("about"):
-            //include constant("aboutinner"); - alternative
-            include constant("aboutfirstcontainer");
-            include constant("aboutsecondcontainer");
-            include constant("grid");
+            //GO FROM HERE
+            includePage(constant("aboutinner"));
+            // include constant("aboutfirstcontainer");
+            // include constant("aboutsecondcontainer");
+            // include constant("grid");
             break;
         case ("blog"):
             include constant("blogarticle");
@@ -39,8 +40,8 @@ include constant("head");
             include constant("grid");
             include constant("grid");
             break;
-        default:
-    ?> <div class="container-fluid bg-1">
+        default: ?>
+            <div class="container-fluid bg-1">
                 <h1>404 Page Not Found</h1>
             </div>
     <?php
@@ -49,6 +50,7 @@ include constant("head");
 
     include constant("footer");
     ?>
+    
 
 </body>
 
