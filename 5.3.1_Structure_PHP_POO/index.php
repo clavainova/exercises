@@ -3,9 +3,8 @@
 
 <?php
 require 'config.php';
-require 'functions/includePage.php';
-include constant("head");
 
+include constant("head");
 include constant("nav");
 
 $page = $_GET['page'];

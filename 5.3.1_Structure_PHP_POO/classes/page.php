@@ -36,22 +36,22 @@ class Page
         print "</head><body>";
         //start at 1 because already embedded the head
         for ($i = 1; $i < count($this->components); $i++) {
-            includePage($this->components[$i]);
+            $this->includePage($this->components[$i]);
         }
         print "</body>";
     }
 
-    function includePage($page)
+    public function includePage($page)
     {
         if (!include $page) {
-            checkStatus($page);
+            $this->checkStatus($page);
             print "<div class='container-fluid bg-1'><h1>404 Page Not Found</h1></div>";
         } else {
             include constant($page);
         }
     }
 
-    function checkStatus($str)
+    public function checkStatus($str)
     {
         if (null !== constant($str)) {
             return;
