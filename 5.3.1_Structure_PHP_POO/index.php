@@ -11,30 +11,19 @@ $page = $_GET['page'];
 //custom stuff inserted here
 switch ($page) {
     case ("about"):
-        //GO FROM HERE
-        // include constant("aboutfirstcontainer");
-        // include constant("aboutsecondcontainer");
-        // include constant("grid");            
         $pageList[4]->buildPage();
-
         break;
     case ("blog"):
-        include constant("blogarticle");
-        include constant("blogarticle");
-        include constant("blogarticle");
+        $pageList[2]->buildPage();
         break;
     case ("contact"):
-        include constant("contactfirstcontainer");
+        $pageList[3]->buildPage();
         break;
     case ("index"):
-        include constant("indexfirstcontainer");
-        include constant("indexsecondcontainer");
-        include constant("grid");
+        $pageList[0]->buildPage();
         break;
     case ("produits"):
-        include constant("grid");
-        include constant("grid");
-        include constant("grid");
+        $pageList[1]->buildPage();
         break;
     default: ?>
         <div class="container-fluid bg-1">
