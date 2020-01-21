@@ -3,7 +3,7 @@
 
 <?php
 require 'config.php';
-require 'functions/includePage.php';
+include 'functions/includePage.php';
 include constant("head");
 ?>
 
@@ -17,10 +17,11 @@ include constant("head");
     switch ($page) {
         case ("about"):
             //GO FROM HERE
-            includePage("aboutinner");
-            // include constant("aboutfirstcontainer");
-            // include constant("aboutsecondcontainer");
-            // include constant("grid");
+            include constant("aboutfirstcontainer");
+            include constant("aboutsecondcontainer");
+            include constant("grid");
+            //$pageList[4]->buildPage();
+
             break;
         case ("blog"):
             include constant("blogarticle");
@@ -50,7 +51,7 @@ include constant("head");
 
     include constant("footer");
     ?>
-    
+
 
 </body>
 
