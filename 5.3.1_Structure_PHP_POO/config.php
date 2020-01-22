@@ -1,4 +1,4 @@
-<?php 
+<?php
 //nb: made file paths absolute
 
 //parent
@@ -26,12 +26,16 @@ define("head", components . "head.php");
 define("nav", components . "nav.php");
 
 //ressources
-$titre = "Pierre, Paul et Jacquot";
-$birdurl = image . 'bird.jpg';
-$birds1url =  image . 'birds1.jpg';
-$birds2url =  image . 'birds2.jpg';
-$birds3url =  image . 'birds3.jpg';
-$cssurl = assets . 'style.css';
+//use print not include to solve scoping problems
+define("birdurl", image . 'bird.jpg');
+define("birds1url",  image . 'birds1.jpg');
+define("birds2url", image . 'birds2.jpg');
+define("birds3url",  image . 'birds3.jpg');
+// $birdurl = image . 'bird.jpg';
+// $birds1url =  image . 'birds1.jpg';
+// $birds2url =  image . 'birds2.jpg';
+// $birds3url =  image . 'birds3.jpg';
+define("cssurl", assets . 'style.css');
 
 //layouts
 define("aboutinner", layouts . "about.php");

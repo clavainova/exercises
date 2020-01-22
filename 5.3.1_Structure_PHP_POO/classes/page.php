@@ -46,8 +46,6 @@ class Page
         if (!include $page) {
             $this->checkStatus($page);
             print "<div class='container-fluid bg-1'><h1>404 Page Not Found</h1></div>";
-        } else {
-            include constant($page);
         }
     }
 

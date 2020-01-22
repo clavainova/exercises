@@ -2,8 +2,8 @@
     <h3 class="margin">Qui sommes-nous ?</h3>
     <img src="
         <?php
-        print $birdurl;
-        ?>    
+                print constant("birdurl");
+                ?>    
         " class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
     <h3>I'm an adventurer</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna

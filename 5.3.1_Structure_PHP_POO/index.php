@@ -4,9 +4,6 @@
 <?php
 require 'config.php';
 
-include constant("head");
-include constant("nav");
-
 $page = $_GET['page'];
 //custom stuff inserted here
 switch ($page) {

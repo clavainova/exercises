@@ -8,9 +8,10 @@
             </button>
             <a id="logo" class="navbar-brand" href="index.php?page=index"><img src="
                 <?php
-                print $birdurl;
+                print constant("birdurl");
+
                 ?>
-                "  class="img-circle" alt="logo" width="50px;"></a>
+                " class="img-circle" alt="logo" width="50px;"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">

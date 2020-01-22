@@ -9,7 +9,7 @@
                     magna aliqua.</p>
                 <img src="
             <?php
-                print $birds1url;
+                print constant("birds1url");
             ?>
             " class="img-responsive margin" style="width:100%" alt="Image">
         </div>
@@ -18,7 +18,7 @@
                 magna aliqua.</p>
             <img src="
             <?php
-                print $birds2url;
+                print constant("birds2url");
             ?>" class="img-responsive margin" style="width:100%" alt="Image">
         </div>
         <div class="col-sm-4">
@@ -26,14 +26,14 @@
                 magna aliqua.</p>
             <img src="
             <?php
-                print $birds3url;
+                print constant("birds3url");;
             ?>" class="img-responsive margin" style="width:100%" alt="Image">
         <?php else : ?>
 
             <img src="
             <?php
-                print $birds1url;
-            ?>
+                print constant("birds1url");
+                ?>
             " class="img-responsive margin" style="width:100%" alt="Image">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
                 magna aliqua.</p>
@@ -42,8 +42,8 @@
 
             <img src="
             <?php
-                print $birds2url;
-            ?>" class="img-responsive margin" style="width:100%" alt="Image">
+                print constant("birds2url");
+                ?>" class="img-responsive margin" style="width:100%" alt="Image">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
                 magna aliqua.</p>
         </div>
@@ -51,8 +51,8 @@
             <img src="
             
             <?php
-                print $birds3url;
-            ?>" class="img-responsive margin" style="width:100%" alt="Image">
+                print constant("birds3url");
+                ?>" class="img-responsive margin" style="width:100%" alt="Image">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
                 magna aliqua.</p>
         <?php endif ?>
