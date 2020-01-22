@@ -29,10 +29,8 @@ class Page
 
     public function buildPage()
     {
-        print "<head><title>";
-        include $this->name;
-        print "</title>";
-        include $this->components[0];
+        print "<head><title>".$this->name."</title>";
+        include $this->components[0]; //head
         print "</head><body>";
         //start at 1 because already embedded the head
         for ($i = 1; $i < count($this->components); $i++) {
