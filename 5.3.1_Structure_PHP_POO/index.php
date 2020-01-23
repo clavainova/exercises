@@ -2,6 +2,24 @@
 <html lang="en">
 
 <?php
+//go router php
+
+include_once 'classes/Request.php';
+include_once 'classes/Router.php';
+$router = new Router(new Request);
+
+$router->get('/', function () {
+});
+
+$router->get('/profile', function ($request) {
+});
+
+$router->post('/data', function ($request) {
+    return json_encode($request->getBody());
+});
+
+
+//end router
 require 'config.php';
 
 $page = $_GET['page'];
@@ -22,11 +40,8 @@ switch ($page) {
     case ("produits"):
         $pageList[1]->buildPage();
         break;
-    default: ?>
-        <div class="container-fluid bg-1">
-            <h1>404 Page Not Found</h1>
-        </div>
-<?php
+    default:
+        $pageList[5]->buildPage();
         break;
 }
 ?>

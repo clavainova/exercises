@@ -5,15 +5,13 @@ class Page
     public $value;
     public $name;
     public $path;
-    public $layout;
     public $components = array();
-    function __construct($id, $value, $name, $path, $layout, $components)
+    function __construct($id, $value, $name, $path, $components)
     {
         $this->id = $id;
         $this->value = $value;
         $this->name = $name;
         $this->path = $path;
-        $this->layout = $layout;
         $this->components = $components;
     }
 

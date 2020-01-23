@@ -24,6 +24,7 @@ define("footer", components . "footer.html");
 define("grid", components . "grid.php");
 define("head", components . "head.php");
 define("nav", components . "nav.php");
+define("404", components . "404.php");
 
 //ressources
 define("birdurl", image . 'bird.jpg');
@@ -31,13 +32,6 @@ define("birds1url",  image . 'birds1.jpg');
 define("birds2url", image . 'birds2.jpg');
 define("birds3url",  image . 'birds3.jpg');
 define("cssurl", assets . 'style.css');
-
-//layouts
-define("aboutinner", layouts . "about.php");
-define("bloginner", layouts . "blog.php");
-define("contactinner", layouts . "contact.php");
-define("produitsinner", layouts . "produits.php");
-define("indexinner", layouts . "index.php");
 
 //subcomponents
 define("indexfirstcontainer", index . "firstcontainer.php");
@@ -61,7 +55,6 @@ $pageData = array(
         "value" => "index",
         "name" => "Accueil",
         "path" => pageroot . "index",
-        "layout" => aboutinner,
         "components" => array(head, nav, indexfirstcontainer, indexsecondcontainer, grid, footer)
     ),
     array(
@@ -69,7 +62,6 @@ $pageData = array(
         "value" => "produits",
         "name" => "Nos produits",
         "path" => pageroot . "produits",
-        "layout" => produitsinner,
         "components" => array(head, nav, grid, grid, grid, footer)
     ),
     array(
@@ -77,7 +69,6 @@ $pageData = array(
         "value" => "blog",
         "name" => "Blog",
         "path" => pageroot . "blog",
-        "layout" => bloginner,
         "components" => array(head, nav, blogarticle, blogarticle, blogarticle, footer)
     ),
     array(
@@ -85,7 +76,6 @@ $pageData = array(
         "value" => "contact",
         "name" => "Contact",
         "path" => pageroot . "contact",
-        "layout" => contactinner,
         "components" => array(head, nav, contactfirstcontainer, footer)
     ),
     array(
@@ -93,8 +83,14 @@ $pageData = array(
         "value" => "about",
         "name" => "A propos",
         "path" => pageroot . "about",
-        "layout" => aboutinner,
         "components" => array(head, nav, aboutfirstcontainer, aboutsecondcontainer, grid, footer)
+    ),
+    array(
+        "id" => "5",
+        "value" => "404",
+        "name" => "404 Not Found",
+        "path" => pageroot . "404",
+        "components" => array(head, nav, 404, footer)
     )
 );
 //var_dump($pageData);
@@ -110,9 +106,8 @@ for ($i = 0; $i < count($pageData); $i++) {
     $thisValue = $pageData[$i]["value"];
     $thisName = $pageData[$i]["name"];
     $thisPath = $pageData[$i]["path"];
-    $thisLayout = $pageData[$i]["layout"];
     $thisComponents = $pageData[$i]["components"];
-    $page = new Page($thisId, $thisValue, $thisName, $thisPath, $thisLayout, $thisComponents);
+    $page = new Page($thisId, $thisValue, $thisName, $thisPath, $thisComponents);
     array_push($pageList, $page);
 }
 
