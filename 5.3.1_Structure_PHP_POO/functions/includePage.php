@@ -1,3 +1,4 @@
+<?php
 function buildUrl($index)
 {
     $targeturl = constant($index);
