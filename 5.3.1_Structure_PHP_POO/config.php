@@ -49,8 +49,8 @@ define("includePage", functions . "includePage.php");
 define("pageroot", "http://localhost/progression/5.3_Structure_PHP/index.php?page=");
 
 //pagelist
-$pageData = array(
-    array(
+$pageData = array( 
+    array( 
         "id" => "0",
         "value" => "index",
         "name" => "Accueil",
