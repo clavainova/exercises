@@ -1,6 +1,6 @@
 <?php
 //directory
-define("directory", "a");
+define("directory", "");
 
 //folders
 define("assets", "assets/");
@@ -13,28 +13,38 @@ define("about", "about/");
 define("contact", "contact/");
 define("blog", "blog/");
 
-//files
-define("footer", [directory, components, "footer.html"]);
-define("grid", [directory, components, "grid.php"]);
-define("head", [directory, components, "head.php"]);
-define("nav", [directory, components, "nav.php"]);
-define("404", [directory, components, "404.php"]);
-define("cssurl", [directory, assets, 'style.css']);
-define("pageClass", [directory, classes, "page.php"]);
-define("includePage", [directory, functions, "includePage.php"]);
+//files -- 2
+define("footer", array(directory, components, "footer.html"));
+define("grid", array(directory, components, "grid.php"));
+define("head", array(directory, components, "head.php"));
+define("nav", array(directory, components, "nav.php"));
+define("404", array(directory, components, "404.php"));
+define("cssurl", array(directory, assets, 'style.css'));
+define("pageClass", array(directory, classes, "page.php"));
+define("includePage", array(directory, functions, "includePage.php"));
 
-//level 3
-define("birdurl", [directory, assets, image, 'bird.jpg']);
-define("birds1url", [directory, assets, image, 'birds1.jpg']);
-define("birds2url", [directory, assets, image, 'birds2.jpg']);
-define("birds3url", [directory, assets, image, 'birds3.jpg']);
-define("indexfirstcontainer", [directory, components, index, "firstcontainer.php"]);
-define("indexsecondcontainer",  [directory, components, index, "secondcontainer.php"]);
-define("aboutfirstcontainer", [directory, components, about, "firstcontainer.php"]);
-define("aboutsecondcontainer", [directory, components, about, "secondcontainer.php"]);
-define("contactfirstcontainer", [directory, components, contact, "firstcontainer.php"]);
-define("blogarticle", [directory, components, blog, "article.php"]);
+//files -- 3
+define("birdurl", array(directory, assets, image, 'bird.jpg'));
+define("birds1url", array(directory, assets, image, 'birds1.jpg'));
+define("birds2url", array(directory, assets, image, 'birds2.jpg'));
+define("birds3url", array(directory, assets, image, 'birds3.jpg'));
+define("indexfirstcontainer", array(directory, components, index, "firstcontainer.php"));
+define("indexsecondcontainer",  array(directory, components, index, "secondcontainer.php"));
+define("aboutfirstcontainer", array(directory, components, about, "firstcontainer.php"));
+define("aboutsecondcontainer", array(directory, components, about, "secondcontainer.php"));
+define("contactfirstcontainer", array(directory, components, contact, "firstcontainer.php"));
+define("blogarticle", array(directory, components, blog, "article.php"));
 
+function buildUrl($index)
+{
+    $targeturl = constant($index);
+    $url = "";
+    for ($i = 0; $i < count($targeturl); $i++) {
+        $url .= $targeturl[$i];
+    }
+    return $url;
+}
+echo buildUrl("cssurl");
 
 //pageroot
 define("pageroot", "http://localhost/progression/5.3_Structure_PHP/index.php?page=");
