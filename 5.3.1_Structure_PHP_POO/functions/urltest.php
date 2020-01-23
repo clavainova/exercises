@@ -1,4 +1,7 @@
 <?php
+
+require "buildUrl.php";
+
 //directory
 define("directory", "");
 
@@ -21,7 +24,7 @@ define("nav", array(directory, components, "nav.php"));
 define("404", array(directory, components, "404.php"));
 define("cssurl", array(directory, assets, 'style.css'));
 define("pageClass", array(directory, classes, "page.php"));
-define("includePage", array(directory, functions, "includePage.php"));
+define("buildUrl", array(directory, functions, "buildUrl.php"));
 
 //files -- 3
 define("birdurl", array(directory, assets, image, 'bird.jpg'));
@@ -35,16 +38,10 @@ define("aboutsecondcontainer", array(directory, components, about, "secondcontai
 define("contactfirstcontainer", array(directory, components, contact, "firstcontainer.php"));
 define("blogarticle", array(directory, components, blog, "article.php"));
 
-function buildUrl($index)
-{
-    $targeturl = constant($index);
-    $url = "";
-    for ($i = 0; $i < count($targeturl); $i++) {
-        $url .= $targeturl[$i];
-    }
-    return $url;
-}
-echo buildUrl("cssurl");
+//testing
+echo buildUrl("cssurl")."<br>";
+echo buildUrl("buildUrl")."<br>";
+echo buildUrl("sqdsqd")."<br>";
 
 //pageroot
 define("pageroot", "http://localhost/progression/5.3_Structure_PHP/index.php?page=");
