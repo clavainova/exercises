@@ -13,7 +13,6 @@ define("classes", directory .  "classes/");
 
 //directories
 define("image", assets . "img/");
-define("layouts", components . "layouts/");
 define("index", components . "index/");
 define("about", components . "about/");
 define("contact", components . "contact/");
@@ -112,3 +111,8 @@ for ($i = 0; $i < count($pageData); $i++) {
 }
 
 //var_dump($pageList);
+
+
+//gonna try making an associative array with all the file paths
+
+

@@ -25,7 +25,6 @@ class Request implements IRequest
             $c = str_replace('_', '', strtoupper($match));
             $result = str_replace($match, $c, $result);
         }
-
         return $result;
     }
 
