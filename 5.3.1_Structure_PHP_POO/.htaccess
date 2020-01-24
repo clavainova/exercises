@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteRule ^accueil/?$ index.php?page="index"
+RewriteRule ^nos-produits/?$ index.php?page="produits"
+RewriteRule ^blog/?$ index.php?page="blog"
+RewriteRule ^contact/?$ index.php?page="contact"
+RewriteRule ^a-propos/?$ index.php?page="about"

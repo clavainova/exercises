@@ -2,7 +2,7 @@
 function buildUrl($index)
 {
     $targeturl = "";
-    if (null !== constant($index)) {
+    if (defined($index)) {
         //try using the index to get its filepath
         $targeturl = constant($index);
     } else {
