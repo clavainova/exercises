@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,17 +6,12 @@
 
 <body>
     <?php
-    session_start();
-    if (!isset($_SESSION["username"])) :
-    ?>
-        <form action="connexion.php" method="post">
-            username - <input type="text" name="username" /><br>
-            password - <input type="text" name="pass" /><br>
-            <input type="submit" />
-        </form>
-    <?php
-    else :
+    include "sessionstart.php";
+
+    if (!isset($_SESSION["username"])) {
+        include "form.php";
+    } else {
         include "page.php";
-    endif;
+    }
     ?>
 </body>

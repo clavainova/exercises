@@ -1,11 +1,5 @@
 <?php
-
-try {
-    unset($_SESSION['username']);
-    unset($_SESSION['pass']);
-} catch (Exception $e) {
-    //session not already started
-}
+include "sessionstart.php";
 
 if (($_GET["username"] == null) || ($_GET["pass"] == null)) {
     echo "no password or no username entered<br>";
@@ -14,4 +8,10 @@ if (($_GET["username"] == null) || ($_GET["pass"] == null)) {
     $_SESSION["pass"] = $_GET["pass"];
 }
 
-header("Location: index.php");
+
+//header("Location: index.php");
+
+?>
+<script type="text/javascript">
+window.location.href = "index.php";
+</script>
