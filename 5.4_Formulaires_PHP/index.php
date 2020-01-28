@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,11 +6,10 @@
 <body>
     <?php
     include "sessionstart.php";
-
-    if (!isset($_SESSION["username"])) {
+    if (!isset($_SESSION["username"])) :
         include "form.php";
-    } else {
+    else:
         include "page.php";
-    }
+    endif;
     ?>
 </body>

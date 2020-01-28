@@ -1,5 +1,12 @@
-<form action="connexion.php" method="post">
-    username - <input type="text" name="username" /><br>
-    password - <input type="text" name="pass" /><br>
-    <input type="submit" />
+<form action="connexion.php" method="POST">
+    username: 
+    <input type="text" id="username" name="username"/>
+    <br>
+    password: 
+    <input type="text" id="pass" name="pass"/>
+    <br>
+    stay connected: 
+    <input type="checkbox" id="stayconnected" name="stayconnected"/>
+    <br>
+    <input type="submit" name="submit" value="Submit"/>
 </form>
