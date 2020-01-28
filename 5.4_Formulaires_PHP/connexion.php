@@ -1,14 +1,20 @@
 <?php
 include "sessionstart.php";
-
-if (!isset($_POST["username"]) || !isset($_POST["pass"])) {
-    echo "FAILURE no password or no username entered<br>";
+if ((!isset($_POST["username"]) || $_POST["username"] == "") || (!isset($_POST["pass"]) || $_POST["pass"] == "")) {
+    die("FAILURE no password or no username entered<br>");
 } else {
     $_SESSION["username"] = $_POST["username"];
     $_SESSION["pass"] = $_POST["pass"];
-    echo "success";
+    //get connection and upload to db
     $conn = getConnection();
     uploadUser($conn, $_SESSION["username"], $_SESSION["pass"]);
+    //add remember me cookie if relevant
+    if ($_POST["remember_me"] == '1' || $_POST["remember_me"] == 'on') { {
+            $hour = time() + 3600 * 24 * 30;
+            setcookie('username', $_SESSION["username"], time() + 3600);
+            setcookie('password', $_SESSION["pass"], time() + 3600);
+        }
+    }
 }
 
 function getConnection()
@@ -20,9 +26,7 @@ function getConnection()
     //connect to server
     $conn = new mysqli($servername, $username, $password, $database);
     if ($conn->connect_error) {
-        die("Connection failed \n -- "); // . $conn->connect_error
-    } else {
-        echo "connection successful \n -- ";
+        die("Connection failed"); // . $conn->connect_error
     }
     return $conn;
 }
@@ -30,13 +34,11 @@ function getConnection()
 function uploadUser($conn, $user, $pass)
 {
     if ($stmt = $conn->prepare('INSERT INTO utilisateurs (username,password) VALUES (?,?)')) {
-        echo "preparing statement bind param \n -- ";
+        //preparing statement bind param
         $stmt->bind_param('ss', $user, $pass);
-        echo " statements bound \n -- ";
-        //sss", $nom, $email, $message);
-        echo "executing statement \n -- ";
+        //statements bound,executing statement
         $stmt->execute();
-        echo "executed statement \n -- ";
+        //executed statement
         // sendEmail($email);
     } else {
         die("preparation failed \n -- " . htmlspecialchars($conn->error));
