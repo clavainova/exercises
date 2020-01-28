@@ -1,8 +1,3 @@
-<?php
-setcookie('username', "");
-setcookie('password', "");
-?>
-
 <form action="connexion.php" method="POST">
     username:
     <input type="text" id="username" name="username" />

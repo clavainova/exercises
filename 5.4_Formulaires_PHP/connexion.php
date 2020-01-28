@@ -17,6 +17,10 @@ if ((!isset($_POST["username"]) || $_POST["username"] == "") || (!isset($_POST["
     }
 }
 
+function verify($conn){
+    $stmt = $conn->prepare('SELECT * FROM `utilisateurs` WHERE  username,password');
+}
+
 function getConnection()
 {
     $servername = "localhost";
@@ -41,7 +45,7 @@ function uploadUser($conn, $user, $pass)
         //executed statement
         // sendEmail($email);
     } else {
-        die("preparation failed \n -- " . htmlspecialchars($conn->error));
+        die("preparation failed" . htmlspecialchars($conn->error));
     }
 }
 
