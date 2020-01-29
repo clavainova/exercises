@@ -6,7 +6,7 @@
 <body>
     <?php
     include "sessionstart.php";
-    if (!isset($_SESSION["username"])) :
+    if ((!isset($_SESSION["username"]))&&(!isset($_COOKIE["username"]))) :
         include "form.php";
     else:
         include "page.php";
