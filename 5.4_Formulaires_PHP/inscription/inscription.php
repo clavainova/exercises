@@ -1,6 +1,15 @@
 <?php
 include "sessionstart.php";
 include "utilisateur.php";
+//for email sending
+require_once 'vendor/autoload.php';
+require 'vendor/phpmailer/phpmailer/src/Exception.php';
+require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require 'vendor/phpmailer/phpmailer/src/SMTP.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 
 //check user and pass are set
 if ((!isset($_POST["username"]) || $_POST["username"] == "") || (!isset($_POST["pass"]) || $_POST["pass"] == "")) {
@@ -20,6 +29,8 @@ if ((!isset($_POST["username"]) || $_POST["username"] == "") || (!isset($_POST["
             print("email unique");
             if ($thisUser->addDb($conn)) {
                 print("success, finished");
+                //now send them an email
+                sendEmail($thisUser);
             } else {
                 print("failed to push to database");
             }
@@ -33,6 +44,7 @@ if ((!isset($_POST["username"]) || $_POST["username"] == "") || (!isset($_POST["
     }
 }
 redirect();
+
 function getConnection()
 {
     //connect to server
@@ -40,7 +52,7 @@ function getConnection()
         $conn = new PDO(
             "mysql:host=localhost;dbname=php_formulaires;port=3306",
             "clavain",
-            "impimp88",
+            "",
             array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)
         );
         //check server connection, die if fails, return outcome: true if successful
@@ -71,5 +83,34 @@ function checkUnique($pdo, $thisUser)
 //in function so it's easier to disable for testing
 function redirect()
 {
-    header("Location: index.php");
+    //header("Location: index.php");
+}
+
+function sendEmail($thisUser)
+{
+    $mail = new PHPMailer();
+    $mail->IsSMTP();
+    $mail->Mailer = "smtp";
+
+    $mail->SMTPDebug  = 1;
+    $mail->SMTPAuth   = TRUE;
+    $mail->SMTPSecure = "tls";
+    $mail->Port       = 587;
+    $mail->Host       = "smtp.gmail.com";
+    $mail->Username   = "clavainova@gmail.com";
+    $mail->Password   = "";
+
+    $mail->IsHTML(true);
+    $mail->AddAddress($thisUser->getEmail(), "recipient-name");
+    $mail->SetFrom("clavainova@gmail.com", "from-name");
+    // $mail->AddReplyTo("clavainova@gmail.com", "reply-to-name");
+    // $mail->AddCC("clavainova@gmail.com", "cc-recipient-name");
+    $mail->Subject = "Confirmation for your account";
+    $content = "Dear customer,<br><br>Thank you for registering with 5.4_Formulaires_PHP with the following personal data.<br>Email: " . $thisUser->getEmail() . "<br>Password: " . $thisUser->getPassword();
+    $mail->MsgHTML($content);
+    if (!$mail->Send()) {
+        echo "Error while sending Email.";
+    } else {
+        echo "Email sent successfully";
+    }
 }
