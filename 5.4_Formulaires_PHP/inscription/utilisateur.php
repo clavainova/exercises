@@ -1,15 +1,20 @@
 <?php
 class Utilisateur
 {
-    function __construct($email, $password)
+    function __construct($email, $password, $hash)
     {
         $this->email = $email;
         $this->password = $password;
+        $this->hash = $hash;
     }
 
     public function getEmail()
     {
         return $this->email;
+    }
+
+    public function getHash(){
+        return $this->hash;
     }
 
     public function getPassword()
@@ -51,8 +56,8 @@ class Utilisateur
     public function addDb($pdo)
     {
         try {
-            ($stmt = "INSERT INTO utilisateurs (username,password) VALUES (?,?)");
-            $pdo->prepare($stmt)->execute([$this->email, $this->password]);
+            ($stmt = "INSERT INTO utilisateurs (username,password,hash) VALUES (?,?,?)");
+            $pdo->prepare($stmt)->execute([$this->email, $this->password, $this->hash]);
             return true;
         } catch (Exception $e) {
             return false;
