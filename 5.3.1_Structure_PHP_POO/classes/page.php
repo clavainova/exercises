@@ -27,7 +27,7 @@ class Page
 
     public function buildPage()
     {
-        print "<head><title>".$this->name."</title>";
+        print "<head><title>" . $this->name . "</title>";
         include $this->components[0]; //head
         print "</head><body>";
         //start at 1 because already embedded the head
@@ -47,7 +47,7 @@ class Page
 
     public function checkStatus($str)
     {
-        if (null !== constant($str)) {
+        if (constant($str) !== null) {
             return;
         } else {
             include 'components/config.php';

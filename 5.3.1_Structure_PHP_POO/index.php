@@ -4,6 +4,12 @@
 <?php
 //go router php
 
+//alternative -- use associative array with same
+//index as $_GET["page"] and check if it exists
+//then display that for more efficiency 
+
+
+
 include_once 'classes/Request.php';
 include_once 'classes/Router.php';
 $router = new Router(new Request);
