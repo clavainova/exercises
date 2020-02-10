@@ -1,7 +1,7 @@
 <?php
 define("BDD_SERVER", "localhost");
 define("BDD_DATABASE", "security");
-define("BDD_USER", "root");
+define("BDD_USER", "clavain");
 define("BDD_PWD", "");
 ini_set("allow_url_fopen","1");
 
