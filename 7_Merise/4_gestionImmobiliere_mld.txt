@@ -1,5 +1,0 @@
-MLD
-
-Maison(maison_id, prix, description, prop_id)
-Proprietaire(prop_id, nom, prenom, telephone, email, maison_id, loc_id)
-Maison(loc_id, nom, prenom, telephone, email, prop_id)
