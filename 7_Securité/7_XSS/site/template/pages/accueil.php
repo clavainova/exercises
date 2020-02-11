@@ -29,7 +29,7 @@
 
     // connexion à la base de données pour recup des articles de la base
     try {
-        $bdd = new PDO('mysql:host='.BDD_SERVER.';dbname='.BDD_DATABASE.';charset=utf8;', BDD_USER, BDD_PWD,  );
+        $bdd = new PDO('mysql:host='.BDD_SERVER.';dbname='.BDD_DATABASE.';charset=utf8;', BDD_USER, BDD_PWD);
 
         //construction de la requête
         $sql = "select titre, resume, id from article ";

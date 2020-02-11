@@ -1,0 +1,14 @@
+ escape all dynamic content coming from a data store, so the browser knows it is to be treated as the contents of HTML tags, as opposed to raw HTML.
+
+Escaping dynamic content generally consists of replacing significant characters with the HTML entity encoding:
+
+"	&#34
+#	&#35
+&	&#38
+'	&#39
+(	&#40
+)	&#41
+/	&#47
+;	&#59
+<	&#60
+>	&#62
