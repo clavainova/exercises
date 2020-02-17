@@ -1,12 +1,12 @@
 <?php
-require __DIR__.'/vendor/autoload.php';
+require __DIR__ . "/vendor/autoload.php";
+use vendor\symfony\http-foundation\Session\Session.php;
 // require __DIR__.'/vendor/composer/autoload_real.php';
 
 $duper= "dump";
 dump($duper);
 
-
-$session = new Request();
+$session = new Session();
 $session->start();
 
 // set and get session attributes
@@ -18,6 +18,6 @@ $session->getFlashBag()->add('notice', 'Profile updated');
 
 // retrieve messages
 foreach ($session->getFlashBag()->get('notice', []) as $message) {
-    echo '<div class="flash-notice">'.$message.'</div>';
+    dump($message);
 }
 ?>
