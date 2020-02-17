@@ -1,8 +1,23 @@
 <?php
 require __DIR__.'/vendor/autoload.php';
-
+// require __DIR__.'/vendor/composer/autoload_real.php';
 
 $duper= "dump";
 dump($duper);
 
+
+$session = new Request();
+$session->start();
+
+// set and get session attributes
+$session->set('name', 'Drak');
+$session->get('name');
+
+// set flash messages
+$session->getFlashBag()->add('notice', 'Profile updated');
+
+// retrieve messages
+foreach ($session->getFlashBag()->get('notice', []) as $message) {
+    echo '<div class="flash-notice">'.$message.'</div>';
+}
 ?>
