@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ titre }}
+{% endblock %}
+
+{% block stylesheets %}
+	{{parent()}}
+	<link href={{style}} rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+
+	<div class="example-wrapper">
+		<h1>{{ titre }}</h1>
+		<p>Some words</p>
+	</div>
+{% endblock %}

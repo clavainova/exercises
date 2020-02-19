@@ -1,4 +1,5 @@
 <?php
+//problem with the use statement
 require __DIR__ . "/vendor/autoload.php";
 use vendor\symfony\http-foundation\Session\Session.php;
 // require __DIR__.'/vendor/composer/autoload_real.php';
@@ -10,7 +11,7 @@ $session = new Session();
 $session->start();
 
 // set and get session attributes
-$session->set('name', 'Drak');
+$session->set('name', 'Session');
 $session->get('name');
 
 // set flash messages
