@@ -3,6 +3,8 @@
 {% block title %}Edit Categorie{% endblock %}
 
 {% block body %}
+	<div class="example-wrapper">
+
     <h1>Edit Categorie</h1>
 
     {{ include('categorie/_form.html.twig', {'button_label': 'Update'}) }}
@@ -10,4 +12,5 @@
     <a href="{{ path('categorie_index') }}">back to list</a>
 
     {{ include('categorie/_delete_form.html.twig') }}
+    </div>
 {% endblock %}

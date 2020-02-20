@@ -56,9 +56,10 @@ class ProduitController extends AbstractController
     public function show(CategorieRepository $catrep)
     {
         $cats = $catrep->findAll();
-        dd($cats);
+        dump($cats);
 
         return $this->render('category/index.html.twig', [
+            'controller_name' => 'CategoryController',
             'cats' => $cats
         ]);
     }

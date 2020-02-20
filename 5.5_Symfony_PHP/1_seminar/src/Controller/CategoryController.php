@@ -26,32 +26,34 @@ class CategoryController extends AbstractController
     /**
      * @Route("/add", name="add")
      */
-    public function add()
-    {
-        /*
-        $cat = new Categorie();
-        $cat->setName("Epicerie");
-        //dd($cat);
+    // public function add()
+    // {
+    //     /*
+    //     $cat = new Categorie();
+    //     $cat->setName("Epicerie");
+    //     //dd($cat);
 
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($cat);
-        $em->flush();
-        */
+    //     $em = $this->getDoctrine()->getManager();
+    //     $em->persist($cat);
+    //     $em->flush();
+    //     */
 
-        return $this->render('category/index.html.twig');
-    }
+    //     return $this->render('categorie/index.html.twig', [
+    //         'controller_name' => 'CategoryController',
+    //     ]);
+    // }
     /**
      * @Route("/show", name="show")
      */
 
     public function show(CategorieRepository $catrep)
     {
-        $cats = $catrep->findAll();
-        dump($cats);
+        $categories = $catrep->findAll();
+        dump($categories);
 
-        return $this->render('category/index.html.twig', [
+        return $this->render('categorie/index.html.twig', [
             'controller_name' => 'CategoryController',
-            'cats' => $cats
+            'categories' => $categories
         ]);
     }
 }
