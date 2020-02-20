@@ -5,8 +5,11 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Categorie;
-use Doctrine\ORM\EntityManager;
-//use App\
+use App\Repository\CategorieRepository;
+//use Doctrine\ORM\EntityManager;
+// use Symfony\Component\HttpFoundation\Response;
+// use Symfony\Component\Validator\Validator\ValidatorInterface;
+// use Doctrine\ORM\EntityRepository;
 
 class CategoryController extends AbstractController
 {
@@ -25,6 +28,7 @@ class CategoryController extends AbstractController
      */
     public function add()
     {
+        /*
         $cat = new Categorie();
         $cat->setName("Epicerie");
         //dd($cat);
@@ -32,24 +36,22 @@ class CategoryController extends AbstractController
         $em = $this->getDoctrine()->getManager();
         $em->persist($cat);
         $em->flush();
+        */
 
-        return $this->render('category/index.html.twig', [
-            'controller_name' => 'CategoryController'
-        ]);
+        return $this->render('category/index.html.twig');
     }
-
     /**
      * @Route("/show", name="show")
      */
-    /*
+
     public function show(CategorieRepository $catrep)
     {
         $cats = $catrep->findAll();
-        dd($cats);
+        dump($cats);
 
         return $this->render('category/index.html.twig', [
+            'controller_name' => 'CategoryController',
             'cats' => $cats
         ]);
     }
-    */
 }

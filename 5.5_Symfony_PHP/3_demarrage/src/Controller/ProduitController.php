@@ -1,5 +1,7 @@
 <?php
 
+//foreign key being created before both exist
+
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -9,6 +11,8 @@ use App\Entity\Produit;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityRepository;
+
 
 class ProduitController extends AbstractController
 {
@@ -28,12 +32,11 @@ class ProduitController extends AbstractController
     public function add()
     {
         $prod = new Produit();
-        $prod->setLibelle("bird");
-        $prod->setImg("birds2.jpg");
         //dd($cat);
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($prod);
+        //dd($em);
         $em->flush();
 
         return $this->render('produit/index.html.twig', [
