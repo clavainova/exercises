@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JWT / Une mise en application simple</title>
+    <link href="https://fonts.googleapis.com/css?family=Lacquer&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body {
+            background-color: #CCC;
+            padding: 0;
+            margin: 0;
+            font-family: 'Lacquer', sans-serif;
+        }
+
+        section {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-flow: column wrap;
+        }
+
+        article {
+            display: flex;
+            width: 50%;
+            margin: auto;
+            padding: 30px;
+            background-color: white;
+            flex-flow: column wrap;
+        }
+        article.message{
+            transition:all .5s ease;
+            opacity:0;
+            margin-bottom:-200px;
+            height:0;
+            cursor:pointer;
+        }
+        article.apparait{
+            opacity:1;
+            margin-bottom:0px;
+            height:200px;
+        }
+        input {
+            padding: 10px 15px;
+            box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+        }
+
+        h1,
+        h2 {
+            margin: 10px auto;
+        }
+
+        button {
+            width: auto;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>JWT / Une mise en application simple</h1>
+        <h2>(Brrrr chilling)</h2>
+        <article>
+            <label>Identifiant
+                <input name="identifiant" type="text">
+            </label>
+            <label>Mot de passe
+                <input name="motdepasse" type="password">
+            </label>
+            <button>S'identifier</button>
+            <button>Annuler</button>
+        </article>
+        <article class="message"></article>
+    </section>
+    <script>
+        // Déclaration des variables utiles
+        let token;
+        let message = document.querySelector('article.message');
+        // Rendre le message interactif pour gérer les retours du serveur
+        message.addEventListener('click', masqueLeMessage);
+
+        let btn_ar = document.querySelectorAll('button');
+        let input_ar = document.querySelectorAll('input');
+
+        console.log(btn_ar);
+        btn_ar[0].addEventListener('click', envoie);
+        btn_ar[1].addEventListener('click', annule);
+        // Envoyer les données du formulaire
+        function envoie() {
+            console.log("envoie de données");
+            // Préparation d'une requête XHR
+            var xhr = new XMLHttpRequest();
+            
+            // Préparer une requête POST
+            xhr.open("POST", 'http://localhost:3000/id', true);
+
+            // Attribuer un entête indiquant qu'on envoie du JSON
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+            //Envoie les informations du header adaptées avec la requête
+            // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+            xhr.onreadystatechange = function () { //Appelle une fonction au changement d'état.
+                if (this.readyState === XMLHttpRequest.DONE) {
+                    switch(this.status){
+                        case 200 :
+                            token = this.responseText;
+                            setUpRockNRollMessageYeeaaaahhhh('Vous êtes identifié');
+                            break;
+                        case 401 :
+                            setUpRockNRollMessageYeeaaaahhhh("Attentioooon, petit coquiiiin, tu n'es pas identifiéééé");
+                            break;
+                        default:
+                            setUpRockNRollMessageYeeaaaahhhh("Problème d'authentification, merci de rééssayer");
+                    }
+                }
+            }
+            xhr.send(setUpReponse(input_ar));
+        }
+        // Passer d'un tableau à un objet
+        function setUpReponse(ar){
+            let tmp = {id:ar[0].value, mdp:ar[1].value};
+            console.log(tmp);
+            return JSON.stringify(tmp);
+        }
+        // Annuler la saisie dans le formulaire
+        function annule() {
+            for (let el of document.querySelectorAll('input')) {
+                el.value = '';
+            }
+        }
+        // Afficher un message d'alerte (utiliser après le retour du serveur)
+        function setUpRockNRollMessageYeeaaaahhhh(str){
+            message.textContent = str;
+            message.classList.toggle('apparait');
+            console.log(str, message);
+        }
+        // Fermer le message
+        function masqueLeMessage(){
+            message.classList.toggle('apparait');
+            message.textContent = '';
+        }
+    </script>
+</body>
+
+</html>
