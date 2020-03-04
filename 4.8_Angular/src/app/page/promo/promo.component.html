@@ -1,0 +1,12 @@
+<section>
+    <article>
+        <h1>promos :</h1>
+        <article *ngFor="let p of promos">
+            <h2> {{ p.nom }} </h2>
+            <blockquote> {{ p.description }} </blockquote>
+            <p *ngIf="p.effectifs">Effectifs: {{p.effectifs}}</p>
+            <p *ngIf="p.effectifsActuels">Effectifs actuels: {{p.effectifsActuels}}</p>
+            <p *ngIf="p.survivants">Survivants: {{p.survivants}}</p>
+        </article>
+    </article>
+</section>
