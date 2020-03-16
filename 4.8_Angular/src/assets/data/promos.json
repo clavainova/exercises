@@ -1,0 +1,18 @@
+[
+    {
+        "_id": 0,
+        "nom": "AngularTest2",
+        "description": "testing angular (clavain)",
+        "effectifs": 28,
+        "effectifsActuels": 20,
+        "survivants": 18
+    },
+    {
+        "_id": 1,
+        "nom": "AngularTest3",
+        "description": "testing angular again (safufshj)",
+        "effectifs": 284,
+        "effectifsActuels": 204,
+        "survivants": 184
+    }
+]

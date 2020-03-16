@@ -1,1 +1,13 @@
-<p>etudiants works!</p>
+<section>
+    <article>
+        <h1>Etudiants</h1>
+        <input name="rech" [(ngModel)]="recherche" placeholder="Rechercher les étudiants">
+        <article *ngFor="let s of dataServe.etudiants | etudiantPipe:recherche">
+            <h2>Name: {{s.nom}} </h2>
+            <p><u>Mood:</u> {{s.description}} </p>
+            <p *ngIf="s.age"><u>Age:</u> {{s.age}}</p>
+            <p *ngIf="s.promo.nom"><u>Promo:</u> {{s.promo.nom}}, {{s.promo.description}}</p>
+            <a [routerLink]="['/etudiant', s.nom]">Voir l'etudiant</a>
+        </article>
+    </article>
+</section>

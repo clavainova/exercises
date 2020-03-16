@@ -1,1 +1,11 @@
-<p>connexion works!</p>
+<article>
+    <form (submit)="connexion()">
+        <div class="grid">
+            <p>user: </p><input type="text" name="id" [(ngModel)]="connexion.id">
+            <p>pass: </p><input type="password" name="mdp" [(ngModel)]="connexion.mdp">
+            <input class="button" type="reset" value="Annuler">
+            <input class="button" type="submit" value="Se connecter">
+        </div>
+    </form>
+    <!-- <span>state of the connection: {{ dataServe.identifie }}</span> -->
+</article>

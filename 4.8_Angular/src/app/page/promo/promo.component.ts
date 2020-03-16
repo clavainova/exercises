@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Ipromo } from 'src/app/modele/ipromo';
+//import { Ipromo } from 'src/app/modele/ipromo';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-promo',
@@ -8,40 +9,9 @@ import { Ipromo } from 'src/app/modele/ipromo';
 })
 export class PromoComponent implements OnInit {
 
-  promos: Array<Ipromo>;
-  promo: Ipromo;
-
-  constructor() { }
+  constructor(public dataServe:DataService) { }
+  
   ngOnInit(): void {
-    /*
-    this.promo = {
-      _id: 0,
-      nom: "attempt",
-      description: "testing angular",
-      effectifs: 28,
-      effectifsActuels: 20,
-      survivants: 18
-    }
-  */
-
-    this.promos = [
-      {
-        _id: 0,
-        nom: "AngularTest2",
-        description: "testing angular",
-        effectifs: 28,
-        effectifsActuels: 20,
-        survivants: 18
-      },
-      {
-        _id: 1,
-        nom: "AngularTest2",
-        description: "testing angular",
-        effectifs: 28,
-        effectifsActuels: 20,
-        survivants: 18
-      }
-    ]
+    console.log(this.dataServe.promos);
   }
-
 }

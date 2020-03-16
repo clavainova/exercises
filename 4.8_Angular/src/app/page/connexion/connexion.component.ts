@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-connexion',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConnexionComponent implements OnInit {
 
-  constructor() { }
+  connexion:any;
+
+  constructor(private dataServe:DataService) { }
 
   ngOnInit(): void {
+    this.connexion = {
+      id: "",
+      mdp: ""
+    }
+  }
+
+  seConnecter(){
+    this.dataServe.identifie = !this.dataServe.identifie;
   }
 
 }

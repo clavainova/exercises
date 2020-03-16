@@ -1,0 +1,11 @@
+textarea {
+    min-height: 70px;
+}
+
+input.ng-invalid, textarea.ng-invalid {
+    border-bottom: 1px solid rgb(216, 42, 109);
+}
+
+input.ng-valid[required], textarea.ng-valid[required] {
+    border-bottom: yellowgreen;
+}

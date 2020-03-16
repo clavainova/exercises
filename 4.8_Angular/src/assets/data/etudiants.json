@@ -1,0 +1,32 @@
+[
+    {
+        "_id": 0,
+        "nom": "clavain",
+        "description": "tired",
+        "age": 22,
+        "promo": {
+            "nom": "clavainpromo",
+            "description" : "promotime"
+        }
+    },
+    {
+        "_id": 1,
+        "nom": "michel otroschenko",
+        "description": "testing",
+        "age": 0,
+        "promo": {
+            "nom": "michelpromo",
+            "description" : "promotime"
+        }
+    },
+    {
+        "_id": 2,
+        "nom": "autre etudiant",
+        "description": "testing again",
+        "age": 100,
+        "promo": {
+            "nom": "testpromo",
+            "description" : "promotime"
+        }
+    }
+]

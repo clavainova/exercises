@@ -1,1 +1,20 @@
-<p>contact works!</p>
+<article>
+    <form #f="ngForm" (submit)="envoyer(f)">
+        <h1>Nous contactez</h1>
+        <div class="grid">
+            <u>Name:</u> <input type="text" [(ngModel)]="message.nom" (input)="traceForm();" name=" nom"
+                placeholder="name">
+            <u>Email:</u> <input type="email" required [(ngModel)]="message.email" (input)="traceForm();" name="email"
+                placeholder="email" #nomMail="ngModel">
+            <br *ngIf="nomMail.invalid"><span *ngIf="nomMail.invalid">Please add an email</span>
+            <u>Subject:</u> <input type="text" [(ngModel)]="message.sujet" (input)="traceForm();" name="sujet"
+                placeholder="sujet">
+            <u>Message:</u> <textarea required [(ngModel)]="message.message" (input)="traceForm();" name="message"
+                text="type here" #nomMessage="ngModel"></textarea>
+            <br *ngIf="nomMessage.invalid"><span *ngIf="nomMessage.invalid">Please add a message</span>
+            <button (click)="envoyer(f)">ENVOYER</button>
+            <button (click)="annuler()">ANNULER</button>
+        </div>
+        <input class="button" type="reset" value="reset">
+    </form>
+</article>
