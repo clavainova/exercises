@@ -7,7 +7,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'About' });
+  //res.render('about', { title: 'About' });
+  res.sendFile("/var/www/html/progression/4.7_Node_JS/2_bases_etendues/myapp/public/mythique.html");
+  //res.writeHead(200, {"Content-Type": "text/html"});
 });
 
 module.exports = router;
