@@ -6,3 +6,28 @@ body {
 a {
   color: #00B7FF;
 }
+
+nav ul {
+  white-space: nowrap;
+}
+
+nav li {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #c84678;
+  background-color: white;
+  min-width: 10vw;
+  text-align: center;
+}
+
+nav li:after, h1:after {
+  font-weight: bolder;
+  content: " ☆";
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}

@@ -1,2 +1,6 @@
 DEBUG=myapp:* npm start
+//load pages
 
+node ./server.js
+nodemon ./server.js
+//start server

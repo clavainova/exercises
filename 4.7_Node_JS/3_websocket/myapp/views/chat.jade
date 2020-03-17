@@ -1,0 +1,32 @@
+extends layout
+
+block head
+  meta(charset='utf-8')
+  title WebSockets - Simple chat
+  style.
+    p { line-height:18px; }
+    div { width:500px; margin-left:auto; margin-right:auto;}
+    #content { padding:5px; background:#ddd; border-radius:5px;
+    overflow-y: scroll; border:1px solid #CCC;
+    margin-top:10px; height: 160px; }
+    #input { border-radius:2px; border:1px solid #ccc;
+    margin-top:10px; padding:5px; width:400px;
+    }
+    #status { width:88px;display:block;float:left;margin-top:15px; }
+    
+block content
+  .container
+    br
+    .jumbotron
+      h1.display-4 Send Message
+      br
+      input#name.form-control(placeholder='Name')
+      br
+      textarea#message.form-control(placeholder='Your Message Here')
+      br
+      button#send.btn.btn-success Send
+    #messages
+  script.
+
+
+
