@@ -5,7 +5,7 @@ const express = require("express");
 const app = express();
 // App.get permet de déterminer nos routes une à une
 app.get('/', function (req, res) {
-    res.send("<a href='https://www.youtube.com/watch?v=I5mlAZkibgw' target='_blank'>Résiste ! Prouve, que tu existes</a>")
+    res.sendFile("/var/www/html/progression/4.7_Node_JS/4_jwt/app/index.html")
 });
 
 app.get('/cris', function (req, res) {
@@ -19,3 +19,17 @@ app.get('*', function (req, res) {
 app.listen(3000, () => {
     console.log('Serveur en écoute sur le port 3000');
 });
+
+
+//body parser test
+var bodyParser = require('body-parser')
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+
+app.use(function (req, res) {
+    res.setHeader('Content-Type', 'text/plain')
+    res.write('you posted:\n')
+    res.end(JSON.stringify(req.body, null, 2))
+})
+
+//handlebars??

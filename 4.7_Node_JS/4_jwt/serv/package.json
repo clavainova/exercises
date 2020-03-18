@@ -1,5 +1,5 @@
 {
-  "name": "jsonwebtoken",
+  "name": "ex4",
   "version": "0.1.0",
   "description": "Un serveur qui renvoie un token JSON lors d'une authentification",
   "main": "app.js",
@@ -13,6 +13,8 @@
   "author": "Fabrique Numérique (école Simplon PAU)",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1"
   }
 }
