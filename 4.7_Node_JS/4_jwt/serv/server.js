@@ -1,15 +1,8 @@
-// On importe express dans notre application
-// Node utilise require pour cette opération (comme les imports de la programmation en modules par exemple)
-const express = require("express");
-// On crée notre application express
-const app = express();
+var express = require("express");
+var app = express();
 // App.get permet de déterminer nos routes une à une
 app.get('/', function (req, res) {
     res.sendFile("/var/www/html/progression/4.7_Node_JS/4_jwt/app/index.html")
-});
-
-app.get('/cris', function (req, res) {
-    res.send("<a href='https://www.youtube.com/watch?v=dg6Boku_bQc' target='_blank'>Tous les cris les SOS</a>")
 });
 // Ici nous utilisons une wildcard * pour capter les routes qui ne sont pas encore définies et renvoyer une erreur 404
 app.get('*', function (req, res) {
@@ -31,5 +24,9 @@ app.use(function (req, res) {
     res.write('you posted:\n')
     res.end(JSON.stringify(req.body, null, 2))
 })
+
+//json test
+//tutorial: https://www.freecodecamp.org/news/securing-node-js-restful-apis-with-json-web-tokens-9f811a92bb52/
+var jwt = require('jsonwebtoken');
 
 //handlebars??
