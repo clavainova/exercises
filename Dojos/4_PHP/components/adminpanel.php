@@ -82,7 +82,7 @@ function build($table, $cols)
         </td></tr>");
     }
     print("</table>
-    INSERT 🆕</article>");
+    <a href='http://localhost/progression/Dojos/4_PHP/index.php?page=addArticle'>INSERT 🆕</a></article>");
 }
 
 

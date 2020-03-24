@@ -261,3 +261,17 @@ th, td {
     float: none;
     display: inline-block;
 }
+
+.blog{
+    padding: 20px;
+}
+
+.blog div{
+    margin-left: 30vw;
+}
+
+.blog p{
+    text-align: left;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}

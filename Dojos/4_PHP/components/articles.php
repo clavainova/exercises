@@ -7,10 +7,9 @@
     $users = fetchData($pdo, "user");
     
     foreach ($articles as $value) :
-        print("<article><h1>" . $value["article_title"] . "</h1>" .
+        print("<article class='blog'><h1>" . $value["article_title"] . "</h1>" .
             "<p>Published: " . $value["date_published"] . "</p>" .
-            "<img class='artimg' src='" . ASSETS_PATH . "/img" .
-            "/" . $value["article_image"] . "'>" .
+            "<img class='artimg' src='" . ASSETS_PATH . "/img" . "/" . $value["article_image"] . "'>" .
             "<p>" . $value["article_text"] . "</p>"
             . "<h1>Comments:</h1>");
         $comments = fetchData($pdo, "comment");

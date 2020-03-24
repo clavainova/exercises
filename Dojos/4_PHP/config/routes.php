@@ -5,6 +5,8 @@ return array(
     "update"=>"update.php",
     "404" => "404.php",
     "articles" => "articles.php",
-    "adminpanel" => "adminpanel.php"
+    "adminpanel" => "adminpanel.php",
+    "addArticle" => "addArticle.php"
+
 );
 ?>

@@ -12,6 +12,11 @@ class Controller
         $this->render('articles.php');
     }
 
+    public function addArticle()
+    {
+        $this->render('addArticle.php');
+    }
+
     public function settings()
     {
         $this->render('settings.php');

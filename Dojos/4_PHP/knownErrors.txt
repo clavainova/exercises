@@ -1,1 +1,2 @@
 1) can't delete elements with foreign key - need to change so foreign keys have auto cascade on
+2) possibly a mistake trying to creata a generic CRUD instead of one for each
