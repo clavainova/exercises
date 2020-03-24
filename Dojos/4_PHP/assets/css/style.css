@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../img/fancy-pants.jpg");
+    color: #333333;
+    font-family: 'Open Sans', sans-serif;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: underline;
+    color: inherit;
+}
+
+header {
+    padding-top: 6vh;
+    font-family: 'Scope One', serif;
+    font-size: 2.5em;
+}
+
+nav {
+    padding-top: 20px;
+}
+
+header, nav {
+    background-color: #F2F2F2;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    text-decoration: underline;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.whitebox {
+    background-color: rgb(238, 238, 238);
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.produit {
+    padding: 1vw 1vw;
+    margin: 2.5vw 2.5vw;
+    border-radius: 15px;
+    background-color: #EEEEEE;
+}
+
+.produit img {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+.produit p {
+    font-style: oblique;
+}
+
+button {
+    float: right;
+    background-color: #333333;
+    color: #F2F2F2;
+    padding: 10px 10px;
+    border-radius: 3px;
+    border: inherit;
+}
+
+h2 {
+    background-color: #EEEEEE;
+    font-size: 4em;
+    padding-left: 5vw;
+    width: 30vw;
+    margin-top: 5vh;
+    border-radius: 0px 13px 13px 0px;
+}
+
+section article, .secart {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    background-color: rgb(238, 238, 238);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    min-height: 14vw;
+    border-radius: 13px;
+}
+
+section article div {
+    text-align: left;
+    background: none;
+    padding-top: 2vw;
+}
+
+article div h1 {
+    text-align: center;
+}
+
+section article img {
+    height: 10vw;
+    float: left;
+    margin: 2vw;
+    border-radius: 13px;
+    object-fit: cover;
+    width: 10vw;
+}
+
+.connexion {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    border-radius: 13px;
+    padding: 2.5vw 2.5vw;
+    background-color: #F2F2F2;
+    display: grid;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    grid-template-columns: 1fr 3fr;
+    grid-row-gap: 1em;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.connexion p {
+    margin-left: 20px;
+}
+
+input {
+    max-height: 1.5em;
+}
+
+footer {
+    background-color: #333333;
+    color: #F2F2F2;
+    padding: 20px 20px;
+}
+
+.three-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.error, .notif {
+    left: 50px;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.error, .standalone-button-a {
+    background: rgb(255, 244, 146);
+    color: #ff2a2a;
+    border: 2px solid rgb(80, 77, 49);
+}
+
+.notif, .standalone-button-b {
+    background: rgb(158, 255, 223);
+    color: #000000;
+    border: 2px solid rgb(49, 80, 70);
+}
+
+.longtitle {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    padding-left: 0 !important;
+    border-radius: 0;
+}
+
+.highlightbox {
+    background: #F2F2F2;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    font-size: 1.5em;
+    display: grid;
+    grid-column-gap: 2em;
+    grid-template-columns: 1fr 1fr;
+}
+
+.highlightbox>h3, .highlightbox>p {
+    display: inline-block;
+}
+
+.highlightbox>h3 {
+    text-align: right;
+}
+
+.highlightbox-margin {
+    margin: 5vw 5vw;
+    padding: 2.5vw 2.5vw;
+    background: #F2F2F2;
+    border-radius: 3px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.standalone-button-a, .standalone-button-b {
+    color: #333333;
+    padding: 10px 10px;
+    border-radius: 3px;
+    font-size: 1em;
+    min-height: 2.5em;
+}
+
+.back-button {
+    float: left;
+    margin: 5px 5px;
+    margin-left: 5vw;
+    background: rgb(158, 255, 223);
+    color: #333333;
+}
+
+.span-note {
+    text-align: center;
+    color: #333333;
+    background: #F2F2F2;
+}
+
+.center {
+    text-align: center;
+}
+
+div>button {
+    display: inline;
+    float: none;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+th, td {
+    background-color: rgb(187, 187, 187);
+    padding: 10px;
+}
