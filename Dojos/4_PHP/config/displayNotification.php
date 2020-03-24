@@ -47,3 +47,17 @@ if (isset($_SESSION["error"])) :
     //unset error
     unset($_SESSION['error']);
 endif;
+
+//if there's a custom error (admin/sql only)
+if (isset($_SESSION["customerror"])) :
+    ?>
+        <div class="error">
+            <?php
+            print($_SESSION["customerror"]);
+            ?>
+        </div>
+    <?php
+        //unset error
+        unset($_SESSION['customerror']);
+    endif;
+    

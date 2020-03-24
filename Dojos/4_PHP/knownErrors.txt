@@ -1,0 +1,1 @@
+1) can't delete elements with foreign key - need to change so foreign keys have auto cascade on

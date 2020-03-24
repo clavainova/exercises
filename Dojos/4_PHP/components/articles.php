@@ -1,11 +1,11 @@
 <section>
 
     <?php
-    //need to display category and 
-    //comment author, both requiring some kind of search function
 
     $pdo = getConnection();
     $articles = fetchData($pdo, "article");
+    $users = fetchData($pdo, "user");
+    
     foreach ($articles as $value) :
         print("<article><h1>" . $value["article_title"] . "</h1>" .
             "<p>Published: " . $value["date_published"] . "</p>" .
@@ -19,7 +19,7 @@
             if ($item["article_id"] == $value["article_id"]) {
                 print("<div>
                 <h3>" . $item["comment_title"] . "</h3>
-                <h3>Posted: " . $item["comment_date"] . "</h3>
+                <h3>Posted: " . $item["comment_date"] . " by " . getElemById($users, $item["user_id"], "user") ."</h3>
                 <p>" . $item["comment_text"] . "</p>                
                 </div>");
             }

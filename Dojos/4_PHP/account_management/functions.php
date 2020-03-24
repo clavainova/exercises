@@ -167,8 +167,7 @@ function addUser($pdo, $user)
 //sets the "verification" field to 1 in the database
 function verifyUser($pdo, $email)
 {
-    ($stmt = "UPDATE `user` SET `verified` = '1' WHERE `user`.`email` = ? ;");
-
+    $stmt = "UPDATE `user` SET `verified` = '1' WHERE `user`.`email` = ? ;";
     if (!$pdo->prepare($stmt)->execute([$email])) {
         return false;
         //print("preparation failed" . htmlspecialchars($pdo->error));
@@ -282,3 +281,16 @@ function redirect($url)
 }
 
 //***********************[CRUD]***********************//
+
+//takes array of sql table, id, name of sql table
+function getElemById($table, $id, $tablename)
+{
+    $criteria = $tablename . "_id";
+    $returnvalue = $tablename . "_name";
+    foreach ($table as $row) {
+        if ($row[$criteria] == $id) {
+            return $row[$returnvalue];
+        }
+    }
+    return false;
+}
