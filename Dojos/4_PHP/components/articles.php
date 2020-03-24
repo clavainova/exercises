@@ -1,11 +1,33 @@
-<article>
+<section>
+
     <?php
+    //need to display category and 
+    //comment author, both requiring some kind of search function
+
     $pdo = getConnection();
     $articles = fetchData($pdo, "article");
     foreach ($articles as $value) :
-        //print each here
+        print("<article><h1>" . $value["article_title"] . "</h1>" .
+            "<p>Published: " . $value["date_published"] . "</p>" .
+            "<img class='artimg' src='" . ASSETS_PATH . "/img" .
+            "/" . $value["article_image"] . "'>" .
+            "<p>" . $value["article_text"] . "</p>"
+            . "<h1>Comments:</h1>");
+        $comments = fetchData($pdo, "comment");
+        foreach ($comments as $item) {
+            //if they match -- the comment is for this article
+            if ($item["article_id"] == $value["article_id"]) {
+                print("<div>
+                <h3>" . $item["comment_title"] . "</h3>
+                <h3>Posted: " . $item["comment_date"] . "</h3>
+                <p>" . $item["comment_text"] . "</p>                
+                </div>");
+            }
+        }
+        print("</article>");
     ?>
     <?php
     endforeach;
     ?>
-</article>
+
+</section>

@@ -10,24 +10,8 @@
     }
 ?>
 
-<script>
-    function changeVisibility(id) {
-        if (document.getElementById(id).style.display == "none") {
-            document.getElementById(id).style.display = "block";
-        } else {
-            document.getElementById(id).style.display = "none";
-        }
-    }
-</script>
-
 <section class="secart">
-    <h1 class="center">Select a table to show/hide:</h1>
-    <div class="center">
-        <button onclick="changeVisibility('article');">Articles</button>
-        <button onclick="changeVisibility('category');">Categories</button>
-        <button onclick="changeVisibility('comment');">Comments</button>
-        <button onclick="changeVisibility('user');">Users</button>
-    </div>
+    <h1 class="center">CRUD Access</h1>
 
     <?php
     build("article", [
@@ -66,7 +50,7 @@
 function build($table, $cols)
 {
     //start building the html table
-    print("<article style='center' id='" . $table . "' style='display:none;'>
+    print("<article style='center' id='" . $table . "'>
     <table>
     <tr>");
     foreach ($cols as $col) {

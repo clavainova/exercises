@@ -105,8 +105,8 @@ section article, .secart {
     margin-top: 20px;
     margin-bottom: 20px;
     display: block;
-    min-height: 14vw;
     border-radius: 13px;
+    padding: 2px;
 }
 
 section article div {
@@ -255,4 +255,9 @@ div>button {
 th, td {
     background-color: rgb(187, 187, 187);
     padding: 10px;
+}
+
+.artimg{
+    float: none;
+    display: inline-block;
 }
