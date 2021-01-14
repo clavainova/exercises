@@ -32,7 +32,8 @@ export class DataService {
       data => {
         console.log(data);
         this.etudiants = data;
-      })
+      });
+      erreur=>console.log(erreur);
   }
 
   getPromos() {
@@ -40,7 +41,9 @@ export class DataService {
       data => {
         console.log(data);
         this.promos = data;
-      })
+      });
+      erreur=>console.log(erreur);
+
   }
 
   getEtudiant(nom:string){

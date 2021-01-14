@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+constructor(){}
 
-  constructor() { }
+  // constructor(private HttpClient) { 
+  //   this.getEtudiants;
+  // }
+
+  // getEtudiants(){
+  //   this.http.get<Array<Etudiant>>('assets/data/etudiants.json');
+  //   plats=>
+  // }
 
   ngOnInit(): void {
+
   }
 
 }

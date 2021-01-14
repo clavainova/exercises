@@ -9,13 +9,13 @@ import { ContactComponent } from './page/contact/contact.component';
 import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
-  {path:"", component:AccueilComponent},
-  {path: "promo", component:PromoComponent, canActivate:[AuthGuard]},
-  {path:"etudiants", component:EtudiantsComponent},
-  {path:"etudiant", component:EtudiantComponent},
-  {path:"etudiant/:nom", component:EtudiantComponent},
-  {path:"connexion", component:ConnexionComponent},
-  {path: "contact", component:ContactComponent},
+  { path: "", component: AccueilComponent },
+  { path: "promo", component: PromoComponent, canActivate: [AuthGuard] },
+  { path: "etudiants", component: EtudiantsComponent },
+  { path: "etudiant", component: EtudiantComponent },
+  { path: "etudiant/:nom", component: EtudiantComponent },
+  { path: "connexion", component: ConnexionComponent },
+  { path: "contact", component: ContactComponent },
   {
     path: 'edition',
     loadChildren: () => import('./edition/edition.module').then(m => m.EditionModule)

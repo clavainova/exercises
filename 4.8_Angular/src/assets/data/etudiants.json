@@ -11,11 +11,11 @@
     },
     {
         "_id": 1,
-        "nom": "michel otroschenko",
+        "nom": "etudiant 2",
         "description": "testing",
         "age": 0,
         "promo": {
-            "nom": "michelpromo",
+            "nom": "etudiant 2 promo",
             "description" : "promotime"
         }
     },
