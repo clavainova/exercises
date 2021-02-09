@@ -1,0 +1,16 @@
+Les réponses à ces exercices se trouvent dans "myapp":
+- 1_Bases
+- 2_Bases_Etendues
+- 2_Express
+- 3_Express_Bases_Etendues
+- 3_Websocket
+- 4_JWT
+Les autres applications contiennent sont des versions d'expérimentation et de test
+
+progrès([ ] = pas fini, [?] = commencé, [X] = fini)
+[ ] 1_Bases
+[X] 2_Bases_Etendues
+[?] 2_Express
+[?] 3_Express_Bases_Etendues
+[?] 3_Websocket
+[?] 4_JWT
